@@ -252,7 +252,7 @@ function render_shopping_cart(ShoppingCart $shopping_cart)
 
     return $output;
 }
-function render_shopping_cart_coupon(ShoppingCart $shopping_cart,$final) 
+function render_shopping_cart_coupon(ShoppingCart $shopping_cart)//,$final removed var for total coupon 
 {
     $coupon_value = $shopping_cart->GetCoupon();//session call for total sum of coupon
     $coupon_codes = $shopping_cart->GetCouponCode();//session call for all the codes applies

@@ -65,7 +65,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
            
 	  $output .= "<p align='center' class='required'>Please fill in missing required * fields</p>";  
 	 
-	  $output .= "         <div class='form'>
+	  $output .= "<div class='form'>
 			  <form method='post' action='processGroup.php' id='peoples_names'>
 			  <table cellpadding='4'>
 			 <tr>
