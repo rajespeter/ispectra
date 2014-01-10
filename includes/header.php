@@ -4,10 +4,10 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Welcome to Engage For God, Missional Life </title>
+    <title>Welcome to iSpectra</title>
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     
-     <meta name="description" content="Engage For God, Missional Life is a conference on church growth and chiristian ministies with workshops on youth ministries, world missions, short term and career missions, multicultural ministries,church growth and much more." />
+     <meta name="description" content="iSpectra" />
     
     <script type="text/javascript">
 

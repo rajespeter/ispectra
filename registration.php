@@ -36,17 +36,17 @@ require_once("./includes/initialize.php"); ?>
                     Prior to August 31: &nbsp; $50 per person <br/>
                     September 1 - October 17: $60<br/>
                     October 18 and<br/>
-                    Adult Registration At the door:    &nbsp; $75 per person<br/>
+                    Adult Registration At the door:    &nbsp; $99 per person<br/>
                 </p>
                 
                 <p align="center" ><a href='./PayPalCart/html/processGroup.php?id=' title="Register on Line NOW" target="">Register On-Line </a> </p>
                 <p><br /></p>
-                <p>	Children (Grades 1 through 6) <br/>
+                <!--p>	Children (Grades 1 through 6) <br/>
                      ALL DAY SATURDAY 8:30 AM – 4:30 PM<br/>
                     - $20 per child on-line <br/>
                     ($30 at the door)  <br />
                     
-                </p>
+                </p-->
                  <hr />
                  <p>You can Register additional people with you as your register on-line. <br />
                  If you Register an additional 4 or more adults at the same time  <br />

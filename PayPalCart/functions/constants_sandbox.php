@@ -8,7 +8,7 @@ defined('DB_NAME') ? null : define("DB_NAME", "mystore");
 defined('DB_USER') ? null : define("DB_USER", "ispectr_radmin");
 defined('DB_PASS') ? null : define("DB_PASS", "j0sephk#$$");
 defined('DB_NAME') ? null : define("DB_NAME", "ispectra_reg");*/
-	
+date_default_timezone_set('America/Los_Angeles');
 define('LOG_FILE' , '/Library/WebServer/Documents');
 //define('LOG_FILE' , '/home/bayareasummit/cooperfam.org/ispectra');
 define('REGULAR_XML_FILE' , '../regular_catalog.xml');
