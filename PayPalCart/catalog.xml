@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<product>
+		<id>ADULT</id>
+		<title>ENGAGE Adult Registration </title>
+		<description>Conference Registration  </description>
+		<img>../../images/engageLogo.png</img>
+		<price>50.00</price>
+	</product>
+	<product>
+		<id>CHILD</id>
+		<title>ENGAGE Child Registration</title>
+		<description>Registration for Child's program</description>
+		<img>../../images/engageLogo.png</img>
+		<price>20.00</price>
+	</product>
+	<product>
+		<id>GROUP</id>
+		<title>ENGAGE Group Registration</title>
+		<description>Registration for Groups of 5+ </description>
+		<img>../../images/engageLogo.png</img>
+		<price>40.00</price>
+	</product>
+	<product>
+		<id>EXHIBITOR</id>
+		<title>ENGAGE EXHIBITOR Registration </title>
+		<description>Registration for EXHIBITOR </description>
+		<img>../../images/engageLogo.png</img>
+		<price>100.00</price>
+	</product>
+	<product>
+		<id>RECORDINGS</id>
+		<title>ENGAGE Workshop Recordings </title>
+		<description>Recordings for Engage Workshops </description>
+		<img>../../images/engageLogo.png</img>
+		<price>30.00</price>
+	</product>
+	<product>
+		<id>TESTER</id>
+		<title>ENGAGE Tester</title>
+		<description>For Testing the registration process</description>
+		<img>../../images/engageLogo.png</img>
+		<price>5.00</price>
+	</product>
+</items>
+	
+		
