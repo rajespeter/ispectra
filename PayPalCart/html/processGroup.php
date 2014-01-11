@@ -50,11 +50,37 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 	$trans_language= !empty($_POST['trans_language']) ? $_POST['trans_language'] : "";
 	$comments= !empty($_POST['comments']) ? $_POST['comments'] : "";
 
-	$coupon_row=!empty($_POST['t_coupon'])?valid_coupon($t_coupon):-1; //db call 
-    $coupon_value =($coupon_row>0)?$coupon_row[1]['value']:-1;
-	
+//if the user enters blank coupon dont check 
+//if the user enters valid coupon then  chk
+
+// the check will return a postive value if passes and will return a negative value if fails
+
+//if returns negative value then registration validation fails
+
+//
+
+	//blank coupon  "required feilds"
+	//invalid coupon "required feilds if blank and "
+	//correct coupon
+	  $coupon_row=-1;
+	    if (!empty($_POST['t_coupon']))
+		{
+		$coupon_row  = valid_coupon($t_coupon);
+		}
+		if ($coupon_row!=-1)
+		{
+		$coupon_value =$coupon_row[1]['value'];
+		}
+		else
+		{
+					$coupon_value=-1;
+			
+		}
+
+   
     $zip_error = (!preg_match('/^\d{5}(?:-\d{4})?$/', $zip_code));
    	$coutput = countryArray("", "");
+	
 
 	//check to see if all required items in form are complete and correct.       
     if (empty($_POST['first_name']) || 
@@ -62,13 +88,13 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
         empty($_POST['contact_number'])||
         empty($_POST['adultchild']) ||
         empty($_POST['email']) ||
-         $coupon_value < 0 ||
+        (!empty($_POST['t_coupon']) && ( $coupon_value < 0)) ||
         (!empty($_POST['email']) && ($email_error == '1')))
        {
-       	
-            
-	  $output .= "<p align='center' class='required'>You might have missed a *Required feild or <br> entered a wrong coupon</p>";  
-	 
+      
+	 	 $output .= "<p align='center' class='required'>You might have missed a *Required feild or entered incorrect coupon</p>";  
+	
+	
 	  $output .= "<div class='form'>
 			  <form method='post' action='processGroup.php' id='peoples_names'>
 			  <table cellpadding='4'>
@@ -170,7 +196,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			if ($coupon_value > 0 ) {
 				$output .="<td><label   class='field' for='Coupon'>Coupon</label></td>";
 			}else{
-				$output .="<td><label   class='required' for='Coupon'>Invalid Coupon</label></td>";
+				$output .="<td><label   class='required' for='Coupon'>Coupon</label></td>";
 			}
 				
 	  		$output .="	<td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= '$t_coupon' /></td>
