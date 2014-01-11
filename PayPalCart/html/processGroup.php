@@ -49,22 +49,25 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 	$secondary_language= !empty($_POST['secondary_language']) ? $_POST['secondary_language'] : "";
 	$trans_language= !empty($_POST['trans_language']) ? $_POST['trans_language'] : "";
 	$comments= !empty($_POST['comments']) ? $_POST['comments'] : "";
+
+	$coupon_row=!empty($_POST['t_coupon'])?valid_coupon($t_coupon):-1; //db call 
+    $coupon_value =($coupon_row>0)?$coupon_row[1]['value']:-1;
 	
- 
-    
     $zip_error = (!preg_match('/^\d{5}(?:-\d{4})?$/', $zip_code));
    	$coutput = countryArray("", "");
-	
+
 	//check to see if all required items in form are complete and correct.       
     if (empty($_POST['first_name']) || 
         empty($_POST['last_name']) ||
         empty($_POST['contact_number'])||
         empty($_POST['adultchild']) ||
         empty($_POST['email']) ||
-        (!empty($_POST['email']) && ($email_error == '1'))) 
+         $coupon_value < 0 ||
+        (!empty($_POST['email']) && ($email_error == '1')))
        {
-           
-	  $output .= "<p align='center' class='required'>Please fill in missing required * fields</p>";  
+       	
+            
+	  $output .= "<p align='center' class='required'>You might have missed a *Required feild or <br> entered a wrong coupon</p>";  
 	 
 	  $output .= "<div class='form'>
 			  <form method='post' action='processGroup.php' id='peoples_names'>
@@ -163,9 +166,14 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				  <td > <input class='textbox' type='text' name='trans_language' id='t_language' size='30' value= '$trans_language' /></td>
 			  </tr>
 		    </tr>
-		    <tr>     
-		  		<td><label  class='field' for='comments'>Coupon</label></td>
-	  			<td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= '$t_coupon' /></td>
+		    <tr>";
+			if ($coupon_value > 0 ) {
+				$output .="<td><label   class='field' for='Coupon'>Coupon</label></td>";
+			}else{
+				$output .="<td><label   class='required' for='Coupon'>Invalid Coupon</label></td>";
+			}
+				
+	  		$output .="	<td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= '$t_coupon' /></td>
 	  		</tr> 
 	  	  	<tr>     
 		  		<td><label  class='field' for='comments'>Comments</label></td>
@@ -236,12 +244,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  fwrite($fh, $v);
 		  fclose($fh);
         
- 		  $coupon_row=valid_coupon($t_coupon); //db call 
-		    
-         // $code_val= $coupon_row[1]['code'];;//TBD to get the coupon codes entered
-      
-	     $coupon_value =$coupon_row[1]['value'];
-		 
+ 		 
 		 if ( $coupon_value >0) { //it is a valid coupon get the value
 		    $shopping_cart->AddCoupon($coupon_value); //sum that up in session
 		    $shopping_cart->AddCouponCode($t_coupon); //sum that up in session

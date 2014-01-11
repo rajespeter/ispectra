@@ -209,8 +209,9 @@ function get_coupon($codes){ //not using this anymore
 	}
 }
 function valid_coupon($codes){
+	
 
-	if (empty($codes))
+	if ($codes=="")
 	{
 		 return(-1);
 	}
@@ -237,7 +238,7 @@ function valid_coupon($codes){
         }
         else
         {
-            return null;
+            return -1;
         }
     }
     else
