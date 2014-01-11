@@ -597,7 +597,7 @@ function render_basic_form ()
 	  </td>
   </tr>
 	  <tr>
-		  <td><label class='field' for='email'> Email Address  </label></td>
+		  <td><label class='field' for='email'> * Email Address  </label></td>
 		  <td ><input class='textbox' type='text' name='email' id='email' size='40' value= '' /></td>
 	  </tr> 
 	   <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />

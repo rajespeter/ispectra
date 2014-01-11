@@ -60,6 +60,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
         empty($_POST['last_name']) ||
         empty($_POST['contact_number'])||
         empty($_POST['adultchild']) ||
+        empty($_POST['email']) ||
         (!empty($_POST['email']) && ($email_error == '1'))) 
        {
            
@@ -122,15 +123,15 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
 			  </tr> 
 			  <tr>     
-				  <td><label class='field' for='recordings'>Add Ethnic Training for $30 </label></td>
-				  <td > <input class='' type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' "; 
+				  <td ><label class='field' for='recordings'>Add Ethnic Training for $30 </label></td>
+				  <td align='left'> <input class='' type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' "; 
 		   			if (!empty($recordings)) {$output .=  $checked;}
 		  			$output .=  "
 		  			/></td>                          
 		  		</tr>
 			
 		      <tr>
-				  <td ><label class='field' for='email'> Email Address</label></td>
+				  <td ><label class='required'  class='field' for='email'>* Email Address</label></td>
 				  <td><input class='textbox' type='text' name='email' id='email' size='40' value= '$email_address'/>
 				  </td>
 			  </tr>
