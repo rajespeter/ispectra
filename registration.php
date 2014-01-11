@@ -30,12 +30,12 @@ require_once("./includes/initialize.php"); ?>
                 <h3 align="center" >Information </h3>
                 
                 
-                <p> Registration Fees:   Includes SATURDAY lunch, <br /> 
+                <p> Registration Fees:  <br /> 
                     refreshments and materials  <br />
                     Adult On-Line Registration fees:<br />
-                    Prior to August 31: &nbsp; $50 per person <br/>
-                    September 1 - October 17: $60<br/>
-                    October 18 and<br/>
+                    Prior to TBD: &nbsp; TBD per person <br/>
+                    TBD<br/>
+                    TBD and<br/>
                     Adult Registration At the door:    &nbsp; $99 per person<br/>
                 </p>
                 
@@ -50,19 +50,19 @@ require_once("./includes/initialize.php"); ?>
                  <hr />
                  <p>You can Register additional people with you as your register on-line. <br />
                  If you Register an additional 4 or more adults at the same time  <br />
-                 you save $20 per adult automaticly </p>        
+                 you save TBD per adult automaticly </p>        
           
               
                 <hr />
                
-                <p> When you Register you can add downloads of all of<br />the ENGAGE 2013 workshops 
+                <p> When you Register you can also register for Ethnic Training conducted by XXXX prior<br />the iSpectra 2014 workshops 
                    as add-on <br /> - $30 for set per attendee</p>
                    <hr />
        
                <br/>
                <p>For questions regarding registration contact <br/>
-                    By E-mail: John.Dupree@Perspectives.org <br/>
-                By Phone:   (209) 848-2262 </p>
+                    By E-mail: somone@nowhere.org <br/>
+                By Phone:   xxx-xxx-xx </p>
               
                
                 
@@ -75,10 +75,10 @@ require_once("./includes/initialize.php"); ?>
             
              <p class="clear"> </p> 
              
-             <h2 align="center">Special Registration for Host Church attendees</h2>
+             <!--h2 align="center">Special Registration for Host Church attendees</h2>
              
              <p align="center" ><a href='./PayPalCart/html/processGroup.php?id=HOST' target="">Host Church</a>   </p>
-                <p><br /></p>  
+                <p><br /></p-->  
          </div> <!-- content -->
 </div> <!-- outerDiv -->
 
