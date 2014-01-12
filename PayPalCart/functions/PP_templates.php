@@ -257,13 +257,14 @@ function render_shopping_cart_coupon(ShoppingCart $shopping_cart)//,$final remov
     $coupon_value = $shopping_cart->GetCoupon();//session call for total sum of coupon
     $coupon_codes = $shopping_cart->GetCouponCode();//session call for all the codes applies
     $code_array = implode("','", $coupon_codes)  ;  
+	$formcpn = -1;
 	
-if ($final==1) {
+if ($formcpn==1) {
 	 $output="
     <form action='placeOrder.php' method='post' id='shoppingcart' >
        <input type='hidden' name='cform' value='cform' />";
        }
-  $output.="
+  $output="
     <table class='shoppingCart' >
     <tr>
         <th>
@@ -287,6 +288,7 @@ if ($final==1) {
         $output .= render_shopping_cart_row($shopping_cart, $product_id, $line_item_counter);
         $line_item_counter++; 
     }
+	print_r($coupon_value);
     if ($coupon_value>0) { //if not -1
     	 
     		
@@ -304,7 +306,7 @@ if ($final==1) {
 	  $output .= render_shopping_cart_total_row($shopping_cart);
        
 
-if ($final==1) {
+if ($formcpn==1) {
    $output .= "
     	
 		  <!--tr>

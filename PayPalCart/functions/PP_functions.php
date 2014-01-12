@@ -220,7 +220,7 @@ function valid_coupon($codes){
     $sql = "SELECT value, code FROM coupon WHERE code ='".$codes."'";
 	error_log($sql);// $sql) ;//remove later
     global $mysqli;
-	  if ($stmt = $mysqli->prepare($sql))// 
+	  if ($stmt = $mysqli->prepare($sql))
      {
         $stmt->execute();
         $stmt->store_result();

@@ -251,7 +251,8 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  $fh = fopen($myFile, 'a') or die("can't open file");
         print_r(error_get_last());
 		  
-		  $v = "["  . $reg_date  . "],  " 
+		  $v = "["  . $reg_date  . "]";
+		  /*,  " 
 		  . $_REQUEST['agency_name'] . ",  " 
 		  . $_REQUEST['ag_address1'] . ",  " 
 		  . $_REQUEST['ag_address2'] . " , " 
@@ -264,7 +265,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  . $_REQUEST['last_name'] . " , "
 		  . $_REQUEST['adultchild'] . " , " 
 		  . $_REQUEST['email'] . " , " 
-		  . $_REQUEST['recordings'] ."\n"; 
+		  . $_REQUEST['recordings'] ."\n"; */
 		  
 		  
 		  fwrite($fh, $v);
