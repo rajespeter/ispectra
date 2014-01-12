@@ -33,7 +33,7 @@ require_once("./includes/initialize.php"); ?>
                 <p> Registration Fees:  <br /> 
                     refreshments and materials  <br />
                     Adult On-Line Registration fees:<br />
-                    Prior to TBD: &nbsp; TBD per person <br/>
+                    Prior to March 16 2014: &nbsp; $99 per person <br/>
                     TBD<br/>
                     TBD and<br/>
                     Adult Registration At the door:    &nbsp; $99 per person<br/>
