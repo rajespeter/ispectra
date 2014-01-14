@@ -650,7 +650,7 @@ function render_basic_form ()
 	  </tr> 
 	  	  <tr>     
 		  <td><label  for='comments'>Comments</label></td>
-		  <td > <textarea class='textbox' cols='50'>
+		  <td > <textarea class='textbox' name='comments' cols='50'>
 		  </textarea> </td>
 	  </tr>
   </table>

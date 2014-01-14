@@ -213,9 +213,9 @@ echo "<div class='nav'>
     if (isset($_POST['address2']) ) {$full_address .= "," . $_POST['address2']; } 
     $full_phone_number = $_POST['night_phone_a'] . "-" . $_POST['night_phone_b'] . "-" . $_POST['night_phone_c'];
     $reg_date =  date('m-d-y - H:m:s');
-    
-    $myFile="/Library/WebServer/Documents/order.log"; // file with information about person who is paying
-		$fh = fopen($myFile, 'a') or die("can't open file");
+       $myFile=LOG_FILE."/order.log";
+		
+     	$fh = fopen($myFile, 'a') or die("can't open file");
 		
 		$v = "["  . $reg_date  . "],  " 
 		. $_POST['first'] . " " 

@@ -256,21 +256,25 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  $fh = fopen($myFile, 'a') or die("can't open file");
         print_r(error_get_last());
 		  
-		  $v = "["  . $reg_date  . "]";
-		  /*,  " 
-		  . $_REQUEST['agency_name'] . ",  " 
-		  . $_REQUEST['ag_address1'] . ",  " 
-		  . $_REQUEST['ag_address2'] . " , " 
-		  . $_REQUEST['ag_city'] . " , " 
-		  . $_REQUEST['ag_state'] . " , " 
-		  . $_REQUEST['ag_zip'] . " , " 
-		  . $_REQUEST['ag_night_phone_a'] . "-" . $_REQUEST['ag_night_phone_b'] . "-" . $_REQUEST['ag_night_phone_c'] . " , " 
-		  . $_REQUEST['ag_email'] . " , " 
-		  . $_REQUEST['first_name'] . ",  "
+	$v = "["  . $reg_date  . "],  " 
+		 . $_REQUEST['first_name'] . ",  " 
+		  . $_REQUEST['last_name'] . ",  " 
+		  . $_REQUEST['contact_number'] . " , " 
+		  . $_REQUEST['address1'] . " , " 
+		  . $_REQUEST['address2'] . " , " 
+		  . $_REQUEST['city'] . " , " 
+		  . $_REQUEST['zip'] . " , " 
+		  . $_REQUEST['email'] . ",  "
 		  . $_REQUEST['last_name'] . " , "
-		  . $_REQUEST['adultchild'] . " , " 
-		  . $_REQUEST['email'] . " , " 
-		  . $_REQUEST['recordings'] ."\n"; */
+		  . $_REQUEST['recordings'] . " , " 
+		  . $_REQUEST['adult'] . " , " 
+		  . $_REQUEST['church'] . " , " 
+		  . $_REQUEST['t_coupon'] . " , " 
+		  . $_REQUEST['ethinicity'] . " , " 
+		  . $_REQUEST['primary_language'] . " , " 
+		  . $_REQUEST['secondary_language'] . " , " 
+		  . $_REQUEST['trans_language'] . " , " 
+		  . $_REQUEST['comments'] ."\n"; 
 		  
 		  
 		  fwrite($fh, $v);
