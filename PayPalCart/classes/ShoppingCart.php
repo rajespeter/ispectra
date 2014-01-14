@@ -8,7 +8,7 @@ class ShoppingCart {
     
 	public function AddCoupon($coupon){
 		$this->coupons += $coupon ;
-	    
+	  
 	}
 	public function GetCoupon(){
 		return $this->coupons;
