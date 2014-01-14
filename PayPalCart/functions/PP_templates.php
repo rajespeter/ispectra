@@ -42,7 +42,7 @@ function render_footer() {
 
      <div id="footer">
          <p  align="center"> 
-             <a href="../../sindex.php" title="Engage Home page"> Return to Registration Home page </a>
+             <a href="../../registration.php" title="iSpectra Home page"> Return to Registration Home page </a>
              </p>
         <p >&copy; iSpectra &nbsp;&nbsp; 
         <a href="../../privacy.htm" target="_blank" >Privacy Policy</a> | 
@@ -609,7 +609,7 @@ function render_basic_form ()
 		  Child<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'CHILD' /></td>                          
 	  </tr-->
 	  <tr>
-		  <td><label class='field' for='church'>Church,Organization Name </label></td>
+		  <td><label class='field' for='church'>Church, Org. Name </label></td>
 		  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
 	  </tr> 
 	  
@@ -631,16 +631,16 @@ function render_basic_form ()
 		  <td > <input class='textbox' type='text' name='ethinicity' id='ethinicity' size='30' value= '' /></td>
 	  </tr>
 	  <tr>     
-		  <td><label  for='primary_language'>Primary Language</label></td>
+		  <td><label  for='primary_language'>Primary Lang.</label></td>
 		  <td > <input class='textbox' type='text' name='primary_language' id='primary_language' size='30' value= '' /></td>
 	  </tr>
 	  	  <tr>     
-		  <td><label  for='secondary_language'>Secondary Language</label></td>
+		  <td><label  for='secondary_language'>Secondary Lang.</label></td>
 		  <td > <input class='textbox' type='text' name='secondary_language' id='secondary_language' size='30' value= '' /></td>
 	  </tr>
 	   </tr>
 	  	  <tr>     
-		  <td><label  for='trans_language'>Translation language()</label></td>
+		  <td><label  for='trans_language'>Translation Lang.</label></td>
 		  <td > <input class='textbox' type='text' name='trans_language' id='t_language' size='30' value= '' /></td>
 	  </tr>
     </tr>

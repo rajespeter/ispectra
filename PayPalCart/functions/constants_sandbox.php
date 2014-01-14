@@ -16,9 +16,9 @@ define('EXHIBITORS_XML_FILE' , '../exhibitors_catalog.xml');
 define('GROUP_XML_FILE' , '../group_catalog.xml');
 define('PAYPAL_BUSINESS_VALUE' , 'engageseller@yahoo.com');
 define('PAYPAL_FORM_URL', 'https://www.sandbox.paypal.com/cgi-bin/webscr' );
-define('PAYPAL_IPN_RETURN_URL', 'https://www.mynetglobal.com/PayPalCart/html/my_ipn.php');
-define('PAYPAL_CHECKOUT_COMPLETE_URL', 'http://www.mynetglobal.com/engageforgod/registration.php?clear=1');
-define('PAYPAL_CANCEL_CHECKOUT_URL', 'http://www.mynetglobal.com/PayPalCart/html/clearCart.php?clear=1');
+define('PAYPAL_IPN_RETURN_URL', 'http://cooperfam.org/ispectra/PayPalCart/html/my_ipn.php');
+define('PAYPAL_CHECKOUT_COMPLETE_URL', 'http://cooperfam.org/ispectra/registration/registration.php?clear=1');
+define('PAYPAL_CANCEL_CHECKOUT_URL', 'http://cooperfam.org/ispectra/PayPalCart/html/clearCart.php?clear=1');
 
 
 ?>

@@ -96,10 +96,10 @@ $req = str_replace("&", "\n", $req);  // Make it a nice list in case we want to 
 // Check that the result verifies
 //if (strpos($curl_result, "VERIFIED") !== FALSE) {
     $req .= "\n\nPaypal Verified OK";
-    mail("dlindert@yahoo.com", "IPN interaction verified", "$req", "From: dlindert@yahoo.com" );
+    mail("dlindert@yahoo.com,rajeshpeter@gmail.com", "IPN interaction verified", "$req", "From: dlindert@yahoo.com" );
 }  else if (strcmp ($curl_res, "INVALID") == 0) {//else {
     $req .= "\n\nData NOT verified from Paypal!";
-    mail("dlindert@yahoo.com", "IPN interaction not verified", "$req", "From: dlindert@yahoo.com" );
+    mail("dlindert@yahoo.com,rajeshpeter@gmail.com", "IPN interaction not verified", "$req", "From: dlindert@yahoo.com" );
     exit();
 }
 

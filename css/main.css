@@ -33,7 +33,7 @@
 }
 
 body {
-	font: 1em/1.5em "Trebuchet MS", sans-serif;
+	font: 1em/1.5em 'Open Sans', arial;
 	/*background: #ffcc33;*/
  
   background: -webkit-linear-gradient( #ffcc00, #ffffcc);

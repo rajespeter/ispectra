@@ -139,11 +139,11 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				  </td>
 			  </tr>	  
 			  <tr>
-				  <td><label class='field' for='church'>Church,Organization Name</label></td>
+				  <td><label class='field' for='church'>Church,Org. Name</label></td>
 				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
 			  </tr> 
 			    <tr>     
-		  <td><label class='required' for='recordings'> &nbsp;&nbsp;&nbsp; * Register For (atleast one) </label></td>
+		  <td><label class='required' for='recordings'> &nbsp;&nbsp;&nbsp; * Register For </label></td>
 		  <td colspan=2 >
 		  <table >
 		   <tr>     
@@ -158,7 +158,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		   			if (!empty($recordings)) {$output .=  $checked;}
 		  			$output .=  "
 		  			/>
-		  	  </td>   
+		  	  </td> 
+		  	   
+		   
 		   </tr>
 		   </table>
 	  </tr>
@@ -185,15 +187,15 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				  <td > <input class='textbox' type='text' name='ethinicity' id='ethinicity' size='30' value= '$ethinicity' /></td>
 			  </tr>
 			  <tr>     
-				  <td><label   class='field' for='primary_language'>Primary Language</label></td>
+				  <td><label   class='field' for='primary_language'>Primary Lang.</label></td>
 				  <td > <input class='textbox' type='text' name='primary_language' id='primary_language' size='30' value= '$primary_language' /></td>
 			  </tr>
 			  	  <tr>     
-				  <td><label  class='field' for='secondary_language'>Secondary Language</label></td>
+				  <td><label  class='field' for='secondary_language'>Secondary Lang.</label></td>
 				  <td > <input class='textbox' type='text' name='secondary_language' id='secondary_language' size='30' value='$secondary_language' /></td>
 			  </tr>
 			  <tr>     
-				  <td><label  class='field' for='trans_language'>Translation language()</label></td>
+				  <td><label  class='field' for='trans_language'>Translation Lang.</label></td>
 				  <td > <input class='textbox' type='text' name='trans_language' id='t_language' size='30' value= '$trans_language' /></td>
 			  </tr>
 		    </tr>
