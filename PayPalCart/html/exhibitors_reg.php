@@ -198,7 +198,9 @@ if(isset($ag_email_address) && ($email_error == '1'))
     $ag_email_address = !empty($_POST['ag_email']) ? $_POST['ag_email'] : "";   
                 
     $reg_date =  date('m,d,y - H:m:s');
-    $myFile="./registration.log";
+    
+	$myFile=LOG_FILE."/e_registration.log";
+    echo $myFile;
     $fh = fopen($myFile, 'a') or die("can't open file");
     
     $v = "["  . $reg_date  . "],  " 

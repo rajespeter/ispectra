@@ -4,7 +4,7 @@
 require_once("./includes/initialize.php"); ?>
   
 <?php include_layout_template('header.php'); ?>         
-         <div id="content">
+    
     
      <div id="leftContent"> 
     
@@ -60,6 +60,9 @@ require_once("./includes/initialize.php"); ?>
                    <hr />
        
                <br/>
+                      <p>Fee non-refundable after TBD receipt for donation only issued upon request.</p>
+          <hr />
+           
                <p>For questions regarding registration contact <br/>
                     By E-mail: somone@nowhere.org <br/>
                 By Phone:   xxx-xxx-xx </p>
@@ -80,7 +83,7 @@ require_once("./includes/initialize.php"); ?>
              <p align="center" ><a href='./PayPalCart/html/processGroup.php?id=HOST' target="">Host Church</a>   </p>
                 <p><br /></p-->  
          </div> <!-- content -->
-</div> <!-- outerDiv -->
+ 
 
  
                          <!--            </td>

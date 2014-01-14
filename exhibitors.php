@@ -20,7 +20,7 @@ require_once("./includes/initialize.php"); ?>
                 Delegate Registration Includes: <br/> 
                   SATURDAY lunch, refreshments and materials </p>
 
-            <p> Exhibit fee:  &nbsp; $100    </p>
+            <p> Exhibit fee:  &nbsp; $200    </p>
             
         <p align="center" ><a href="./PayPalCart/html/exhibitors_reg.php?id=EXHIBITOR" target="_blank">
         Register On-Line </a> </p>

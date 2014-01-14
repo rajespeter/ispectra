@@ -37,10 +37,10 @@ body {
 	/*background: #ffcc33;*/
  
   background: -webkit-linear-gradient( #ffcc00, #ffffcc);
-   /*background:    -moz-linear-gradient(#ffcc00, #ffffcc);
+  /* background:    -moz-linear-gradient(#ffcc00, #ffffcc);
   background:     -ms-linear-gradient(#ffcc00, #ffffcc);
   background:      -o-linear-gradient(#ffcc00, #ffffcc);*/
-  background:         linear-gradient( to right, #ffcc00, #ffffcc);
+   background:         linear-gradient( to right,#99D0DD , #00A6C7 );
 	/*background: #C4DC36 url(../images/Engage-heading_bkgd.png) repeat fixed;*/
 	margin: 0; /* shorthand for all margins = 0 */
 	padding: 0;
@@ -505,14 +505,14 @@ nav .currentpg, a:hover.currentpg {
 #centerContent h1 {
 	font-size: 1.6em;
 	font-weight: bold;
-	color: #060;
+	color: #0266C8;
 	margin: 0 0 .4ex 0;
 }
 
 #centerContent h2 {
 	font-size: 1.4em;
 	font-weight: bold;
-	color: #060;
+	color: #0266C8;
 	margin: .4ex 0;
 }
 
@@ -525,7 +525,7 @@ nav .currentpg, a:hover.currentpg {
 }
 #centerContent h3 {
 	font-size: 1.3em;
-	color: #055d33;
+	color: #012592;
 	text-align: center;
 	font-weight: bold;
 }
@@ -600,7 +600,7 @@ nav .currentpg, a:hover.currentpg {
 .prgDesc h3 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 1.6em;
-	color: #060;
+	color: #0266C8;
 	border-bottom: 1px solid #344;
 	padding-bottom: 0.2em;
 	padding-left: 0.5em;
@@ -679,7 +679,7 @@ nav .currentpg, a:hover.currentpg {
 #leftContent h1 {
 	font-size: 1.6em;
 	font-weight: bold;
-	color: #060;
+	color: #0266C8;
 	margin: 0 0 .4ex 0; /*  0 0 .4ex 0  */
 	
 }
@@ -687,7 +687,7 @@ nav .currentpg, a:hover.currentpg {
 #leftContent h2 {
 	font-size: 1.4em;
 	font-weight: bold;
-	color: #060;
+	color: #0266C8;
 	margin: .4ex 0; /* .4ex 0  */
 }
 
@@ -700,7 +700,7 @@ nav .currentpg, a:hover.currentpg {
 }
 #leftContent h3 {
 	font-size: 1.3em;
-	color: #055d33;
+	color: #0266C8;
 	text-align: center;
 	font-weight: bold;
 }
@@ -777,7 +777,7 @@ nav .currentpg, a:hover.currentpg {
 #ex {
 	font-size: smaller;
 	padding: 10px;
-	border: 5px solid gray;
+	border: 1px solid gray;
 	background-color: transparent;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -850,7 +850,7 @@ nav .currentpg, a:hover.currentpg {
 .programDesc h3 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 1.6em;
-	color: #060;
+	color: #0266C8;
 	border-bottom: 1px solid #344;
 	padding-bottom: 0.2em;
 	padding-left: 0.5em;
@@ -944,7 +944,7 @@ nav .currentpg, a:hover.currentpg {
 #floatRight a {
 	font-size: 1.2em;
 	background: #FFFFFF;
-	color: #060;
+	color: #0266C8;
 	
 	min-width: 250px;
 }
@@ -1026,7 +1026,7 @@ nav .currentpg, a:hover.currentpg {
 #sideBar a {
 	font-size: 1.1em;
 	background: #FFFFFF;
-	color: #060;
+	color: #0266C8;
 	border-style: none;
 	width: 100px;
 }

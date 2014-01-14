@@ -19,7 +19,7 @@
                    <a href="registration.php" title="Details of the Program">Register for conference/Ethnic training</a> 
                 </li>
                  <li>
-                   <a href="exhibitors.php"  title="Details on the workshops">Register as Exibitor</a> 
+                   <!--a href="exhibitors.php"  title="Details on the workshops">Register as Exibitor</a--> 
                 </li>
                 
  				<li>
