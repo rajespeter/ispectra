@@ -42,6 +42,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
     $email_address = !empty($_POST['email']) ? $_POST['email'] : "";
     $adult_child = !empty($_POST['adultchild']) ? $_POST['adultchild'] : "";
     $recordings = !empty($_POST['recordings']) ? $_POST['recordings'] : "";
+    $adult = !empty($_POST['adult']) ? $_POST['adult'] : "";
     $church = !empty($_POST['church']) ? $_POST['church'] : "";
 	$t_coupon= !empty($_POST['t_coupon']) ? $_POST['t_coupon'] : "";
 	$ethinicity= !empty($_POST['ethinicity']) ? $_POST['ethinicity'] : "";
@@ -50,18 +51,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 	$trans_language= !empty($_POST['trans_language']) ? $_POST['trans_language'] : "";
 	$comments= !empty($_POST['comments']) ? $_POST['comments'] : "";
 
-//if the user enters blank coupon dont check 
-//if the user enters valid coupon then  chk
-
-// the check will return a postive value if passes and will return a negative value if fails
-
-//if returns negative value then registration validation fails
-
-//
-
-	//blank coupon  "required feilds"
-	//invalid coupon "required feilds if blank and "
-	//correct coupon
+ 
 	  $coupon_row=-1;
 	    if (!empty($_POST['t_coupon']))
 		{
@@ -88,6 +78,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
         empty($_POST['contact_number'])||
         empty($_POST['adultchild']) ||
         empty($_POST['email']) ||
+        (empty($_POST['adult']) && empty($_POST['recordings'])) ||
         (!empty($_POST['t_coupon']) && ( $coupon_value < 0)) ||
         (!empty($_POST['email']) && ($email_error == '1')))
        {
@@ -151,13 +142,27 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				  <td><label class='field' for='church'>Church,Organization Name</label></td>
 				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
 			  </tr> 
-			  <tr>     
-				  <td ><label class='field' for='recordings'>Add Ethnic Training for $30 </label></td>
-				  <td align='left'> <input class='' type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' "; 
+			    <tr>     
+		  <td><label class='required' for='recordings'> &nbsp;&nbsp;&nbsp; * Register For (atleast one) </label></td>
+		  <td colspan=2 >
+		  <table >
+		   <tr>     
+		   <td><label for='recordings'>Participant $ 99</label></td>
+		     <td align='left'> <input class='' type='checkbox' name='adult' id='adult' size='25' value='adult' "; 
+		   			if (!empty($adult)) {$output .=  $checked;}
+		  			$output .=  "
+		  	  />
+	      
+		   	  <td ><label  for='recordings'> &nbsp;&nbsp;&nbsp; Ethnic Training $30 </label></td>
+			  <td align='left'> <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' "; 
 		   			if (!empty($recordings)) {$output .=  $checked;}
 		  			$output .=  "
-		  			/></td>                          
-		  		</tr>
+		  			/>
+		  	  </td>   
+		   </tr>
+		   </table>
+	  </tr>
+			
 			
 		      <tr>
 				  <td ><label class='required'  class='field' for='email'>* Email Address</label></td>
@@ -277,19 +282,21 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		    $shopping_cart->AddCouponCode($t_coupon); //sum that up in session
 		    set_shopping_cart($shopping_cart);  
 		  }
-		
-        if ($adult_child === 'ADULT')
-            {
-                $product_id =    'ADULT';
-                $shopping_cart->AddItem($product_id);
-                set_shopping_cart($shopping_cart);  
-            }
-        if ($adult_child === 'CHILD')
-            {
-                $product_id = 'CHILD';
-                $shopping_cart->AddItem($product_id);
-                set_shopping_cart($shopping_cart);  
-            }
+		 echo $adult;
+		if ($adult === 'adult'){
+	        if ($adult_child === 'ADULT')
+	            {
+	                $product_id =    'ADULT';
+	                $shopping_cart->AddItem($product_id);
+	                set_shopping_cart($shopping_cart);  
+	            }
+	        if ($adult_child === 'CHILD')
+	            {
+	                $product_id = 'CHILD';
+	                $shopping_cart->AddItem($product_id);
+	                set_shopping_cart($shopping_cart);  
+	            }
+		}
       /*  if ($recordings === 'RECORDINGS')
             {
                 $product_id = 'RECORDINGS';

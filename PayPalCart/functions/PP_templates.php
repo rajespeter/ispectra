@@ -613,9 +613,19 @@ function render_basic_form ()
 		  <td><label class='field' for='church'>Church,Organization Name </label></td>
 		  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
 	  </tr> 
+	  
 	  <tr>     
-		  <td><label class='field' for='recordings'>Add Ethnic Training for $30 </label></td>
-		  <td > <input class='' type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' /></td>
+		  <td><label for='recordings'> &nbsp;&nbsp;&nbsp; * Register For  </label></td>
+		  <td colspan=2 ><table border=1>
+		  <tr>     
+		   <td><label for='recordings'>Participant $ 99</label></td>
+		   <td > <input type='checkbox' name='adult' id='adult' size='25' value='adult' checked /> </td>
+	      
+		   <td><label  for='recordings'>&nbsp;&nbsp;&nbsp;Ethnic Training for $30 </label></td>
+		   <td>
+		   <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' /></td>
+		   </tr>
+		   </table>
 	  </tr>
 	  <tr>     
 		  <td><label  for='ethinicity'>Ethinicity</label></td>
