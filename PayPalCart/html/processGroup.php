@@ -282,8 +282,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		    $shopping_cart->AddCouponCode($t_coupon); //sum that up in session
 		    set_shopping_cart($shopping_cart);  
 		  }
-		 echo $adult;
-		if ($adult === 'adult'){
+ 		if ($adult === 'adult'){
 	        if ($adult_child === 'ADULT')
 	            {
 	                $product_id =    'ADULT';

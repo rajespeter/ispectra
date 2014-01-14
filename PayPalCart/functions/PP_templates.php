@@ -288,8 +288,7 @@ if ($formcpn==1) {
         $output .= render_shopping_cart_row($shopping_cart, $product_id, $line_item_counter);
         $line_item_counter++; 
     }
-	print_r($coupon_value);
-    if ($coupon_value>0) { //if not -1
+     if ($coupon_value>0) { //if not -1
     	 
     		
 	   $output .= "
