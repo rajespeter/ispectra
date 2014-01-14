@@ -147,13 +147,13 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  <td colspan=2 >
 		  <table >
 		   <tr>     
-		   <td><label for='recordings'>Participant $ 99</label></td>
+		   <td><label for='recordings'>Conference $99&nbsp;</label></td>
 		     <td align='left'> <input class='' type='checkbox' name='adult' id='adult' size='25' value='adult' "; 
 		   			if (!empty($adult)) {$output .=  $checked;}
 		  			$output .=  "
 		  	  />
 	      
-		   	  <td ><label  for='recordings'> &nbsp;&nbsp;&nbsp; Ethnic Training $30 </label></td>
+		   	  <td ><label  for='recordings'> &nbsp;&nbsp;&nbsp; Ethnic Training $30&nbsp;</label></td>
 			  <td align='left'> <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' "; 
 		   			if (!empty($recordings)) {$output .=  $checked;}
 		  			$output .=  "

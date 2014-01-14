@@ -618,10 +618,10 @@ function render_basic_form ()
 		  <td><label for='recordings'> &nbsp;&nbsp;&nbsp; * Register For  </label></td>
 		  <td colspan=2 ><table border=1>
 		  <tr>     
-		   <td><label for='recordings'>Participant $ 99</label></td>
+		   <td><label for='recordings'>Conference $99&nbsp;</label></td>
 		   <td > <input type='checkbox' name='adult' id='adult' size='25' value='adult' checked /> </td>
 	      
-		   <td><label  for='recordings'>&nbsp;&nbsp;&nbsp;Ethnic Training for $30 </label></td>
+		   <td><label  for='recordings'>&nbsp;&nbsp;&nbsp;Ethnic Training $30&nbsp;</label></td>
 		   <td>
 		   <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' /></td>
 		   </tr>

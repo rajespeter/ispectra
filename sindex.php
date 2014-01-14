@@ -16,14 +16,14 @@
                   </li>-->
              
                 <li>
-                   <a href="registration.php" title="Details of the Program">Register as participant</a> 
+                   <a href="registration.php" title="Details of the Program">Register for conference/Ethnic training</a> 
                 </li>
                  <li>
                    <a href="exhibitors.php"  title="Details on the workshops">Register as Exibitor</a> 
                 </li>
                 
  				<li>
-                   <a href="tobedone.php"  title="Details on the workshops">Ethnographic training</a> 
+                   <!--a href="tobedone.php"  title="Details on the workshops">Ethnographic training</a--> 
                 </li>
                               
             </ul>
