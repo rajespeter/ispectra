@@ -18,12 +18,6 @@ require_once('../classes/ShoppingCart.php');
 // Functions
 session_start();
  
-if(isset($_SESSION['gcode']) && !empty($_SESSION['gcode'])) 
-{
-   $_SESSION['gcode']=rand(1,100);
-   echo "session". $_SESSION['gcode'];
-}
- 
 
 function get_xml_catalog() {
     return new SimpleXMLElement(file_get_contents(REGULAR_XML_FILE));
