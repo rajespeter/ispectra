@@ -254,37 +254,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
         {  //if form is complete, all required fields done and correct, then add the item or items to shopping cart
 		
 		// first log info about who is being registered also used by exhibitor registration for person attending
-		  $reg_date =  date('m-d-y - H:m:s');
-		   $myFile=LOG_FILE."/registration.log";
-		  $fh = fopen($myFile, 'a') or die("can't open file");
-        print_r(error_get_last());
-		  
-	$v = "["  . $reg_date  . "],  " 
-		 . $_REQUEST['first_name'] . ",  " 
-		  . $_REQUEST['last_name'] . ",  " 
-		  . $_REQUEST['contact_number'] . " , " 
-		  . $_REQUEST['address1'] . " , " 
-		  . $_REQUEST['address2'] . " , " 
-		  . $_REQUEST['city'] . " , " 
-		  . $_REQUEST['zip'] . " , " 
-		  . $_REQUEST['country'] . " , " 
-		  . $_REQUEST['email'] . ",  "
-		  . $_REQUEST['last_name'] . " , "
-		  . $_REQUEST['recordings'] . " , " 
-		  . $_REQUEST['adult'] . " , " 
-		  . $_REQUEST['church'] . " , " 
-		  . $_REQUEST['t_coupon'] . " , " 
-		  . $_REQUEST['ethinicity'] . " , " 
-		  . $_REQUEST['primary_language'] . " , " 
-		  . $_REQUEST['secondary_language'] . " , " 
-		  . $_REQUEST['trans_language'] . " , " 
-		  . $_REQUEST['comments'] ."\n"; 
-		  
-		  
-		  fwrite($fh, $v);
-		  fclose($fh);
-        
- 		 
+		 
 		 if ( $coupon_value >0) { //it is a valid coupon get the value
 		    $shopping_cart->AddCoupon($coupon_value); //sum that up in session
 		    $shopping_cart->AddCouponCode($t_coupon); //sum that up in session
@@ -312,12 +282,41 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
             }*/ 
             //since we yanked the code from engage we are using recording logic of ethno training
             
-		    if ($recordings === 'RECORDINGS')
+		    if ($recordings === 'ETRAIN')
             {
                 $product_id = 'ETRAIN';
                 $shopping_cart->AddItem($product_id);
                 set_shopping_cart($shopping_cart);  
             }
+		    $myFile=LOG_FILE."/registration.log";
+		  $fh = fopen($myFile, 'a') or die("can't open file");
+        print_r(error_get_last());
+		  
+	  $v= $_REQUEST['first_name'] . "~  " 
+		  . $_REQUEST['last_name'] . "~  " 
+		  . $_REQUEST['contact_number'] . " ~ " 
+		  . $_REQUEST['address1'] . " ~ " 
+		  . $_REQUEST['address2'] . " ~ " 
+		  . $_REQUEST['city'] . " ~ " 
+		  . $_REQUEST['zip'] . " ~ " 
+		  . $_REQUEST['country'] . " ~ " 
+		  . $_REQUEST['email'] . "~  "
+		  . $_REQUEST['recordings'] . " ~ " 
+		  . $_REQUEST['adult'] . " ~ " 
+		  . $_REQUEST['church'] . " ~ " 
+		  . $_REQUEST['t_coupon'] . " ~ " 
+		  . $_REQUEST['ethinicity'] . " ~ " 
+		  . $_REQUEST['primary_language'] . " ~ " 
+		  . $_REQUEST['secondary_language'] . " ~ " 
+		  . $_REQUEST['trans_language'] . " ~ " 
+		  . $_REQUEST['comments'] . " ~ " 
+		  . session_id()  ."\n"; 
+		  
+		 
+		  fwrite($fh, $v);
+		  fclose($fh);
+        
+ 		 insert_register($v); //db insert
 		
         echo render_shopping_cart_coupon($shopping_cart);  
         echo "<div class='nav' align='center'>

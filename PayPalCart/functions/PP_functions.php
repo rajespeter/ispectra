@@ -268,4 +268,51 @@ function valid_coupon($codes){
 }
 
 
+function insert_register($reg_row){
+	
+
+ 
+    $id = "'".str_replace("~","','",$reg_row) ."'";//this will break if they enter a , some where
+    $sql ="INSERT INTO `register`( `first_name`,
+                       `last_name`, 
+                       `contact_number`,
+                       `address1`,
+                       `address2`, 
+                       `city`, 
+                       `zip`, 
+		               `country`, 
+                       `email`, 
+                       `etrain`, 
+                       `adult`, 
+                       `church`, 
+                       `coupon`, 
+                       `ethinicity`, 
+                       `primary_language`,
+                       `secondary_language`, 
+                       `trans_language`, 
+                       `comments` ,
+                       `gcode`) VALUES ($id)";
+	  
+	error_log($sql);// $sql) ;//remove later
+	//echo $sql;
+    global $mysqli;
+	if ($stmt = $mysqli->prepare($sql))
+     {
+        $stmt->execute();
+        $stmt->store_result();
+        
+       
+		/* close statement and connection */
+		$stmt->close();
+
+		/* close connection */
+		//$mysqli->close();
+    }
+    else
+    {
+        error_log('Could not prepare MySQLi statement.');
+    }
+	}
+ 
+
 ?>

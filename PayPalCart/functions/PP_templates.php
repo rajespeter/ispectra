@@ -622,7 +622,7 @@ function render_basic_form ()
 	      
 		   <td><label  for='recordings'>&nbsp;&nbsp;&nbsp;Ethnic Training $30&nbsp;</label></td>
 		   <td>
-		   <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' /></td>
+		   <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' /></td>
 		   </tr>
 		   </table>
 	  </tr>
