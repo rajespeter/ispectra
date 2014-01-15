@@ -292,25 +292,25 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  $fh = fopen($myFile, 'a') or die("can't open file");
         print_r(error_get_last());
 		  
-	  $v= $_REQUEST['first_name'] . "~  " 
-		  . $_REQUEST['last_name'] . "~  " 
-		  . $_REQUEST['contact_number'] . " ~ " 
-		  . $_REQUEST['address1'] . " ~ " 
-		  . $_REQUEST['address2'] . " ~ " 
-		  . $_REQUEST['city'] . " ~ " 
-		  . $_REQUEST['zip'] . " ~ " 
-		  . $_REQUEST['country'] . " ~ " 
-		  . $_REQUEST['email'] . "~  "
-		  . $recordings . " ~ " 
-		  . $adult . " ~ " 
-		  . $_REQUEST['church'] . " ~ " 
-		  . $_REQUEST['t_coupon'] . " ~ " 
-		  . $_REQUEST['ethinicity'] . " ~ " 
-		  . $_REQUEST['primary_language'] . " ~ " 
-		  . $_REQUEST['secondary_language'] . " ~ " 
-		  . $_REQUEST['trans_language'] . " ~ " 
-		  . $_REQUEST['comments'] . " ~ " 
-		  . $shopping_cart->GetGcode()."\n"; 
+	  $v= $_REQUEST['first_name']."~" 
+		  .$_REQUEST['last_name']."~" 
+		  .$_REQUEST['contact_number']."~" 
+		  .$_REQUEST['address1']."~" 
+		  .$_REQUEST['address2']."~" 
+		  .$_REQUEST['city']."~" 
+		  .$_REQUEST['zip']."~" 
+		  .$_REQUEST['country']."~" 
+		  .$_REQUEST['email']."~"
+		  .$recordings."~" 
+		  .strtoupper($adult)."~" 
+		  .$_REQUEST['church']."~" 
+		  .$_REQUEST['t_coupon']."~" 
+		  .$_REQUEST['ethinicity']."~" 
+		  .$_REQUEST['primary_language']."~" 
+		  .$_REQUEST['secondary_language']."~ " 
+		  .$_REQUEST['trans_language']."~" 
+		  .$_REQUEST['comments']."~" 
+		  .$shopping_cart->GetGcode()."\n"; 
 		  
       
 		  fwrite($fh, $v);
