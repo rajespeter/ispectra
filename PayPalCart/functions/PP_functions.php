@@ -98,24 +98,7 @@ function product_exists($product_id)
 
 function get_shopping_cart() {
 	
-if (!isset($_SESSION['CREATED'])) {
-    $_SESSION['CREATED'] = time();
-} else if (time() - $_SESSION['CREATED'] > 3600) {
-    // session started more than 30 minutes ago
-   session_regenerate_id(true);    // change session ID for the current session an invalidate old session ID
-    $_SESSION['CREATED'] = time();  // update creation time
- 
 
- }
-
-if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 3600)) {
-    // last request was more than 30 minutes ago
-    session_unset();     // unset $_SESSION variable for the run-time 
-    session_destroy();   // destroy session data in storage
-     $shopping_cart->EmptyCart();
-    echo '<h2>Looks like you left  the page idle 60 minutes without txn,  Shopping Cart Emptied!</h2>';
-   
-}
     if (! isset($_SESSION['cart'])) {
         return new ShoppingCart();
     } else {

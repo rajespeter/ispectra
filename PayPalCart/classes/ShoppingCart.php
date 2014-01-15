@@ -5,13 +5,19 @@ class ShoppingCart {
     private $names = array();
     private $codes = array();
     private $coupons =0;
+	private $gcode=0;
     
 	public function AddCoupon($coupon){
+
 		$this->coupons += $coupon ;
 	  
 	}
 	public function GetCoupon(){
 		return $this->coupons;
+		
+	}
+	public function GetGcode(){
+		return $this->gcode;
 		
 	}
 	public function AddCouponCode($code){
@@ -42,6 +48,7 @@ class ShoppingCart {
             $this->items[$product_id] = $this->items[$product_id] + 1;
          else {
             $this->items[$product_id] = 1;
+			$this->gcode = rand(1,3000);
          }   
     }
     
@@ -107,6 +114,7 @@ class ShoppingCart {
         $this->names = array();
 		$this->coupons = 0;
 		$this->codes = array();
+		$this->code = 0;
    
     }
     

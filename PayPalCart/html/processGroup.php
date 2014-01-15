@@ -301,8 +301,8 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  . $_REQUEST['zip'] . " ~ " 
 		  . $_REQUEST['country'] . " ~ " 
 		  . $_REQUEST['email'] . "~  "
-		  . $_REQUEST['recordings'] . " ~ " 
-		  . $_REQUEST['adult'] . " ~ " 
+		  . $recordings . " ~ " 
+		  . $adult . " ~ " 
 		  . $_REQUEST['church'] . " ~ " 
 		  . $_REQUEST['t_coupon'] . " ~ " 
 		  . $_REQUEST['ethinicity'] . " ~ " 
@@ -310,9 +310,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  . $_REQUEST['secondary_language'] . " ~ " 
 		  . $_REQUEST['trans_language'] . " ~ " 
 		  . $_REQUEST['comments'] . " ~ " 
-		  . session_id()  ."\n"; 
+		  . $shopping_cart->GetGcode()."\n"; 
 		  
-		 
+      
 		  fwrite($fh, $v);
 		  fclose($fh);
         
