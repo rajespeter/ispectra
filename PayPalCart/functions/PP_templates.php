@@ -221,7 +221,7 @@ function render_shopping_cart(ShoppingCart $shopping_cart)
     <table class='shoppingCart' >
     <tr>
         <th>
-            Product ID TBD
+            Product ID 
         </th>
         <th>
             Quantity
@@ -268,7 +268,7 @@ if ($formcpn==1) {
     <table class='shoppingCart' >
     <tr>
         <th>
-            Product ID TBD
+            Product ID 
         </th>
         <th>
             Quantity
@@ -550,7 +550,7 @@ function render_basic_form ()
 {
 		
 	//invoking country function //
-	$coutput = countryArray("", "");
+	$coutput = countryArray("country", "country");
 	
     echo " 
     

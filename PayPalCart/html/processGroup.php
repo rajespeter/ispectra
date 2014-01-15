@@ -38,6 +38,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
     $address_second = !empty($_POST['address2']) ? $_POST['address2'] : "";     
     $city_name = !empty($_POST['city']) ? $_POST['city'] : "";   
     $state_name = !empty($_POST['state']) ? $_POST['state'] : "";   
+    $country = !empty($_POST['country']) ? $_POST['country'] : "";   
     $zip_code = !empty($_POST['zip']) ? $_POST['zip'] : "";    
     $email_address = !empty($_POST['email']) ? $_POST['email'] : "";
     $adult_child = !empty($_POST['adultchild']) ? $_POST['adultchild'] : "";
@@ -69,7 +70,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 
    
     $zip_error = (!preg_match('/^\d{5}(?:-\d{4})?$/', $zip_code));
-   	$coutput = countryArray("", "");
+   	$coutput = countryArray("country", "US");
 	
 
 	//check to see if all required items in form are complete and correct.       
@@ -266,6 +267,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  . $_REQUEST['address2'] . " , " 
 		  . $_REQUEST['city'] . " , " 
 		  . $_REQUEST['zip'] . " , " 
+		  . $_REQUEST['country'] . " , " 
 		  . $_REQUEST['email'] . ",  "
 		  . $_REQUEST['last_name'] . " , "
 		  . $_REQUEST['recordings'] . " , " 
