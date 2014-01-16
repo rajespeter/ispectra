@@ -7,7 +7,7 @@
 //test on sand box on real site
 
 // For Testing with PayPal real
-require_once ('constants_sandbox.php');
+require_once ('constants_live.php');
 
 /* Database */
 

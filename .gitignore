@@ -30,3 +30,5 @@ dreamhost.pub
 css/registration.log
 
 PayPalCart/html/constants_sandbox.php
+
+PayPalCart/functions/constants_live.php
