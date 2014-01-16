@@ -209,7 +209,7 @@ echo "<div class='nav'>
                     
                 </div>";  
                 
-    $full_address .=   $_POST['address1'];
+    $full_address =   $_POST['address1'];
     if (isset($_POST['address2']) ) {$full_address .= "," . $_POST['address2']; } 
     $full_phone_number = $_POST['night_phone_a'] . "-" . $_POST['night_phone_b'] . "-" . $_POST['night_phone_c'];
     $reg_date =  date('m-d-y - H:m:s');

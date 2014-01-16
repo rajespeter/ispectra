@@ -35,19 +35,22 @@ $curl_err = curl_error($ch);
 curl_close($ch);
 
 $req = str_replace("&", "\n", $req);  // Make it a nice list in case we want to email it to ourselves for reporting
+error_log("ipn request". $req);
 
 // Check that the result verifies
 if (strpos($curl_result, "VERIFIED") !== FALSE) {
     $req .= "\n\nPaypal Verified OK";
-    mail("dlindert@yahoo.com", "IPN interaction verified", "$req", "From: dlindert@yahoo.com" );
+    mail("rajeshpeter@gmail.com", "IPN interaction verified", "$req", "From: dlindert@yahoo.com" );
 } else {
     $req .= "\n\nData NOT verified from Paypal!";
-    mail("dlindert@yahoo.com", "IPN interaction not verified", "$req", "From: dlindert@yahoo.com" );
+    mail("rajeshpeter@gmail.com", "IPN interaction not verified", "$req", "From: dlindert@yahoo.com" );
     exit();
 }
 
 //this is from the other course on save the stuff into a log file
-    $myFile="./payments.log";
+
+   $myFile=LOG_FILE."/payments.log";
+		 
     $fh = fopen($myFile, 'a') or die("can't open file");
     
     $v =  $_POST['txn_id'] . $_POST['payment_status'] . " : [" . $_POST['payment_date'] . "] : "  . " subtotal:" . $_POST['mc_gross'] . $_POST['payer_email'] . "\n"; 

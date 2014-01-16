@@ -14,11 +14,17 @@ define('LOG_FILE' , '/Library/WebServer/Documents');
 define('REGULAR_XML_FILE' , '../regular_catalog.xml');
 define('EXHIBITORS_XML_FILE' , '../exhibitors_catalog.xml');
 define('GROUP_XML_FILE' , '../group_catalog.xml');
-define('PAYPAL_BUSINESS_VALUE' , 'engageseller@yahoo.com');
-define('PAYPAL_FORM_URL', 'https://www.sandbox.paypal.com/cgi-bin/webscr' );
-define('PAYPAL_IPN_RETURN_URL', 'http://cooperfam.org/ispectra/PayPalCart/html/my_ipn.php');
-define('PAYPAL_CHECKOUT_COMPLETE_URL', 'http://cooperfam.org/ispectra/registration/registration.php?clear=1');
-define('PAYPAL_CANCEL_CHECKOUT_URL', 'http://cooperfam.org/ispectra/PayPalCart/html/clearCart.php?clear=1');
 
+define('PAYPAL_BUSINESS_VALUE' , 'engageseller@yahoo.com');
+//define('PAYPAL_BUSINESS_VALUE' , 'rajeshpeter-facilitator@gmail.com');
+define('PAYPAL_FORM_URL', 'https://www.sandbox.paypal.com/cgi-bin/webscr' );
+
+define('PAYPAL_IPN_RETURN_URL', 'http://localhost/~Guest/ispectra/PayPalCart/html/my_ipn.php');
+define('PAYPAL_CHECKOUT_COMPLETE_URL', 'http://localhost/~Guest/ispectra/PayPalCart/html/clearCart.php?complete=1');
+define('PAYPAL_CANCEL_CHECKOUT_URL', 'http://localhost/~Guest/ispectra/PayPalCart/html/clearCart.php?clear=1');
+/*define('PAYPAL_IPN_RETURN_URL', 'http://cooperfam.org/ispectra/PayPalCart/html/my_ipn.php');
+define('PAYPAL_CHECKOUT_COMPLETE_URL', 'http://cooperfam.org/ispectra/registration.php?clear=1');
+define('PAYPAL_CANCEL_CHECKOUT_URL', 'http://cooperfam.org/ispectra/PayPalCart/html/clearCart.php?clear=1');
+*/
 
 ?>
