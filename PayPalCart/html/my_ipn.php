@@ -15,9 +15,9 @@ foreach ($_POST as $key => $value) {
 }
 // Now Post all of that back to PayPal's server using curl, and validate everything with PayPal
 // We will use CURL instead of PHP for this for a more universally operable script (fsockopen has issues on some environments)
-//$url = "https://www.sandbox.paypal.com/cgi-bin/webscr";
+$url = "https://www.sandbox.paypal.com/cgi-bin/webscr";
 
-$url = "https://www.paypal.com/cgi-bin/webscr";
+//$url = "https://www.paypal.com/cgi-bin/webscr";
 
 $curl_result=$curl_err='';
 $ch = curl_init();
