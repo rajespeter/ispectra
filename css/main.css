@@ -33,7 +33,7 @@
 }
 
 body {
-	font: 1em/1.5em 'Open Sans', arial;
+	/*font: 1em/1.5em 'Open Sans', arial;*/
 	/*background: #ffcc33;*/
  
   background: -webkit-linear-gradient( #ffcc00, #ffffcc);
@@ -108,15 +108,15 @@ p, h1, h2, h3, h4, h5, h6, li {
 
 a {
 	text-decoration: none;
-	color: #33F;
-	background-color: #fff;
+	/*color: #33F;*/
+	/*background-color: #fff;*/
 	padding: 0 2px;
-	border: 1px solid #FFC;
+	/*border: 1px solid #FFC;*/
 }
 
 a:hover, a:active {
-	color: #222;
-	border-bottom: 1px none #EFEFEF;
+	/*color: #222;
+	border-bottom: 1px none #EFEFEF;*/
 }
 
 .section {
@@ -205,8 +205,8 @@ input.btn:hover {
 	background: inherit;
 }
 nav {
-	background: #D5973C;
-	height: 2.3em;
+	/*background: #D5973C;*/
+	/*height: 2.3em;*/
 }
 
 nav select {
@@ -214,7 +214,7 @@ nav select {
 	}
 	
 nav select {
-	background: #FFCC66 ;
+	/*background: #FFCC66 ;*/
 	height: 2em;
 	width: 100%;
 	}	
@@ -227,7 +227,7 @@ nav ul, li {
 }
 
 nav ul {
-	background: #FFCC66 ;
+	/*background: #FFCC66 ;*/
 	height: 2em;
 	width: 100%;
 }
@@ -239,6 +239,7 @@ nav li a {
 	text-decoration: none;
 	background: inherit;
 }
+/*
 nav li a:hover {
 	background: #D5973C;
 	color: white;
@@ -271,7 +272,7 @@ nav .currentpg, a:hover.currentpg {
 	margin:0;
 	padding:0;
 	list-style:none;
-	/*float:left;*/
+	float:left;
 }
 
 .nav a {
@@ -1117,11 +1118,11 @@ nav .currentpg, a:hover.currentpg {
 }
 
 #footer a {
-	color: #10727b;
+	/*color: #10727b;*/
 	text-decoration: underline ;
 }
 #footer a:hover {
-	color: #660000 ;
+	/*color: #660000 ;*/
 	text-decoration: underline ;
 }
 

@@ -11,8 +11,10 @@ define('DS','/');
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
 
-define('SITE_ROOT','/Users/Guest/Sites/ispectra');
+//define('SITE_ROOT','/Users/Guest/Sites/ispectra');
 //define('SITE_ROOT','/home/bayareasummit/cooperfam.org/ispectra');
+define('SITE_ROOT','/Applications/MAMP/htdocs/ispectraignite.dev/ispectra');
+
 
 defined('SITE_ROOT') ? null : 
 	define('SITE_ROOT', DS.'Applications'.DS.'XAMPP'.DS.'xamppfiles'.DS.'htdocs'.DS.'harvestgroup'.DS.'engageforgod'); //change these to match your site

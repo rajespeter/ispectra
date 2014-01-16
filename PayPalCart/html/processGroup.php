@@ -377,6 +377,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['exhb_complete'])) 
 ?>
 
 <?php
-echo render_footer()
+echo render_footer();
+
 ?>
 

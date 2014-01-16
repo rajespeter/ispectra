@@ -1,5 +1,8 @@
 <?php
 function render_header($title = 'iSpectra Conference Registration') {
+    $header = file_get_contents('../../includes/header.php');
+    echo $header;
+/*
 return '
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -33,10 +36,18 @@ return '
             
     <div class="wrapper">
             
-';        
+';  */      
 } 
 
 function render_footer() {
+    echo '<p  align="center"> 
+             <a href="../../registration.php" title="iSpectra Registration"> Return to Registration </a>
+             </p>
+             <p>&nbsp;</p>';
+    $footer = file_get_contents('../../includes/footer.php');
+    echo $footer;
+
+    /*
      return '
          
 
@@ -56,7 +67,7 @@ function render_footer() {
 
  </body>
 
-</html>';
+</html>';  */
  }  
 
 
@@ -243,12 +254,12 @@ function render_shopping_cart(ShoppingCart $shopping_cart)
     }
      //$output .= render_shopping_cart_shipping_row($shopping_cart); 
       
-   	  $output .= render_shopping_cart_total_row($shopping_cart) ;
+      $output .= render_shopping_cart_total_row($shopping_cart) ;
        
   //  $output .= render_shopping_cart_total_row($shopping_cart);
     $output .= "
-    	  </table>
-		  ";
+          </table>
+          ";
 
     return $output;
 }
@@ -257,10 +268,10 @@ function render_shopping_cart_coupon(ShoppingCart $shopping_cart)//,$final remov
     $coupon_value = $shopping_cart->GetCoupon();//session call for total sum of coupon
     $coupon_codes = $shopping_cart->GetCouponCode();//session call for all the codes applies
     $code_array = implode("','", $coupon_codes)  ;  
-	$formcpn = -1;
-	
+    $formcpn = -1;
+    
 if ($formcpn==1) {
-	 $output="
+     $output="
     <form action='placeOrder.php' method='post' id='shoppingcart' >
        <input type='hidden' name='cform' value='cform' />";
        }
@@ -289,43 +300,43 @@ if ($formcpn==1) {
         $line_item_counter++; 
     }
      if ($coupon_value>0) { //if not -1
-    	 
-    		
-	   $output .= "
-    	
-		  <tr>
-			  <td colspan=2><label class='feild' for='first'> Coupon Applied</label></td>
- 			  <td ><label class='feild' for='first'>    '".$code_array ."' </label></td>
- 			  <td>
- 				   $ ".$coupon_value."	
-			  </td>
-		  </tr>
-		  ";
-		}
-	  $output .= render_shopping_cart_total_row($shopping_cart);
+         
+            
+       $output .= "
+        
+          <tr>
+              <td colspan=2><label class='feild' for='first'> Coupon Applied</label></td>
+              <td ><label class='feild' for='first'>    '".$code_array ."' </label></td>
+              <td>
+                   $ ".$coupon_value."  
+              </td>
+          </tr>
+          ";
+        }
+      $output .= render_shopping_cart_total_row($shopping_cart);
        
 
 if ($formcpn==1) {
    $output .= "
-    	
-		  <!--tr>
-			  <td colspan=2><label class='feild' for='first'>Enter Coupon Code</label></td>
-			  <td ><input class='textcpn' type='text' name='coupon' id='coupon'  size=10 value= '' /></td>
-			  <td>
-			  <input class='btn' type='submit' name='submit' value='Apply  Coupon'/> 
-			  </td>
-		  </tr-->
-		  
-		  </table>
-		  </form>";
+        
+          <!--tr>
+              <td colspan=2><label class='feild' for='first'>Enter Coupon Code</label></td>
+              <td ><input class='textcpn' type='text' name='coupon' id='coupon'  size=10 value= '' /></td>
+              <td>
+              <input class='btn' type='submit' name='submit' value='Apply  Coupon'/> 
+              </td>
+          </tr-->
+          
+          </table>
+          </form>";
 }else{
-		
-			 $output .= "
-				  </table>
-				  ";	
-	
-	
-			
+        
+             $output .= "
+                  </table>
+                  ";    
+    
+    
+            
 }
     return $output;
 }
@@ -353,8 +364,8 @@ function render_paypal_checkout(ShoppingCart $shopping_cart)
          echo "You have registered 5 or more Adults, the discout will be aplied when you go to pay";
      } else{
        
-       $discount_group = ($coupon_value > 0 )	? $coupon_value : 0;
-	    
+       $discount_group = ($coupon_value > 0 )   ? $coupon_value : 0;
+        
      }
      
      //echo "ADULTS = " . $quantity_adults; 
@@ -406,7 +417,7 @@ function render_paypal_checkout(ShoppingCart $shopping_cart)
         <input type='hidden' name='cancel_return' value='  " .PAYPAL_CANCEL_CHECKOUT_URL. "  '>
 
     <input type='image' src='https://www.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif' border='0' name='submit' 
-		alt='PayPal - The safer, easier way to pay online!'>
+        alt='PayPal - The safer, easier way to pay online!'>
     <img alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'>
 
 </form>";
@@ -417,64 +428,64 @@ function render_agency_form()
 {
     echo "
   <div>
-	<div class='section'>
-	  <form method='post' action='exhibitors_reg.php' id='add_names'>
-	  <h4> Please Fill in information about your organization </h4>
-	  <table cellpadding='4' align='center'>
-	  <tr>
-		<td><label class='required' for='agency'>* Your Agency or Organizations Name</label></td>
-		<td ><input class='textbox' type='text' name='agency_name' id='agency_name' size='25' value= '$agency_name' /></td>
-	   </tr>
-	   <tr>
-		<td><label class='required' for='address'>* Address Line 1</label></td>
-		<td ><input class='textbox' type='text' name='ag_address1' id='ag_address1' size='40' value='$ag_address_first'/></td>
-	  </tr>
-	  <tr>
-		<td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
-		<td ><input class='textbox' type='text' name='ag_address2' id='ag_address2' size='40' value='$ag_address_second'/></td>
-	  </tr>
-	  <tr>
-		<td><label class='required' for='city'>* City</label></td>
-		<td ><input class='textbox' type='text' name='ag_city' id='ag_city' size='40' value= '$ag_city_name'/></td>
-	  </tr>
-	  <tr>
-		<td><label class='required' for='state'>* State</label></td>
-		<td >
-			<input class='textbox' type='text' name='ag_state' id='ag_state' size='2' value= '$ag_state_name' />
-			<label class='required' for='zip'>&nbsp;&nbsp;<strong>* Zip</strong>&nbsp;</label>
-			<input class='textbox' type='text' name='ag_zip' id='ag_zip' size='10' value= '$ag_zip_code' />
-		</td>
-	  </tr>
-	  <tr>
-		<td><label class='required' for='phone'>* Phone</label></td>
-		<td >
-		<input class='textbox' type='text' name='ag_night_phone_a' id='ag_night_phone_a' size='3' value='$ag_phone_area_code'/>
-		<label class='field'>&nbsp;&nbsp;</label>
-		<input class='textbox' type='text' name='ag_night_phone_b' id='ag_night_phone_b' size='3'value='$ag_phone_prefix'/>
-		<label class='field'>&nbsp;&nbsp;</label>
-		<input class='textbox' type='text' name='ag_night_phone_c' id='ag_night_phone_c' size='4' 
-			value='$ag_phone_postfix'/></td>
-	  </tr>
-	  <tr>
-		  <td><label class='required' for='email'>* Email Address</label></td>
-		  <td ><input class='textbox' type='text' name='ag_email' id='ag_email' size='40' value= '$ag_email_address' /></td>
-	  </tr>                               
-	  <tr>                        
-	  </tr>
+    <div class='section'>
+      <form method='post' action='exhibitors_reg.php' id='add_names'>
+      <h4> Please Fill in information about your organization </h4>
+      <table cellpadding='4' align='center'>
+      <tr>
+        <td><label class='required' for='agency'>* Your Agency or Organizations Name</label></td>
+        <td ><input class='textbox' type='text' name='agency_name' id='agency_name' size='25' value= '$agency_name' /></td>
+       </tr>
+       <tr>
+        <td><label class='required' for='address'>* Address Line 1</label></td>
+        <td ><input class='textbox' type='text' name='ag_address1' id='ag_address1' size='40' value='$ag_address_first'/></td>
+      </tr>
+      <tr>
+        <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
+        <td ><input class='textbox' type='text' name='ag_address2' id='ag_address2' size='40' value='$ag_address_second'/></td>
+      </tr>
+      <tr>
+        <td><label class='required' for='city'>* City</label></td>
+        <td ><input class='textbox' type='text' name='ag_city' id='ag_city' size='40' value= '$ag_city_name'/></td>
+      </tr>
+      <tr>
+        <td><label class='required' for='state'>* State</label></td>
+        <td >
+            <input class='textbox' type='text' name='ag_state' id='ag_state' size='2' value= '$ag_state_name' />
+            <label class='required' for='zip'>&nbsp;&nbsp;<strong>* Zip</strong>&nbsp;</label>
+            <input class='textbox' type='text' name='ag_zip' id='ag_zip' size='10' value= '$ag_zip_code' />
+        </td>
+      </tr>
+      <tr>
+        <td><label class='required' for='phone'>* Phone</label></td>
+        <td >
+        <input class='textbox' type='text' name='ag_night_phone_a' id='ag_night_phone_a' size='3' value='$ag_phone_area_code'/>
+        <label class='field'>&nbsp;&nbsp;</label>
+        <input class='textbox' type='text' name='ag_night_phone_b' id='ag_night_phone_b' size='3'value='$ag_phone_prefix'/>
+        <label class='field'>&nbsp;&nbsp;</label>
+        <input class='textbox' type='text' name='ag_night_phone_c' id='ag_night_phone_c' size='4' 
+            value='$ag_phone_postfix'/></td>
+      </tr>
+      <tr>
+          <td><label class='required' for='email'>* Email Address</label></td>
+          <td ><input class='textbox' type='text' name='ag_email' id='ag_email' size='40' value= '$ag_email_address' /></td>
+      </tr>                               
+      <tr>                        
+      </tr>
   </table>
-	  <p class='required' align='center'>* Required field.</p>
-	  <p align='center'><input class='btn' type='submit' name='register' value='Register Your Agency' />  </p>       
-	  
-	  <p  align='center'>
-	  
-	  Or </p>
-	   <p class='nav' align='center'><a href='exh_clearCart.php?clear=1'>Cancel and Clear Cart</a>
-	  </p>    
-	</form> 
-			
-				
-	</div> 
-	
+      <p class='required' align='center'>* Required field.</p>
+      <p align='center'><input class='btn' type='submit' name='register' value='Register Your Agency' />  </p>       
+      
+      <p  align='center'>
+      
+      Or </p>
+       <p class='nav' align='center'><a href='exh_clearCart.php?clear=1'>Cancel and Clear Cart</a>
+      </p>    
+    </form> 
+            
+                
+    </div> 
+    
   </div>
   
   ";
@@ -484,62 +495,62 @@ function render_agency_form_completed()
 {
     echo "
   <div>
-	  <div class='section'>
-	  <form method='post' action='processGroup.php' id='add_names'>
-	  <h4> Please Fill in information about your organization </h4>
-	  <table cellpadding='4' align='center'>
-	  <tr>
-		<td><label class='required' for='agency'>* Your Agency or Organizations Name</label></td>
-		<td ><input class='textbox' type='text' name='agency_name' id='agency_name' size='25' value='$agency_name'/></td>
-	  </tr>
-	  <tr>
-		<td><label class='required' for='address'>* Address Line 1</label></td>
-		<td ><input class='textbox' type='text' name='ag_address1' id='ag_address1' size='40' value='$ag_address_first'/></td>
-	  </tr>
-	  <tr>
-		<td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
-		<td ><input class='textbox' type='text' name='ag_address2' id='ag_address2' size='40' value='$ag_address_second'/></td>
-	  </tr>
-	  <tr>
-		<td><label class='required' for='city'>* City</label></td>
-		<td ><input class='textbox' type='text' name='ag_city' id='ag_city' size='40' value= '$ag_city_name' /></td>
-	  </tr>
-	  <tr>
-		<td><label class='required' for='state'>* State</label></td>
-		<td >
-			<input class='textbox' type='text' name='ag_state' id='ag_state' size='2' value= '$ag_state_name' />
-			<label class='required' for='zip'>&nbsp;&nbsp;<strong>* Zip</strong>&nbsp;</label>
-			<input class='textbox' type='text' name='ag_zip' id='ag_zip' size='10' value= '$ag_zip_code' />
-		</td>
-	  </tr>
-	  <tr>
-		<td><label class='required' for='phone'>* Phone</label></td>
-		<td >
-		<input class='textbox' type='text' name='ag_night_phone_a' id='ag_night_phone_a' size='3' value='$ag_phone_area_code'/>
-		<label class='field'>&nbsp;&nbsp;</label>
-		<input class='textbox' type='text' name='ag_night_phone_b' id='ag_night_phone_b' size='3' value='$ag_phone_prefix'/>
-		<label class='field'>&nbsp;&nbsp;</label>
-		<input class='textbox' type='text' name='ag_night_phone_c' id='ag_night_phone_c' size='4' value='$ag_phone_postfix'/>
-		</td>
-	  </tr>
-	  <tr>
-		  <td><label class='required' for='email'>* Email Address</label></td>
-		  <td ><input class='textbox' type='text' name='ag_email' id='ag_email' size='40' value= '$ag_email_address' /></td>
-	  </tr>                               
-	  <tr>                        
-	  </tr>
-	</table>
-		<p class='required' align='center'>* Required field.</p>
-		<p align='center'><input class='btn' type='submit' name='action' value='Action' />     </p>           
-	</form> 
-		<p class='nav' align='center'>
-			
-			Or </p>
-			 <p align='center'><a href='exh_clearCart.php?clear=1'>Cancel and Clear Cart</a>
-			</p>
-			
-		</div> 
-	  
+      <div class='section'>
+      <form method='post' action='processGroup.php' id='add_names'>
+      <h4> Please Fill in information about your organization </h4>
+      <table cellpadding='4' align='center'>
+      <tr>
+        <td><label class='required' for='agency'>* Your Agency or Organizations Name</label></td>
+        <td ><input class='textbox' type='text' name='agency_name' id='agency_name' size='25' value='$agency_name'/></td>
+      </tr>
+      <tr>
+        <td><label class='required' for='address'>* Address Line 1</label></td>
+        <td ><input class='textbox' type='text' name='ag_address1' id='ag_address1' size='40' value='$ag_address_first'/></td>
+      </tr>
+      <tr>
+        <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
+        <td ><input class='textbox' type='text' name='ag_address2' id='ag_address2' size='40' value='$ag_address_second'/></td>
+      </tr>
+      <tr>
+        <td><label class='required' for='city'>* City</label></td>
+        <td ><input class='textbox' type='text' name='ag_city' id='ag_city' size='40' value= '$ag_city_name' /></td>
+      </tr>
+      <tr>
+        <td><label class='required' for='state'>* State</label></td>
+        <td >
+            <input class='textbox' type='text' name='ag_state' id='ag_state' size='2' value= '$ag_state_name' />
+            <label class='required' for='zip'>&nbsp;&nbsp;<strong>* Zip</strong>&nbsp;</label>
+            <input class='textbox' type='text' name='ag_zip' id='ag_zip' size='10' value= '$ag_zip_code' />
+        </td>
+      </tr>
+      <tr>
+        <td><label class='required' for='phone'>* Phone</label></td>
+        <td >
+        <input class='textbox' type='text' name='ag_night_phone_a' id='ag_night_phone_a' size='3' value='$ag_phone_area_code'/>
+        <label class='field'>&nbsp;&nbsp;</label>
+        <input class='textbox' type='text' name='ag_night_phone_b' id='ag_night_phone_b' size='3' value='$ag_phone_prefix'/>
+        <label class='field'>&nbsp;&nbsp;</label>
+        <input class='textbox' type='text' name='ag_night_phone_c' id='ag_night_phone_c' size='4' value='$ag_phone_postfix'/>
+        </td>
+      </tr>
+      <tr>
+          <td><label class='required' for='email'>* Email Address</label></td>
+          <td ><input class='textbox' type='text' name='ag_email' id='ag_email' size='40' value= '$ag_email_address' /></td>
+      </tr>                               
+      <tr>                        
+      </tr>
+    </table>
+        <p class='required' align='center'>* Required field.</p>
+        <p align='center'><input class='btn' type='submit' name='action' value='Action' />     </p>           
+    </form> 
+        <p class='nav' align='center'>
+            
+            Or </p>
+             <p align='center'><a href='exh_clearCart.php?clear=1'>Cancel and Clear Cart</a>
+            </p>
+            
+        </div> 
+      
   </div>
         
         ";
@@ -548,121 +559,121 @@ function render_agency_form_completed()
 
 function render_basic_form ()
 {
-		
-	//invoking country function //
-	$coutput = countryArray("country", "country");
-	
+        
+    //invoking country function //
+    $coutput = countryArray("country", "country");
+    
     echo " 
     
-	  <tr>
-		  <td><label  for='first_name'>* First Name</label></td>
-		  <td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' value= '' /></td>
-	 </tr>
-	  <tr>     
-		  <td><label  for='last_name'>* Last Name</label></td>
-		  <td > <input class='textbox' type='text' name='last_name' id='last_name' size='30' value= '' /></td>
-	  </tr>
-	  <tr>     
-		  <td><label  for='contact_number'>* Contact Number</label></td>
-		  <td > <input class='textbox' type='text' name='contact_number' id='contact_number' size='30' value= '' /></td>
-	  </tr>
-	
-	  
-	  
-	 <tr>
-	  <td><label class='field' for='address'> Address Line 1</label></td>
-	  <td ><input class='textbox' type='text' name='address1' id='address1' size='40' value= '' /></td>
-	  <td>
-	  </tr>
-	  <tr>
-		  <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
-		  <td ><input class='textbox' type='text' name='address2' id='address2' size='40' value= '' /></td>
-	  </tr>
-	  <tr>
-		  <td><label class='field' for='city'> City</label></td>
-		  <td ><input class='textbox' type='text' name='city' id='city' size='40' value= '' /></td>
-	  </tr>
-	  <tr>
-		  <td><label class='field' for='state'> State</label></td>
-		  <td >
-			  <input class='textbox' type='text' name='state' id='state' size='2' value= '' />
-			  <label class='field' for='zip'>&nbsp;&nbsp;<strong> Zip</strong>&nbsp;</label>
-			  <input class='textbox' type='text' name='zip' id='zip' size='10' value= '' />
-		  </td>
-	  </tr>
+      <tr>
+          <td><label  for='first_name'>* First Name</label></td>
+          <td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' value= '' /></td>
+     </tr>
+      <tr>     
+          <td><label  for='last_name'>* Last Name</label></td>
+          <td > <input class='textbox' type='text' name='last_name' id='last_name' size='30' value= '' /></td>
+      </tr>
+      <tr>     
+          <td><label  for='contact_number'>* Contact Number</label></td>
+          <td > <input class='textbox' type='text' name='contact_number' id='contact_number' size='30' value= '' /></td>
+      </tr>
+    
+      
+      
+     <tr>
+      <td><label class='field' for='address'> Address Line 1</label></td>
+      <td ><input class='textbox' type='text' name='address1' id='address1' size='40' value= '' /></td>
+      <td>
+      </tr>
+      <tr>
+          <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
+          <td ><input class='textbox' type='text' name='address2' id='address2' size='40' value= '' /></td>
+      </tr>
+      <tr>
+          <td><label class='field' for='city'> City</label></td>
+          <td ><input class='textbox' type='text' name='city' id='city' size='40' value= '' /></td>
+      </tr>
+      <tr>
+          <td><label class='field' for='state'> State</label></td>
+          <td >
+              <input class='textbox' type='text' name='state' id='state' size='2' value= '' />
+              <label class='field' for='zip'>&nbsp;&nbsp;<strong> Zip</strong>&nbsp;</label>
+              <input class='textbox' type='text' name='zip' id='zip' size='10' value= '' />
+          </td>
+      </tr>
    <tr>
-	  <td><label class='field' for='Country'> Country</label></td>
-	  <td >
-		 $coutput
-		  
-	  </td>
+      <td><label class='field' for='Country'> Country</label></td>
+      <td >
+         $coutput
+          
+      </td>
   </tr>
-	  <tr>
-		  <td><label class='field' for='email'> * Email Address  </label></td>
-		  <td ><input class='textbox' type='text' name='email' id='email' size='40' value= '' /></td>
-	  </tr> 
-	   <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />
-	 <!--tr> 
-		 <td><label  for='Adult or Child'>*  Adult or Child (Grades 1-6) </label></td>
-		  <td >Adult<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'ADULT' />
-			  &nbsp;&nbsp;&nbsp;
-		  Child<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'CHILD' /></td>                          
-	  </tr-->
-	  <tr>
-		  <td><label class='field' for='church'>Church, Org. Name </label></td>
-		  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
-	  </tr> 
-	  
-	  <tr>     
-		  <td><label for='recordings'> &nbsp;&nbsp;&nbsp; * Register For  </label></td>
-		  <td colspan=2 ><table border=1>
-		  <tr>     
-		   <td><label for='recordings'>Conference $99&nbsp;</label></td>
-		   <td > <input type='checkbox' name='adult' id='adult' size='25' value='adult' checked /> </td>
-	      
-		   <td><label  for='recordings'>&nbsp;&nbsp;&nbsp;Ethnic Training $30&nbsp;</label></td>
-		   <td>
-		   <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' /></td>
-		   </tr>
-		   </table>
-	  </tr>
-	  <tr>     
-		  <td><label  for='ethinicity'>Ethinicity</label></td>
-		  <td > <input class='textbox' type='text' name='ethinicity' id='ethinicity' size='30' value= '' /></td>
-	  </tr>
-	  <tr>     
-		  <td><label  for='primary_language'>Primary Lang.</label></td>
-		  <td > <input class='textbox' type='text' name='primary_language' id='primary_language' size='30' value= '' /></td>
-	  </tr>
-	  	  <tr>     
-		  <td><label  for='secondary_language'>Secondary Lang.</label></td>
-		  <td > <input class='textbox' type='text' name='secondary_language' id='secondary_language' size='30' value= '' /></td>
-	  </tr>
-	   </tr>
-	  	  <tr>     
-		  <td><label  for='trans_language'>Translation Lang.</label></td>
-		  <td > <input class='textbox' type='text' name='trans_language' id='t_language' size='30' value= '' /></td>
-	  </tr>
+      <tr>
+          <td><label class='field' for='email'> * Email Address  </label></td>
+          <td ><input class='textbox' type='text' name='email' id='email' size='40' value= '' /></td>
+      </tr> 
+       <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />
+     <!--tr> 
+         <td><label  for='Adult or Child'>*  Adult or Child (Grades 1-6) </label></td>
+          <td >Adult<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'ADULT' />
+              &nbsp;&nbsp;&nbsp;
+          Child<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'CHILD' /></td>                          
+      </tr-->
+      <tr>
+          <td><label class='field' for='church'>Church, Org. Name </label></td>
+          <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
+      </tr> 
+      
+      <tr>     
+          <td><label for='recordings'> &nbsp;&nbsp;&nbsp; * Register For  </label></td>
+          <td colspan=2 ><table border=1>
+          <tr>     
+           <td><label for='recordings'>Conference $99&nbsp;</label></td>
+           <td > <input type='checkbox' name='adult' id='adult' size='25' value='adult' checked /> </td>
+          
+           <td><label  for='recordings'>&nbsp;&nbsp;&nbsp;Ethnic Training $30&nbsp;</label></td>
+           <td>
+           <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' /></td>
+           </tr>
+           </table>
+      </tr>
+      <tr>     
+          <td><label  for='ethinicity'>Ethinicity</label></td>
+          <td > <input class='textbox' type='text' name='ethinicity' id='ethinicity' size='30' value= '' /></td>
+      </tr>
+      <tr>     
+          <td><label  for='primary_language'>Primary Lang.</label></td>
+          <td > <input class='textbox' type='text' name='primary_language' id='primary_language' size='30' value= '' /></td>
+      </tr>
+          <tr>     
+          <td><label  for='secondary_language'>Secondary Lang.</label></td>
+          <td > <input class='textbox' type='text' name='secondary_language' id='secondary_language' size='30' value= '' /></td>
+      </tr>
+       </tr>
+          <tr>     
+          <td><label  for='trans_language'>Translation Lang.</label></td>
+          <td > <input class='textbox' type='text' name='trans_language' id='t_language' size='30' value= '' /></td>
+      </tr>
     </tr>
-	 <tr>     
-		  <td><label  for='comments'>Coupon</label></td>
-	  <td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= '' /></td>
-	  </tr> 
-	  	  <tr>     
-		  <td><label  for='comments'>Comments</label></td>
-		  <td > <textarea class='textbox' name='comments' cols='50'>
-		  </textarea> </td>
-	  </tr>
+     <tr>     
+          <td><label  for='comments'>Coupon</label></td>
+      <td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= '' /></td>
+      </tr> 
+          <tr>     
+          <td><label  for='comments'>Comments</label></td>
+          <td > <textarea class='textbox' name='comments' cols='50'>
+          </textarea> </td>
+      </tr>
   </table>
-		<p  align='center'>* Required field.</p>
-		<p align='center'><input class='btn' type='submit' name='action' value='Add this Person to Registration' />     </p>           
-	</form> 
-	  <p align='center'>Or </p>
-	</div> 
-	 
-				
-	</div>    
-	";
+        <p  align='center'>* Required field.</p>
+        <p align='center'><input class='btn' type='submit' name='action' value='Add this Person to Registration' />     </p>           
+    </form> 
+      <p align='center'>Or </p>
+    </div> 
+     
+                
+    </div>    
+    ";
 }
 
 function render_input_form_check()
@@ -680,110 +691,110 @@ function render_input_form_check()
     $email_address = !empty($_POST['email']) ? $_POST['email'] : "";   
     
     return " 
-	<div class='section'>
-	<form method='post' action='placeOrder.php' id='place_order'>
-	
-	<table cellpadding='4' align='center'>
-		<tr>
-			<td><label class='required' for='first'>* First Name</label></td>
-			<td ><input class='textbox' type='text' name='first' id='first' size='40' value= '$first_name' /></td>
-		</tr>
-		<tr>
-			<td><label class='required' for='last'>* Last Name</label></td>
-			<td ><input class='textbox' type='text' name='last' id='last' size='40' value= '$last_name' /></td>
-		</tr>
-		<tr>
-			<td><label class='required' for='address'>* Address Line 1</label></td>
-			<td ><input class='textbox' type='text' name='address1' id='address1' size='40' value= '$address_first' /></td>
-		</tr>
-		<tr>
-			<td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
-			<td ><input class='textbox' type='text' name='address2' id='address2' size='40' value= '$address_second' /></td>
-		</tr>
-		<tr>
-			<td><label class='required' for='city'>* City</label></td>
-			<td ><input class='textbox' type='text' name='city' id='city' size='40' value= '$city_name' /></td>
-		</tr>
-		<tr>
-			<td><label class='required' for='state'>* State</label></td>
-			<td >
-				<input class='textbox' type='text' name='state' id='state' size='2' value= '$state_name' />
-				<label class='required' for='zip'>&nbsp;&nbsp;<strong>* Zip</strong>&nbsp;</label>
-				<input class='textbox' type='text' name='zip' id='zip' size='10' value= '$zip_code' />
-			</td>
-		</tr>
-		<tr>
-			<td><label class='required' for='phone'>* Phone</label></td>
-			<td >
-			<input class='textbox' type='text' name='night_phone_a' id='night_phone_a' size='3' value='$phone_area_code'/>
-			<label class='field'>&nbsp;&nbsp;</label>
-			<input class='textbox' type='text' name='night_phone_b' id='night_phone_b' size='3'value='$phone_prefix' />
-			<label class='field'>&nbsp;&nbsp;</label>
-			<input class='textbox' type='text' name='night_phone_c' id='night_phone_c' size='4' value='$phone_postfix'/></td>
-		</tr>
-		<tr>
-			<td><label class='required' for='email'>* Email Address</label></td>
-			<td ><input class='textbox' type='text' name='email' id='email' size='40' value= '$email_address'/></td>
-		</tr>                               
-		<tr>                        
-		</tr>
-	</table>
-			<p class='required' align='center'>* Required field.</p>
-			<p align='center'><input class='btn' type='submit' name='submit' value='SUBMIT ORDER'/>     </p>           
-	</form> 
-		
-	</div> 
-	<br />
-	";	
+    <div class='section'>
+    <form method='post' action='placeOrder.php' id='place_order'>
+    
+    <table cellpadding='4' align='center'>
+        <tr>
+            <td><label class='required' for='first'>* First Name</label></td>
+            <td ><input class='textbox' type='text' name='first' id='first' size='40' value= '$first_name' /></td>
+        </tr>
+        <tr>
+            <td><label class='required' for='last'>* Last Name</label></td>
+            <td ><input class='textbox' type='text' name='last' id='last' size='40' value= '$last_name' /></td>
+        </tr>
+        <tr>
+            <td><label class='required' for='address'>* Address Line 1</label></td>
+            <td ><input class='textbox' type='text' name='address1' id='address1' size='40' value= '$address_first' /></td>
+        </tr>
+        <tr>
+            <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
+            <td ><input class='textbox' type='text' name='address2' id='address2' size='40' value= '$address_second' /></td>
+        </tr>
+        <tr>
+            <td><label class='required' for='city'>* City</label></td>
+            <td ><input class='textbox' type='text' name='city' id='city' size='40' value= '$city_name' /></td>
+        </tr>
+        <tr>
+            <td><label class='required' for='state'>* State</label></td>
+            <td >
+                <input class='textbox' type='text' name='state' id='state' size='2' value= '$state_name' />
+                <label class='required' for='zip'>&nbsp;&nbsp;<strong>* Zip</strong>&nbsp;</label>
+                <input class='textbox' type='text' name='zip' id='zip' size='10' value= '$zip_code' />
+            </td>
+        </tr>
+        <tr>
+            <td><label class='required' for='phone'>* Phone</label></td>
+            <td >
+            <input class='textbox' type='text' name='night_phone_a' id='night_phone_a' size='3' value='$phone_area_code'/>
+            <label class='field'>&nbsp;&nbsp;</label>
+            <input class='textbox' type='text' name='night_phone_b' id='night_phone_b' size='3'value='$phone_prefix' />
+            <label class='field'>&nbsp;&nbsp;</label>
+            <input class='textbox' type='text' name='night_phone_c' id='night_phone_c' size='4' value='$phone_postfix'/></td>
+        </tr>
+        <tr>
+            <td><label class='required' for='email'>* Email Address</label></td>
+            <td ><input class='textbox' type='text' name='email' id='email' size='40' value= '$email_address'/></td>
+        </tr>                               
+        <tr>                        
+        </tr>
+    </table>
+            <p class='required' align='center'>* Required field.</p>
+            <p align='center'><input class='btn' type='submit' name='submit' value='SUBMIT ORDER'/>     </p>           
+    </form> 
+        
+    </div> 
+    <br />
+    ";  
 }
 
 function render_special_form ()
 {
     echo " 
     <tr>
-		<td><label  for='first_name'>* First Name</label></td>
-		<td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' value= '' /></td>
-	 </tr>
-	<tr>     
-		<td><label  for='last_name'>* Last Name</label></td>
-		<td > <input class='textbox' type='text' name='last_name' id='last_name' size='30' value= '' /></td>
-	</tr>
-	 <tr>
-	  <td><label class='field' for='address'> Address Line 1</label></td>
-	  <td ><input class='textbox' type='text' name='address1' id='address1' size='40' value= '' /></td>
-	  <td>
-	</tr>
-  	<tr>
-		<td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
-		<td ><input class='textbox' type='text' name='address2' id='address2' size='40' value= '' /></td>
-	</tr>
-	<tr>
-		<td><label class='field' for='city'> City</label></td>
-		<td ><input class='textbox' type='text' name='city' id='city' size='40' value= '' /></td>
-	</tr>
-	<tr>
-		<td><label class='field' for='state'> State</label></td>
-		<td >
-			<input class='textbox' type='text' name='state' id='state' size='2' value= '' />
-			<label class='field' for='zip'>&nbsp;&nbsp;<strong> Zip</strong>&nbsp;</label>
-			<input class='textbox' type='text' name='zip' id='zip' size='10' value= '' />
-		</td>
-	</tr>
-		<tr>
-			<td><label class='field' for='email'>* Email Address  </label></td>
-			<td ><input class='textbox' type='text' name='email' id='email' size='40' value= '' /></td>
-		</tr> 
-		<tr>
-		<td><label class='field' for='church'>Your Church or Organization Name and city </label></td>
-		<td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
-	</tr> 
-		
-		
+        <td><label  for='first_name'>* First Name</label></td>
+        <td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' value= '' /></td>
+     </tr>
+    <tr>     
+        <td><label  for='last_name'>* Last Name</label></td>
+        <td > <input class='textbox' type='text' name='last_name' id='last_name' size='30' value= '' /></td>
+    </tr>
+     <tr>
+      <td><label class='field' for='address'> Address Line 1</label></td>
+      <td ><input class='textbox' type='text' name='address1' id='address1' size='40' value= '' /></td>
+      <td>
+    </tr>
+    <tr>
+        <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
+        <td ><input class='textbox' type='text' name='address2' id='address2' size='40' value= '' /></td>
+    </tr>
+    <tr>
+        <td><label class='field' for='city'> City</label></td>
+        <td ><input class='textbox' type='text' name='city' id='city' size='40' value= '' /></td>
+    </tr>
+    <tr>
+        <td><label class='field' for='state'> State</label></td>
+        <td >
+            <input class='textbox' type='text' name='state' id='state' size='2' value= '' />
+            <label class='field' for='zip'>&nbsp;&nbsp;<strong> Zip</strong>&nbsp;</label>
+            <input class='textbox' type='text' name='zip' id='zip' size='10' value= '' />
+        </td>
+    </tr>
+        <tr>
+            <td><label class='field' for='email'>* Email Address  </label></td>
+            <td ><input class='textbox' type='text' name='email' id='email' size='40' value= '' /></td>
+        </tr> 
+        <tr>
+        <td><label class='field' for='church'>Your Church or Organization Name and city </label></td>
+        <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
+    </tr> 
+        
+        
   </table>
-	<p  align='center'>* Required field.</p>
-	<p align='center'><input class='btn' type='submit' name='action' value='Add this Person to Registration' />     </p>           
+    <p  align='center'>* Required field.</p>
+    <p align='center'><input class='btn' type='submit' name='action' value='Add this Person to Registration' />     </p>           
   </form> 
-	  <p align='center'>Or </p>
+      <p align='center'>Or </p>
 </div> 
                      
                     
@@ -884,14 +895,14 @@ function countryArray($name, $selected)
             "</option>n";
   
  
-	
-			 
+    
+             
     }
-		
+        
  
     $str .= "</select>";
  
     return $str;
-	
-	}
+    
+    }
 ?>

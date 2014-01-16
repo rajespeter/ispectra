@@ -15,18 +15,19 @@ require_once("./includes/initialize.php"); ?>
                                        
                 </div>
                 
-                <?php if (isset($_GET['clear'])) {echo"<p> Shopping Cart was Cleared </p>";} ?>
-                <?php if (isset($_GET['complete'])) {echo"<p> Thank you! Your Order has been completed </p>";} ?>
+                <?php if (isset($_GET['clear'])) {echo"<h3 align='center'> Shopping Cart was Cleared </h3>";} ?>
+                <?php if (isset($_GET['complete'])) {echo"<h3 align='center'> Thank you! Your Order has been completed </h3>";} ?>
                 
             <div id="ex" >
-                
+                <br />
                 <p align="center" ><a href='./PayPalCart/html/processGroup.php?id=' 
-                	title="Register on Line NOW" target="">Start Registeration </a> </p>
+                	title="Start Registration" target="" class="btn large blue">Start Registeration </a> </p>
                 <p><br /></p>
+                <?php /*
                  <p align="center" >
                  	<a href='http://www.ispectraignite.org/' title="iSpectra" target="">
                  		Back to iSpectra </a> </p>
-                
+                */ ?>
              
                
                       <p>&nbsp;</p>
@@ -41,10 +42,7 @@ var linktext = username + "@" + hostname ;
 document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
 </script>
                  </p>
-         <br/>
-         <br/>     
-               
-                  
+         
             </div>
 
            
@@ -59,3 +57,5 @@ document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" +
              <p align="center" ><a href='./PayPalCart/html/processGroup.php?id=HOST' target="">Host Church</a>   </p>
                 <p><br /></p-->  
          </div> 
+
+<?php include_layout_template('footer.php'); ?>  
