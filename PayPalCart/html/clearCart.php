@@ -15,7 +15,7 @@ if (isset($_REQUEST['complete'])) {
     $shopping_cart->EmptyCart();
     echo '<h2>Transaction Completed!</h2>';
 	set_shopping_cart($shopping_cart);
-	mail("rajeshpeter@gmail.com", "REGISTRATION DONE", "REGISTRATION DONE", "From: rajeshpeter@yahoo.com" );
+	mail("rajeshpeter@gmail.com", "REGISTRATION DONE", "REGISTRATION DONE", "From: rajeshpeter@gmail.com" );
 	redirect_to("../../registration.php?complete=1");
 }
 
