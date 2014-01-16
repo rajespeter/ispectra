@@ -40,10 +40,10 @@ error_log("ipn request". $req);
 // Check that the result verifies
 if (strpos($curl_result, "VERIFIED") !== FALSE) {
     $req .= "\n\nPaypal Verified OK";
-    mail("rajeshpeter@gmail.com", "IPN interaction verified", "$req", "From: dlindert@yahoo.com" );
+    mail("dlindert@yahoo.com", "IPN interaction verified", "$req", "From: dlindert@yahoo.com" );
 } else {
     $req .= "\n\nData NOT verified from Paypal!";
-    mail("rajeshpeter@gmail.com", "IPN interaction not verified", "$req", "From: dlindert@yahoo.com" );
+    mail("dlindert@yahoo.com", "IPN interaction not verified", "$req", "From: dlindert@yahoo.com" );
     exit();
 }
 
