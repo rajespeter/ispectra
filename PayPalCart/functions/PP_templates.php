@@ -371,7 +371,7 @@ function render_paypal_checkout(ShoppingCart $shopping_cart)
      //echo "ADULTS = " . $quantity_adults; 
     // echo "<br /> discount = " .$discount_group;
    
-    echo "<div class='left'>" ;
+    echo "<div class='payment-person'>" ;
     echo $first_name . " " . $last_name ."<br />";
     echo $address_first ."<br />";
     if ($address_second != "") {echo $address_second ."<br />"; }  
