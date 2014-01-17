@@ -727,10 +727,11 @@ function render_input_form_check()
             <td><label class='required' for='phone'>* Phone</label></td>
             <td >
             <input class='textbox' type='text' name='night_phone_a' id='night_phone_a' size='3' value='$phone_area_code'/>
-            <label class='field'>&nbsp;&nbsp;</label>
+            <!--label class='field'>&nbsp;&nbsp;</label>
             <input class='textbox' type='text' name='night_phone_b' id='night_phone_b' size='3'value='$phone_prefix' />
             <label class='field'>&nbsp;&nbsp;</label>
-            <input class='textbox' type='text' name='night_phone_c' id='night_phone_c' size='4' value='$phone_postfix'/></td>
+            <input class='textbox' type='text' name='night_phone_c' 
+            id='night_phone_c' size='4' value='$phone_postfix'/--></td>
         </tr>
         <tr>
             <td><label class='required' for='email'>* Email Address</label></td>

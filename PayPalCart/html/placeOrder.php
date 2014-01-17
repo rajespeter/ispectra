@@ -41,18 +41,18 @@ $shopping_cart = get_shopping_cart();
     $state_name = !empty($_POST['state']) ? $_POST['state'] : "";   
     $zip_code = !empty($_POST['zip']) ? $_POST['zip'] : "";   
     $phone_area_code = !empty($_POST['night_phone_a']) ? $_POST['night_phone_a'] : "";   
-    $phone_prefix = !empty($_POST['night_phone_b']) ? $_POST['night_phone_b'] : "";
-    $phone_postfix = !empty($_POST['night_phone_c']) ? $_POST['night_phone_c'] : "";     
+    //$phone_prefix = !empty($_POST['night_phone_b']) ? $_POST['night_phone_b'] : "";
+    //$phone_postfix = !empty($_POST['night_phone_c']) ? $_POST['night_phone_c'] : "";     
     $email_address = !empty($_POST['email']) ? $_POST['email'] : "";   
     
     $zip_error = (!preg_match('/^\d{5}(?:-\d{4})?$/', $zip_code));
     $email_error = (!preg_match('/\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i', $_POST['email']))  ;
     $error_invalid_email = "You have entered and invalid Email address";
-    $phone_area_code_error= (!preg_match('/^\d{3}$/', $phone_area_code));
-    $phone_prefix_error =  (!preg_match('/^\d{3}$/', $phone_prefix)) ;
-    $phone_postfix_error = (!preg_match('/^\d{4}$/', $phone_postfix)) ;
+    $phone_area_code_error= (!preg_match('/^\d{10}$/', $phone_area_code));
+    //$phone_prefix_error =  (!preg_match('/^\d{3}$/', $phone_prefix)) ;
+    //$phone_postfix_error = (!preg_match('/^\d{4}$/', $phone_postfix)) ;
     
-    $phone_error = (!preg_match('/^\d{3}$/', $phone_area_code)) || (!preg_match('/^\d{3}$/', $phone_prefix)) || (!preg_match('/^\d{4}$/', $phone_postfix)) ;
+   // $phone_error = (!preg_match('/^\d{3}$/', $phone_area_code))|| (!preg_match('/^\d{3}$/', $phone_prefix)) || (!preg_match('/^\d{4}$/', $phone_postfix)) ;
     
   
 if (isset($_POST['submit']))
@@ -64,8 +64,8 @@ if (isset($_POST['submit']))
     empty($_POST['state']) ||
     empty($_POST['zip']) ||
     empty($_POST['night_phone_a']) ||
-    empty($_POST['night_phone_b']) ||
-    empty($_POST['night_phone_c']) ||
+    //empty($_POST['night_phone_b']) ||
+   // empty($_POST['night_phone_c']) ||
     empty($_POST['email']) ||
     ($email_error || $phone_error || $zip_error)) 
    {
@@ -133,11 +133,18 @@ if (isset($_POST['submit']))
 			<td><label class='required' for='phone'>* Phone</label></td>
 			<td >
 			<input class='textbox' type='text' name='night_phone_a' id='night_phone_a' size='3' value='$phone_area_code' />
-			<input class='textbox' type='text' name='night_phone_b' id='night_phone_b' size='3'value='$phone_prefix'  />
-			<input class='textbox' type='text' name='night_phone_c' id='night_phone_c' size='4' value='$phone_postfix' /></td>
+			<!--input class='textbox' type='text' name='night_phone_b' id='night_phone_b' size='3'value='$phone_prefix'  />
+			<input class='textbox' type='text' name='night_phone_c' id='night_phone_c' size='4' value='$phone_postfix' /></td-->
 		</tr>
 		";
-	if(empty($phone_area_code) || empty($phone_prefix) || empty($phone_prefix)) 
+	if($phone_area_code_error == '1')
+		{
+			$output .= "<tr> <td> <label> phone number error </label></td>
+						<td><p class='required' align='center'> ";
+			$output .= "Enter 10 Digit Phone no";
+			$output .= "</p> </td> </tr>";
+		}  
+	/*if(empty($phone_area_code) || empty($phone_prefix) || empty($phone_prefix)) 
 		{
 			$output .= "<tr> <td> <label> phone number error </label></td>
 						<td><p class='required' align='center'> ";
@@ -152,7 +159,7 @@ if (isset($_POST['submit']))
 			$output .= "Area Code requires 3 Numbers";
 			$output .= "</p> </td> </tr>";
 		}  
-		if($phone_prefix_error == '1')
+	/*	if($phone_prefix_error == '1')
 		{
 			$output .= "<tr> <td> <label> phone number error </label></td>
 						<td><p class='required' align='center'> ";
@@ -165,7 +172,7 @@ if (isset($_POST['submit']))
 						<td><p class='required' align='center'> ";
 			$output .= "Phone post requires 4 Numbers ";
 			$output .= "</p> </td> </tr>";
-		}               
+		}    */           
 	 $output .=  " 
 			<tr>
 				<td><label class='required' for='email'>* Email Address</label></td>
@@ -211,7 +218,7 @@ echo "<div class='nav'>
                 
     $full_address =   $_POST['address1'];
     if (isset($_POST['address2']) ) {$full_address .= "," . $_POST['address2']; } 
-    $full_phone_number = $_POST['night_phone_a'] . "-" . $_POST['night_phone_b'] . "-" . $_POST['night_phone_c'];
+    $full_phone_number = $_POST['night_phone_a'];// . "-" . $_POST['night_phone_b'] . "-" . $_POST['night_phone_c'];
     $reg_date =  date('m-d-y - H:m:s');
        $myFile=LOG_FILE."/order.log";
 		

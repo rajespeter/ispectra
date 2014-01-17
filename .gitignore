@@ -34,3 +34,7 @@ PayPalCart/html/constants_sandbox.php
 PayPalCart/functions/constants_live.php
 
 .DS_Store
+
+includes/initialize.php
+
+css/main.css
