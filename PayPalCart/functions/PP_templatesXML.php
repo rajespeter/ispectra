@@ -235,7 +235,7 @@ function render_paypal_checkout(ShoppingCart $shopping_cart)
      //echo "ADULTS = " . $quantity_adults; 
     // echo "<br /> discount = " .$discount_group;
    
-    echo "<div class='left'>" ;
+    echo "<div class='payment-person'>" ;
     echo $first_name . " " . $last_name ."<br />";
     echo $address_first ."<br />";
     if ($address_second != "") {echo $address_second ."<br />"; }  
@@ -348,7 +348,7 @@ function render_input_form_check()
                     </tr>
                 </table>
                     <p class='required' align='center'>* Required field.</p>
-                    <p align='center'><input class='btn' type='submit' name='submit' value='SUBMIT ORDER' />     </p>           
+                    <p align='center'><input class='btn large green' type='submit' name='submit' value='SUBMIT ORDER' />     </p>           
             </form> 
                 
             </div> 
@@ -407,7 +407,7 @@ function render_agency_form()
                         </tr>
                     </table>
                         <p class='required' align='center'>* Required field.</p>
-                        <p align='center'><input class='btn' type='submit' name='register' value='Register Your Agency' />     </p>       
+                        <p align='center'><input class='btn large blue' type='submit' name='register' value='Register Your Agency' />     </p>       
                         
                         <p  align='center'>
                         
@@ -474,7 +474,7 @@ function render_agency_form_completed()
                         </tr>
                     </table>
                         <p class='required' align='center'>* Required field.</p>
-                        <p align='center'><input class='btn' type='submit' name='action' value='Action' />     </p>           
+                        <p align='center'><input class='btn large blue' type='submit' name='action' value='Action' />     </p>           
                 </form> 
                     <p class='nav' align='center'>
                         
@@ -546,7 +546,7 @@ function render_basic_form ()
                         
             </table>
                             <p align='center'>* Required field.</p>
-                            <p align='center'><input class='btn' type='submit' name='action' value='Add this Person to Registration' />     </p>           
+                            <p align='center'><input class='btn large blue' type='submit' name='action' value='Add this Person to Registration' />     </p>           
                     </form> 
                         <p align='center'>Or </p>
                     

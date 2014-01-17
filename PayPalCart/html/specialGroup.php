@@ -141,7 +141,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
                     
                         </table>
                             <p class='required' align='center'>* Required field.</p>
-                            <p align='center'><input class='btn' type='submit' name='action' value='Add this Person to Registration' />     </p>
+                            <p align='center'><input class='btn large blue' type='submit' name='action' value='Add this Person to Registration' />     </p>
                     </form>
                     <p align='center'>Or </p>
                     

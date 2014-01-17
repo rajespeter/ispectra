@@ -84,7 +84,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
         (!empty($_POST['email']) && ($email_error == '1')))
        {
       
-	 	 $output .= "<p align='center' class='required'>You might have missed a *Required feild or entered incorrect coupon</p>";  
+	 	 $output .= "<p align='center' class='required'>You might have missed a *Required field or entered incorrect coupon</p>";  
 	
 	
 	  $output .= "<div class='form'>
@@ -239,7 +239,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				  
 		</table>
 			<p class='required' align='center'>* Required field.</p>
-			<p align='center'><input class='btn' type='submit' name='action' value='Add this Person to Registration' />  </p>
+			<p align='center'><input class='btn large blue' type='submit' name='action' value='Add this Person to Registration' />  </p>
 	  </form>
 	  <p align='center'>Or </p>
 	  

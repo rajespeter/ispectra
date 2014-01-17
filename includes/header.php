@@ -33,7 +33,7 @@
 
   
 </head>
-<body class="page page-id-932 page-template-default " data-url="http://www.ispectraignite.org">
+<body class="page page-id-reg page-template-default " data-url="http://www.ispectraignite.org">
 <div id="wrapper">
 <!-- Start Header and Nav -->
 <header id="header" class="clearfix fixed">
@@ -92,3 +92,5 @@
 <div role="main">
   <div class="row">
 <section class="blog nine columns">
+<article class="post-reg page type-page status-publish hentry post" id="post-reg">
+      <div class="post-content">

@@ -40,7 +40,7 @@ return '
 } 
 
 function render_footer() {
-    echo '<p  align="center"> 
+    echo '<p align="center"> 
              <a href="../../registration.php" title="iSpectra Registration"> Return to Registration </a>
              </p>
              <p>&nbsp;</p>';
@@ -305,8 +305,8 @@ if ($formcpn==1) {
        $output .= "
         
           <tr>
-              <td colspan=2><label class='feild' for='first'> Coupon Applied</label></td>
-              <td ><label class='feild' for='first'>    '".$code_array ."' </label></td>
+              <td colspan=2><label class='field' for='first'> Coupon Applied</label></td>
+              <td ><label class='field' for='first'>    '".$code_array ."' </label></td>
               <td>
                    $ ".$coupon_value."  
               </td>
@@ -320,10 +320,10 @@ if ($formcpn==1) {
    $output .= "
         
           <!--tr>
-              <td colspan=2><label class='feild' for='first'>Enter Coupon Code</label></td>
+              <td colspan=2><label class='field' for='first'>Enter Coupon Code</label></td>
               <td ><input class='textcpn' type='text' name='coupon' id='coupon'  size=10 value= '' /></td>
               <td>
-              <input class='btn' type='submit' name='submit' value='Apply  Coupon'/> 
+              <input class='btn large smoke' type='submit' name='submit' value='Apply  Coupon'/> 
               </td>
           </tr-->
           
@@ -474,7 +474,7 @@ function render_agency_form()
       </tr>
   </table>
       <p class='required' align='center'>* Required field.</p>
-      <p align='center'><input class='btn' type='submit' name='register' value='Register Your Agency' />  </p>       
+      <p align='center'><input class='btn large blue' type='submit' name='register' value='Register Your Agency' />  </p>       
       
       <p  align='center'>
       
@@ -541,7 +541,7 @@ function render_agency_form_completed()
       </tr>
     </table>
         <p class='required' align='center'>* Required field.</p>
-        <p align='center'><input class='btn' type='submit' name='action' value='Action' />     </p>           
+        <p align='center'><input class='btn large blue' type='submit' name='action' value='Action' />     </p>           
     </form> 
         <p class='nav' align='center'>
             
@@ -666,7 +666,7 @@ function render_basic_form ()
       </tr>
   </table>
         <p  align='center'>* Required field.</p>
-        <p align='center'><input class='btn' type='submit' name='action' value='Add this Person to Registration' />     </p>           
+        <p align='center'><input class='btn large blue' type='submit' name='action' value='Add this Person to Registration' />     </p>           
     </form> 
       <p align='center'>Or </p>
     </div> 
@@ -727,11 +727,10 @@ function render_input_form_check()
             <td><label class='required' for='phone'>* Phone</label></td>
             <td >
             <input class='textbox' type='text' name='night_phone_a' id='night_phone_a' size='3' value='$phone_area_code'/>
-            <!--label class='field'>&nbsp;&nbsp;</label>
+            <!--<label class='field'>&nbsp;&nbsp;</label>
             <input class='textbox' type='text' name='night_phone_b' id='night_phone_b' size='3'value='$phone_prefix' />
             <label class='field'>&nbsp;&nbsp;</label>
-            <input class='textbox' type='text' name='night_phone_c' 
-            id='night_phone_c' size='4' value='$phone_postfix'/--></td>
+            <input class='textbox' type='text' name='night_phone_c' id='night_phone_c' size='4' value='$phone_postfix'/>--></td>
         </tr>
         <tr>
             <td><label class='required' for='email'>* Email Address</label></td>
@@ -741,7 +740,7 @@ function render_input_form_check()
         </tr>
     </table>
             <p class='required' align='center'>* Required field.</p>
-            <p align='center'><input class='btn' type='submit' name='submit' value='SUBMIT ORDER'/>     </p>           
+            <p align='center'><input class='btn large green' type='submit' name='submit' value='SUBMIT ORDER'/>     </p>           
     </form> 
         
     </div> 
@@ -793,7 +792,7 @@ function render_special_form ()
         
   </table>
     <p  align='center'>* Required field.</p>
-    <p align='center'><input class='btn' type='submit' name='action' value='Add this Person to Registration' />     </p>           
+    <p align='center'><input class='btn large blue' type='submit' name='action' value='Add this Person to Registration' />     </p>           
   </form> 
       <p align='center'>Or </p>
 </div> 

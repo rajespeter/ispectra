@@ -1,3 +1,5 @@
+</div>
+</article>
   </section>
   <!-- Start Sidebar -->
 <aside class="sidebar three columns">

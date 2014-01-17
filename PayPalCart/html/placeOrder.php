@@ -21,7 +21,7 @@ $shopping_cart = get_shopping_cart();
            set_shopping_cart($shopping_cart);  
 		   echo render_shopping_cart_coupon($shopping_cart,1);  
 		    
-		    echo "<h2>  Enter the information for person paying</h2>";
+		    echo "<h2>Enter the information for person paying</h2>";
 		    echo render_input_form_check();
 		    echo "If you are registering 5 or more, discount will be applied when you go to pay";
 		     
@@ -114,8 +114,8 @@ if (isset($_POST['submit']))
 			<td><label class='required' for='state'>* State</label></td>
 			<td >
 				<input class='textbox' type='text' name='state' id='state' size='2' value= '$state_name' />
-				<label class='required' for='zip'>&nbsp;&nbsp;<strong>* Zip</strong>&nbsp;</label>
-				<input class='textbox' type='text' name='zip' id='zip' size='10' value= '$zip_code' />
+            <label class='required' for='zip'>&nbsp;&nbsp;<strong>* Zip</strong>&nbsp;</label>
+            <input class='textbox' type='text' name='zip' id='zip' size='10' value= '$zip_code' />
 			</td>
 		</tr>";
    
@@ -189,7 +189,7 @@ if (isset($_POST['submit']))
 	 $output .=  " 
 		</table>
 			<p class='required' align='center'>* Required field.</p>
-			<p align='center'><input class='btn' type='submit' name='submit' value='SUBMIT ORDER' />     </p>           
+			<p align='center'><input class='btn large green' type='submit' name='submit' value='SUBMIT ORDER' />     </p>           
 	</form> 
 		
 	</div> 
