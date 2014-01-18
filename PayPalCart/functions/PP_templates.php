@@ -156,7 +156,7 @@ function render_shopping_cart_row(ShoppingCart $shopping_cart , $product_id , $l
        $unit_cost = get_item_cost($product_id);
        
        $shipping_amount = 0.00;
-       $prodname=($product_id!="ETRAIN")?$product_id:"ETHNIC TRAINING";
+       $prodname=($product_id!="ETRAIN")?$product_id:"Ethnographic Training";
        
        $output = " 
         <tr>
