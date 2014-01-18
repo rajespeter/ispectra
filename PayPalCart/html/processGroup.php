@@ -154,7 +154,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  			$output .=  "
 		  	  />
 	      
-		   	  <td ><label  for='recordings'> &nbsp;&nbsp;&nbsp; Ethnic Training $30&nbsp;</label></td>
+		   	  <td ><label  for='recordings'> &nbsp;&nbsp;&nbsp; Ethnographic Training $35&nbsp;</label></td>
 			  <td align='left'> <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' "; 
 		   			if (!empty($recordings)) {$output .=  $checked;}
 		  			$output .=  "

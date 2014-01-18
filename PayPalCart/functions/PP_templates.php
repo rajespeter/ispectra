@@ -631,7 +631,7 @@ function render_basic_form ()
            <td><label for='recordings'>Conference $99&nbsp;</label></td>
            <td > <input type='checkbox' name='adult' id='adult' size='25' value='adult' checked /> </td>
           
-           <td><label  for='recordings'>&nbsp;&nbsp;&nbsp;Ethnic Training $30&nbsp;</label></td>
+           <td><label  for='recordings'>&nbsp;&nbsp;&nbsp;Ethnographic Training $35&nbsp;</label></td>
            <td>
            <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' /></td>
            </tr>
