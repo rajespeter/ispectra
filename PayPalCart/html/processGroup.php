@@ -94,35 +94,39 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			  <td><label class='required' for='first_name'>* First Name</label></td>
 			  <td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' 
 			  	value= '$first_name' /></td>
+			  <td></td>
 			 </tr>
 			 <tr>
 			  <td><label class='required' for='last_name'>* Last Name</label></td>
 			  <td><input class='textbox' type='text' name='last_name' id='last_name' size='30' 
 			  	value= '$last_name'/></td>
-			  	</tr>
-				
+		     <td></td>
+     		</tr>			
 			<tr>     
 			  <td><label  class='required' for='contact_number'>* Contact Number</label></td>
 			  <td > <input class='textbox' type='text' name='contact_number' id='contact_number' size='30' 
 			  value= '$contact_number' />
 			   </td>
-			</tr>
+			  <td></td>
+			 </tr>
 		  
 	   		<tr>
 			   <tr>
 				  <td><label class='field' for='address'> Address Line 1</label></td>
 				  <td ><input class='textbox' type='text' name='address1' id='address1' size='40' 
 				  	value= '$address_first' /></td>
-				  <td>
+				  <td></td>
 			  </tr>
 			  <tr>
 				  <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
 				  <td ><input class='textbox' type='text' name='address2' id='address2' size='40' 
 				  	value= '$address_second' /></td>
+				  <td></td>
 			  </tr>
 			  <tr>
 				  <td><label class='field' for='city'> City</label></td>
 				  <td ><input class='textbox' type='text' name='city' id='city' size='40' value= '$city_name' /></td>
+				  <td></td>
 			  </tr>
 			  
 			  <tr>
@@ -132,47 +136,54 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 					  <label class='field' for='zip'>&nbsp;&nbsp;<strong> Zip</strong>&nbsp;</label>
 					  <input class='textbox' type='text' name='zip' id='zip' size='10' value= '$zip_code' />
 				  </td>
+				  <td></td>
 			  </tr> 
-			   <tr>
+			  <tr>
 				  <td>
 				  <label class='field' for='Country'> Country</label></td>
 				  <td align='left' class='field' >$coutput		  
 				  </td>
-			  </tr>	  
+			  	  <td></td>
+			</tr>	  
 			  <tr>
 				  <td><label class='field' for='church'>Church,Org. Name</label></td>
 				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
-			  </tr> 
-			    <tr>     
-		  <td><label class='required' for='recordings'> &nbsp;&nbsp;&nbsp; * Register For </label></td>
-		  <td colspan=2 >
-		  <table >
-		   <tr>     
-		   <td><label for='recordings'>Conference $99&nbsp;</label></td>
-		     <td align='left'> <input class='' type='checkbox' name='adult' id='adult' size='25' value='adult' "; 
-		   			if (!empty($adult)) {$output .=  $checked;}
-		  			$output .=  "
-		  	  />
-	      
-		   	  <td ><label  for='recordings'> &nbsp;&nbsp;&nbsp; Ethnographic Training $35&nbsp;</label></td>
-			  <td align='left'> <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'RECORDINGS' "; 
-		   			if (!empty($recordings)) {$output .=  $checked;}
-		  			$output .=  "
-		  			/>
-		  	  </td> 
-		  	   
-		   
-		   </tr>
-		   </table>
-	  </tr>
+			  	  <td></td>
+			</tr> 
+			<tr>     
+		  		<td><label class='required' for='recordings'> &nbsp;&nbsp;&nbsp; * Register For </label></td>
+			  <td>
+			  <table >
+			   <tr>     
+			   <td><label for='recordings'>Conference $99&nbsp;
+			      		<input class='' type='checkbox' name='adult' id='adult' size='25' value='adult' "; 
+			   			if (!empty($adult)) {$output .=  $checked;}
+			  			$output .=  "
+			  	  		/>
+			  	    </label>
+		         </td>
+			   	  <td ><label  for='recordings'> &nbsp; Ethnographic Training $35&nbsp;
+				  		 <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' "; 
+			   			 if (!empty($recordings)) {$output .=  $checked;}
+			  			 $output .=  "
+			  			 />
+			  			</label>
+			  	  </td> 
+			   </tr>
+			   </table>
+			   </td>
+			   <td></td>
+			
+	  		</tr>
 			
 			
 		      <tr>
 				  <td ><label class='required'  class='field' for='email'>* Email Address</label></td>
 				  <td><input class='textbox' type='text' name='email' id='email' size='40' value= '$email_address'/>
 				  </td>
+				  <td>				  	   <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />
+				  </td>
 			  </tr>
-				  	   <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />
 				  
 			  <!--tr> 
 				 <td><label class='required' for='adultchild'>*  Adult or Child (Grades 1-6)  </label></td>
@@ -183,21 +194,27 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  $output .= "/>
 		   </td>                          
 			  </tr-->
-			  <tr>     
-				  <td><label  class='field' for='ethinicity'>Ethinicity</label></td>
+			  <tr> 
+			      
+				  <td>
+				  <label  class='field' for='ethinicity'>Ethinicity</label></td>
 				  <td > <input class='textbox' type='text' name='ethinicity' id='ethinicity' size='30' value= '$ethinicity' /></td>
+				  <td></td>
 			  </tr>
 			  <tr>     
 				  <td><label   class='field' for='primary_language'>Primary Lang.</label></td>
 				  <td > <input class='textbox' type='text' name='primary_language' id='primary_language' size='30' value= '$primary_language' /></td>
+				  <td></td>
 			  </tr>
 			  	  <tr>     
 				  <td><label  class='field' for='secondary_language'>Secondary Lang.</label></td>
 				  <td > <input class='textbox' type='text' name='secondary_language' id='secondary_language' size='30' value='$secondary_language' /></td>
+				  <td></td>
 			  </tr>
 			  <tr>     
 				  <td><label  class='field' for='trans_language'>Translation Lang.</label></td>
 				  <td > <input class='textbox' type='text' name='trans_language' id='t_language' size='30' value= '$trans_language' /></td>
+				  <td></td>
 			  </tr>
 		    </tr>
 		    <tr>";
@@ -207,13 +224,16 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				$output .="<td><label   class='required' for='Coupon'>Coupon</label></td>";
 			}
 				
-	  		$output .="	<td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= '$t_coupon' /></td>
-	  		</tr> 
-	  	  	<tr>     
+	  		$output .="	<td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= 
+	  		'$t_coupon' /></td>
+	  			<td></td>
+			 </tr> 
+	  	  	 <tr>     
 		  		<td><label  class='field' for='comments'>Comments</label></td>
 		  		<td > <textarea class='textbox' name=comments cols='50'>
 		  		" .$comments. "</textarea> </td>
-	  		</tr>
+	  		  	<td></td>
+			</tr>
 			 ";
 	  
 	  if(!empty($zip_code) && ($zip_error == '1'))

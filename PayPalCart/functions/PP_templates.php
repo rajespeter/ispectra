@@ -565,33 +565,34 @@ function render_basic_form ()
     
     echo " 
     
-      <tr>
-          <td><label  for='first_name'>* First Name</label></td>
-          <td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' value= '' /></td>
-     </tr>
-      <tr>     
-          <td><label  for='last_name'>* Last Name</label></td>
-          <td > <input class='textbox' type='text' name='last_name' id='last_name' size='30' value= '' /></td>
-      </tr>
-      <tr>     
-          <td><label  for='contact_number'>* Contact Number</label></td>
-          <td > <input class='textbox' type='text' name='contact_number' id='contact_number' size='30' value= '' /></td>
-      </tr>
-    
-      
-      
      <tr>
-      <td><label class='field' for='address'> Address Line 1</label></td>
-      <td ><input class='textbox' type='text' name='address1' id='address1' size='40' value= '' /></td>
-      <td>
+     	<td><label  for='first_name'>* First Name</label></td>
+        <td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' value= '' /></td>
+       	<td></td>
+    </tr>
+     <tr>     
+  	    <td><label class='field'  for='last_name'>* Last Name</label></td>
+	    <td><input class='textbox' type='text' name='last_name' id='last_name' size='40' value= '' /></td>
+     	<td></td>
       </tr>
+      <tr>     
+       	<td><label  for='contact_number'>* Contact Number</label></td>
+        <td ><input class='textbox' type='text' name='contact_number' id='contact_number' size='30' value= '' /></td>
+      </tr>
+     <tr>
+     	<td><label class='field' for='address'> Address Line 1</label></td>
+      	<td ><input class='textbox' type='text' name='address1' id='address1' size='40' value= '' /></td>
+      	<td></td>
+     </tr>
       <tr>
           <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
           <td ><input class='textbox' type='text' name='address2' id='address2' size='40' value= '' /></td>
+          <td></td>
       </tr>
       <tr>
           <td><label class='field' for='city'> City</label></td>
           <td ><input class='textbox' type='text' name='city' id='city' size='40' value= '' /></td>
+          <td></td>
       </tr>
       <tr>
           <td><label class='field' for='state'> State</label></td>
@@ -600,69 +601,83 @@ function render_basic_form ()
               <label class='field' for='zip'>&nbsp;&nbsp;<strong> Zip</strong>&nbsp;</label>
               <input class='textbox' type='text' name='zip' id='zip' size='10' value= '' />
           </td>
+          <td></td>
       </tr>
-   <tr>
-      <td><label class='field' for='Country'> Country</label></td>
-      <td >
-         $coutput
-          
-      </td>
-  </tr>
-      <tr>
+	  <tr>
+	      <td><label class='field' for='Country'> Country</label></td>
+	      <td >
+	         $coutput
+	          
+	      </td>
+    	  <td></td>
+       </tr>
+       <tr>
           <td><label class='field' for='email'> * Email Address  </label></td>
           <td ><input class='textbox' type='text' name='email' id='email' size='40' value= '' /></td>
-      </tr> 
+          <td></td>
+       </tr> 
        <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />
-     <!--tr> 
-         <td><label  for='Adult or Child'>*  Adult or Child (Grades 1-6) </label></td>
-          <td >Adult<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'ADULT' />
-              &nbsp;&nbsp;&nbsp;
-          Child<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'CHILD' /></td>                          
-      </tr-->
-      <tr>
+					     <!--tr> 
+					         <td><label  for='Adult or Child'>*  Adult or Child (Grades 1-6) </label></td>
+					         <td >Adult<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'ADULT' />
+					              &nbsp;&nbsp;&nbsp;
+					          Child<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'CHILD' /></td>                          
+					      </tr-->
+        <tr>
           <td><label class='field' for='church'>Church, Org. Name </label></td>
           <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
-      </tr> 
+          <td></td>
+        </tr> 
       
-      <tr>     
+        <tr>     
           <td><label for='recordings'> &nbsp;&nbsp;&nbsp; * Register For  </label></td>
-          <td colspan=2 ><table border=1>
-          <tr>     
-           <td><label for='recordings'>Conference $99&nbsp;</label></td>
-           <td > <input type='checkbox' name='adult' id='adult' size='25' value='adult' checked /> </td>
-          
-           <td><label  for='recordings'>&nbsp;&nbsp;&nbsp;Ethnographic Training $35&nbsp;</label></td>
-           <td>
-           <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' /></td>
-           </tr>
-           </table>
-      </tr>
-      <tr>     
+          <td >
+	          <table >
+	          <tr>     
+	           <td><label for='recordings'>Conference $99&nbsp;
+	            <input type='checkbox' name='adult' id='adult'  value='adult' checked /> </label></td>
+	          
+	           <td><label  for='recordings'>Ethnographic Training $35&nbsp;
+	         	   <input  type='checkbox' name='recordings' id='recordings'  value= 'ETRAIN' />
+	            	</label>
+	            </td>
+	           </tr>
+	           </table>
+	         </td>
+	         <td></td>
+          </tr>
+        <tr>     
           <td><label  for='ethinicity'>Ethinicity</label></td>
           <td > <input class='textbox' type='text' name='ethinicity' id='ethinicity' size='30' value= '' /></td>
+          <td></td>
       </tr>
       <tr>     
           <td><label  for='primary_language'>Primary Lang.</label></td>
           <td > <input class='textbox' type='text' name='primary_language' id='primary_language' size='30' value= '' /></td>
+          <td></td>
       </tr>
-          <tr>     
+      <tr>     
           <td><label  for='secondary_language'>Secondary Lang.</label></td>
           <td > <input class='textbox' type='text' name='secondary_language' id='secondary_language' size='30' value= '' /></td>
+           <td></td>
       </tr>
-       </tr>
+      </tr>
           <tr>     
           <td><label  for='trans_language'>Translation Lang.</label></td>
           <td > <input class='textbox' type='text' name='trans_language' id='t_language' size='30' value= '' /></td>
+          <td></td>
       </tr>
     </tr>
      <tr>     
           <td><label  for='comments'>Coupon</label></td>
-      <td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= '' /></td>
+          <td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= '' /></td>
+          <td></td>
       </tr> 
           <tr>     
           <td><label  for='comments'>Comments</label></td>
           <td > <textarea class='textbox' name='comments' cols='50'>
           </textarea> </td>
+          <td></td>
       </tr>
   </table>
         <p  align='center'>* Required field.</p>
