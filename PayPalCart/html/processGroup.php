@@ -84,7 +84,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
         (!empty($_POST['email']) && ($email_error == '1')))
        {
       
-	 	 $output .= "<p align='center' class='required'>You might have missed a *Required field or entered incorrect coupon</p>";  
+	 	 $output .= "<p align='center' class='required'>You might have missed a *Required field or entered incorrect program code</p>";  
 	
 	
 	  $output .= "<div class='form'>
@@ -226,9 +226,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		    </tr>
 		    <tr>";
 			if ($coupon_value > 0 ) {
-				$output .="<td><label   class='field' for='Coupon'>Coupon</label></td>";
+				$output .="<td><label   class='field' for='Coupon'>Program Code</label></td>";
 			}else{
-				$output .="<td><label   class='required' for='Coupon'>Coupon</label></td>";
+				$output .="<td><label   class='required' for='Coupon'>Program Code</label></td>";
 			}
 				
 	  		$output .="	<td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= 
