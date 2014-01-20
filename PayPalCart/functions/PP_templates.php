@@ -564,7 +564,24 @@ function render_basic_form ()
     $coutput = countryArray("country", "country");
     
     echo " 
-    
+     <tr>     
+         <td colspan=3>
+          <center>
+	          <table >
+	          <tr>     
+	           <td><label for='recordings'>Conference $99&nbsp;
+	            <input type='checkbox' name='adult' id='adult'  value='adult' checked /> </label></td>
+	          
+	           <td><label  for='recordings'>Ethnographic Training $35&nbsp;
+	         	   <input  type='checkbox' name='recordings' id='recordings'  value= 'ETRAIN' />
+	            	</label>
+	            </td>
+	           </tr>
+	           </table>
+	         </td>
+	         </center>
+	       </tr>
+     <tr>
      <tr>
      	<td><label  for='first_name'>* First Name</label></td>
         <td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' value= '' /></td>
@@ -629,24 +646,7 @@ function render_basic_form ()
           <td></td>
         </tr> 
       
-        <tr>     
-          <td><label for='recordings'> &nbsp;&nbsp;&nbsp; * Register For  </label></td>
-          <td >
-	          <table >
-	          <tr>     
-	           <td><label for='recordings'>Conference $99&nbsp;
-	            <input type='checkbox' name='adult' id='adult'  value='adult' checked /> </label></td>
-	          
-	           <td><label  for='recordings'>Ethnographic Training $35&nbsp;
-	         	   <input  type='checkbox' name='recordings' id='recordings'  value= 'ETRAIN' />
-	            	</label>
-	            </td>
-	           </tr>
-	           </table>
-	         </td>
-	         <td></td>
-          </tr>
-        <tr>     
+     
           <td><label  for='ethinicity'>Ethinicity</label></td>
           <td > <input class='textbox' type='text' name='ethinicity' id='ethinicity' size='30' value= '' /></td>
           <td></td>

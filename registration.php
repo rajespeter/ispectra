@@ -21,7 +21,7 @@ require_once("./includes/initialize.php"); ?>
             <div id="ex" >
                 <br />
                 <p align="center" ><a href='./PayPalCart/html/processGroup.php?id=' 
-                	title="Start Registration" target="" class="btn large blue">Start Registeration </a> </p>
+                	title="Start Registration" target="" class="btn large blue">Start Registration </a> </p>
                 <p><br /></p>
                 <?php /*
                  <p align="center" >

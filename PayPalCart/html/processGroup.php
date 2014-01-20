@@ -88,9 +88,42 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 	
 	
 	  $output .= "<div class='form'>
-			  <form method='post' action='processGroup.php' id='peoples_names'>
-			  <table cellpadding='4'>
+			  <form method='post' action='processGroup.php' id='peoples_names'>";
+			  if ($shopping_cart->GetTotal()>0)
+			  {
+			    echo render_shopping_cart($shopping_cart);
+			  }
+		 $output .= "
+		 	  <table cellpadding='4'>
+			   <tr>
+			   
+		  	   <td colspan=3>
+			     <center>  
+			     <table >
+			   <tr>     
+			   <td><label for='recordings'>Conference $99&nbsp;
+			      		<input class='' type='checkbox' name='adult' id='adult' size='25' value='adult' "; 
+			   			if (!empty($adult)) {$output .=  $checked;}
+			  			$output .=  "
+			  	  		/>
+			  	    </label>
+		         </td>
+			   	  <td ><label  for='recordings'> &nbsp; Ethnographic Training $35&nbsp;
+				  		 <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' "; 
+			   			 if (!empty($recordings)) {$output .=  $checked;}
+			  			 $output .=  "
+			  			 />
+			  			</label>
+			  	  </td> 
+			   </tr>
+			   </table>
+			   </center>
+			   </td>
+		 
+			
+	  		</tr>
 			 <tr>
+			 
 			  <td><label class='required' for='first_name'>* First Name</label></td>
 			  <td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' 
 			  	value= '$first_name' /></td>
@@ -150,33 +183,6 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
 			  	  <td></td>
 			</tr> 
-			<tr>     
-		  		<td><label class='required' for='recordings'> &nbsp;&nbsp;&nbsp; * Register For </label></td>
-			  <td>
-			  <table >
-			   <tr>     
-			   <td><label for='recordings'>Conference $99&nbsp;
-			      		<input class='' type='checkbox' name='adult' id='adult' size='25' value='adult' "; 
-			   			if (!empty($adult)) {$output .=  $checked;}
-			  			$output .=  "
-			  	  		/>
-			  	    </label>
-		         </td>
-			   	  <td ><label  for='recordings'> &nbsp; Ethnographic Training $35&nbsp;
-				  		 <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' "; 
-			   			 if (!empty($recordings)) {$output .=  $checked;}
-			  			 $output .=  "
-			  			 />
-			  			</label>
-			  	  </td> 
-			   </tr>
-			   </table>
-			   </td>
-			   <td></td>
-			
-	  		</tr>
-			
-			
 		      <tr>
 				  <td ><label class='required'  class='field' for='email'>* Email Address</label></td>
 				  <td><input class='textbox' type='text' name='email' id='email' size='40' value= '$email_address'/>
