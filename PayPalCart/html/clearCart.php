@@ -17,8 +17,8 @@ if (isset($_REQUEST['complete'])) {
 	set_shopping_cart($shopping_cart);
 	
 
-$headers = "From: peter@example.com\r\n";
-$headers .= "Reply-To: peter@example.com\r\n";
+$headers = "From: register@ispectraignite.org\r\n";
+$headers .= "Reply-To: register@isepctraignite.org\r\n";
 $headers .= "X-Mailer: PHP/".phpversion();
 // compose message
 $message = "we have a succesfull registration ";
@@ -30,11 +30,20 @@ $message = wordwrap($message, 70);
 
 // send email
 mail('rajeshpeter@gmail.com', 'Registration Recived', $message,$headers);
+mail('tadcooper4@gmail.com', 'Registration Recived', $message,$headers);
+//mail('jpsamuel@yahoo.com', 'Registration Recived', $message,$headers);
+
 
 
 redirect_to("../../registration.php?complete=1");  
 }
 
+
+
+
+
+
+?>
 
 
 
