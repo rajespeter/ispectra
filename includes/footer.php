@@ -33,7 +33,11 @@
     <section class="subfooter">
         <div class="row">
             <div class="three columns">
+<<<<<<< HEAD
+                <p>©2014 iSpectra Ignite                &nbsp;&nbsp;
+=======
                 <p>©2013 iSpectra Ignite                &nbsp;&nbsp;
+>>>>>>> 5f2732d531d56a524c0051e4d981d0f730972377
                 <a href="https://facebook.com/ispectraignite" class="boxed-icon facebook"><i class="icon-facebook icon-large"></i></a>
                 <a href="https://youtube.com/ispectra" class="boxed-icon youtube"><i class="icon-youtube icon-large"></i></a>
                 </p>
@@ -53,6 +57,23 @@
     </footer>
 <!-- End Footer -->
 
+<<<<<<< HEAD
+<script type='text/javascript' src='//www.ispectraignite.org/content/themes/ispectra/assets/js/easing.js'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/content/themes/ispectra/assets/js/jquery.superfish.js'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/content/themes/ispectra/assets/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/content/themes/ispectra/assets/js/jquery.foundation.plugins.js'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/content/themes/ispectra/assets/js/twitter.js'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/content/themes/ispectra/assets/js/jquery.cycle2.min.js'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/content/themes/ispectra/assets/js/jquery.magnific-popup.min.js'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/content/themes/ispectra/assets/js/app.js'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.46.0-2013.11.21'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"\/\/www.ispectraignite.org\/content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.ispectraignite.org/content/plugins/contact-form-7/includes/js/scripts.js?ver=3.6'></script>
+=======
 <script type='text/javascript' src='https://www.ispectraignite.org/content/themes/ispectra/assets/js/easing.js'></script>
 <script type='text/javascript' src='https://www.ispectraignite.org/content/themes/ispectra/assets/js/jquery.superfish.js'></script>
 <script type='text/javascript' src='https://www.ispectraignite.org/content/themes/ispectra/assets/js/jquery.flexslider-min.js'></script>
@@ -68,5 +89,6 @@ var _wpcf7 = {"loaderUrl":"https:\/\/www.ispectraignite.org\/content\/plugins\/c
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://www.ispectraignite.org/content/plugins/contact-form-7/includes/js/scripts.js?ver=3.6'></script>
+>>>>>>> 5f2732d531d56a524c0051e4d981d0f730972377
 </body>
 </html>

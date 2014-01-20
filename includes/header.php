@@ -7,6 +7,19 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta https-equiv="cleartype" content="on">
   <meta name="HandheldFriendly" content="True">
+<<<<<<< HEAD
+    <link rel="alternate" type="application/rss+xml" title="iSpectra Ignite &raquo; Feed" href="//www.ispectraignite.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="iSpectra Ignite &raquo; Comments Feed" href="//www.ispectraignite.org/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="iSpectra Ignite &raquo; Registration Comments Feed" href="//www.ispectraignite.org/registration/feed/" />
+<link rel='stylesheet' id='foundation-css'  href='//www.ispectraignite.org/content/themes/ispectra/assets/css/foundation.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='flex-css'  href='//www.ispectraignite.org/content/themes/ispectra/assets/css/flexslider.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='app-css'  href='//www.ispectraignite.org/content/themes/ispectra/assets/css/app.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='selection-css'  href='//www.ispectraignite.org/content/themes/ispectra/assets/css/selection.php?ver=3.6.1' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='ie8-css'  href='//www.ispectraignite.org/content/themes/ispectra/assets/css/ie8.css?ver=3.6.1' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='mp-css'  href='//www.ispectraignite.org/content/themes/ispectra/assets/css/magnific-popup.css?ver=3.6.1' type='text/css' media='all' />
+=======
     <link rel="alternate" type="application/rss+xml" title="iSpectra Ignite &raquo; Feed" href="https://www.ispectraignite.org/feed/" />
 <link rel="alternate" type="application/rss+xml" title="iSpectra Ignite &raquo; Comments Feed" href="https://www.ispectraignite.org/comments/feed/" />
 <link rel="alternate" type="application/rss+xml" title="iSpectra Ignite &raquo; Registration Comments Feed" href="https://www.ispectraignite.org/registration/feed/" />
@@ -18,9 +31,25 @@
 <link rel='stylesheet' id='ie8-css'  href='https://www.ispectraignite.org/content/themes/ispectra/assets/css/ie8.css?ver=3.6.1' type='text/css' media='all' />
 <![endif]-->
 <link rel='stylesheet' id='mp-css'  href='https://www.ispectraignite.org/content/themes/ispectra/assets/css/magnific-popup.css?ver=3.6.1' type='text/css' media='all' />
+>>>>>>> 5f2732d531d56a524c0051e4d981d0f730972377
 
-  <link href="../../css/main.css" rel="stylesheet" type="text/css" />
+  <link href="//www.ispectraignite.org/ispectra/css/main.css" rel="stylesheet" type="text/css" />
 
+<<<<<<< HEAD
+<script type='text/javascript' src='//www.ispectraignite.org/content/themes/ispectra/assets/js/modernizr.foundation.js?ver=3.6.1'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='//www.ispectraignite.org/wp-includes/js/comment-reply.min.js?ver=3.6.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="//www.ispectraignite.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="//www.ispectraignite.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Thank You!' href='//www.ispectraignite.org/donate-thank-you/' />
+<meta name="generator" content="WordPress 3.6.1" />
+<link rel='canonical' href='//www.ispectraignite.org/registration/' />
+
+  
+</head>
+<body class="page page-id-reg page-template-default " data-url="http//www.ispectraignite.org">
+=======
 <script type='text/javascript' src='https://www.ispectraignite.org/content/themes/ispectra/assets/js/modernizr.foundation.js?ver=3.6.1'></script>
 <script type='text/javascript' src='https://www.ispectraignite.org/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
 <script type='text/javascript' src='https://www.ispectraignite.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
@@ -34,6 +63,7 @@
   
 </head>
 <body class="page page-id-reg page-template-default " data-url="https://www.ispectraignite.org">
+>>>>>>> 5f2732d531d56a524c0051e4d981d0f730972377
 <div id="wrapper">
 <!-- Start Header and Nav -->
 <header id="header" class="clearfix fixed">
@@ -41,7 +71,11 @@
   <div class="twelve columns">
     <nav class="row">
        <div class="four mobile-two columns logo">
+<<<<<<< HEAD
+                    <a href="http://www.ispectraignite.org" ><img src="//www.ispectraignite.org/content/themes/ispectra/assets/img/logo.png" alt="iSpectra Ignite" /></a>
+=======
                     <a href="https://www.ispectraignite.org" ><img src="https://www.ispectraignite.org/content/themes/ispectra/assets/img/logo.png" alt="iSpectra Ignite" /></a>
+>>>>>>> 5f2732d531d56a524c0051e4d981d0f730972377
                              </div>
        <div class="eight mobile-two columns mobile-menu-toggle">
         <i class="icon-reorder" id="mobile-toggle"></i>

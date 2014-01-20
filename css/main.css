@@ -369,137 +369,6 @@ p.required {
 
 /* ====- main content ===== */
 
-#leftContent {
-	float: left;
-	width: 63%;
-	margin: 0 0;
-	padding: 1em .65em 1em 1em; /* 15px 10px 15px 15px */
-	background: transparent; /*#fff url(../images/Engage-heading_bkgd.png) repeat;*/
-	font-size: 100%;
-}
-#leftContent p {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 1.2em;
-	line-height: 1.3em;
-	color: #333;
-	margin: 0ex;
-	text-align: center;
-	font-weight: normal;
-	/*  background-color: #C4DC36; light green content background for paragrph content,  */
-	padding: 0.5em;
-}
-#leftContent a {
-	color: #012592;
-	background: #EEEEEE;
-	margin: 3px 3em 3px 25%; /* 3px 50px 3px 25%  */
-	padding: 3px;
-	line-height: 1.6em;
-	text-align: center;
-	width: 50%; /* 20em;  */
-	border-top: medium outset;
-	border-right: medium outset;
-	border-bottom: medium outset;
-	border-left: medium outset;
-	float: left;
-	position: relative;
-}
-
-#leftContent a:hover {
-	color: #600;
-	background-color: #FFFFFF;
-	line-height: 1.6em;
-	text-align: center;
-	margin: 3px 3em 3px 25%; /* 3px 50px 3px 25%  */
-	padding: 3px;
-	width: 50%; /* 20em;  */
-	font-weight: bold; 
-	border-top: outset;
-	border-right: outset;
-	border-bottom: outset;
-	border-left: outset;
-	float: left;
-	position: relative;
-}
-
-#leftContent h1, #leftContent h2, #leftContent h3, #leftContent h4 {
-	font-family: "Helvetica Neue", "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue UltraLight", "Trebuchet MS", sans-serif;
-}
-
-#leftContent h1 {
-	font-size: 1.6em;
-	font-weight: bold;
-	color: #0266C8;
-	margin: 0 0 .4ex 0; /*  0 0 .4ex 0  */
-	
-}
-
-#leftContent h2 {
-	font-size: 1.4em;
-	font-weight: bold;
-	color: #0266C8;
-	margin: .4ex 0; /* .4ex 0  */
-}
-
-#leftContent h4 {
-	font-size: 1.2em;
-	font-weight: bold;
-	color: #330;
-	margin: 1ex 0 -.2ex 0;
-	text-align: center;
-}
-#leftContent h3 {
-	font-size: 1.3em;
-	color: #0266C8;
-	text-align: center;
-	font-weight: bold;
-}
-#leftContent hr {
-	border: 0;
-	height: 2px;
-	background: #000000;
-}
-#leftContent img {
-	text-align: center;
-	padding: 0 0 0 .3em; /* 0px 0px 0px 5px  */
-	height: auto;
-	width: auto;
-}
-
-#leftContent ul {
-	font-size: 1.1em;
-	margin: 0;
-	color: White;
-	font-weight: normal;
-	background: #333;
-	padding: .5em;
-}
-
-#leftContent table {
-	border-top: solid #333;
-	border-right: solid #333;
-	border-bottom: solid #333;
-	border-left: solid #333;
-}
-
-#leftContent td {
-	text-align:center;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 0.8em;
-	font-weight:bold;
-	color: #333;
-	padding: 5px;
-	border-width: 1px;
-	border-style: solid;
-}
-#leftContent td a {
-	font-size: 0.9em;
-	background: #666;
-	padding: 2px;
-	text-align: center;
-	color: #FC6;
-	border-style: none;
-	cursor: pointer;
-}
 
 
 
@@ -523,62 +392,7 @@ p.required {
 }
 
 /* ===== extras box ===== */
-#ex {
-	font-size: smaller;
-	padding: 10px;
-	border: 1px solid gray;
-	background-color: transparent;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 95%;
-}
 
-#ex p {
-	color: black;
-	text-align: center;
-	background: inherit;
-}
-#ex p.left {
-	font-size: smaller;
-	color: black;
-	text-align: left;
-	background: inherit;
-}
-#ex hr {
-	border: 0;
-	height: 2px;
-	background: #000000;
-}
-
-#ex a {
-	color: #012592;
-	background: #EEEEEE;
-	margin: 3px 3px 3px 30%;
-	padding: 3px;
-	line-height: 1.6em;
-	text-align: center;
-	width: 17em;
-	font-weight: normal;
-	border-top: medium outset;
-	border-right: medium outset;
-	border-bottom: medium outset;
-	border-left: medium outset;
-}
-
-#ex a:hover {
-	color: #600;
-	background-color: #FFFFFF;
-	line-height: 1.6em;
-	text-align: center;
-	margin: 3px 3px 3px 30%;
-	padding: 3px;
-	width: 17em;
-	font-weight: normal;
-	border-top: outset;
-	border-right: outset;
-	border-bottom: outset;
-	border-left: outset;
-}
 
 /* ===== program box ===== */
 
@@ -621,12 +435,7 @@ p.required {
 	text-align: right;
 	font-size: 1.2em;
 }
-#leftContent .engage a {
-	border: none;
-	margin: 0px;
-	padding: 0px;
-	background-color: #333;
-}
+
 
 /* ===== sidebar ===== */
 #floatRight {
