@@ -305,7 +305,7 @@ if ($formcpn==1) {
        $output .= "
         
           <tr>
-              <td colspan=2><label class='field' for='first'> Coupon Applied</label></td>
+              <td colspan=2><label class='field' for='first'> Program Code Applied</label></td>
               <td ><label class='field' for='first'>    '".$code_array ."' </label></td>
               <td>
                    $ ".$coupon_value."  
@@ -592,17 +592,17 @@ function render_basic_form ()
 	    <td><input class='textbox' type='text' name='last_name' id='last_name' size='40' value= '' /></td>
      	<td></td>
       </tr>
-      <tr>     
-       	<td><label  for='contact_number'>* Contact Number</label></td>
-        <td ><input class='textbox' type='text' name='contact_number' id='contact_number' size='30' value= '' /></td>
-      </tr>
-     <tr>
+       <tr>
+          <td><label class='field' for='email'> * Email Address  </label></td>
+          <td ><input class='textbox' type='text' name='email' id='email' size='40' value= '' /></td>
+          <td></td>
+       </tr> 
      	<td><label class='field' for='address'> Address Line 1</label></td>
       	<td ><input class='textbox' type='text' name='address1' id='address1' size='40' value= '' /></td>
       	<td></td>
      </tr>
       <tr>
-          <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
+          <td><label class='field' for='address'>Address Line 2</label></td>
           <td ><input class='textbox' type='text' name='address2' id='address2' size='40' value= '' /></td>
           <td></td>
       </tr>
@@ -628,11 +628,12 @@ function render_basic_form ()
 	      </td>
     	  <td></td>
        </tr>
-       <tr>
-          <td><label class='field' for='email'> * Email Address  </label></td>
-          <td ><input class='textbox' type='text' name='email' id='email' size='40' value= '' /></td>
-          <td></td>
-       </tr> 
+      <tr>     
+       	<td><label  for='contact_number'>Phone</label></td>
+        <td ><input class='textbox' type='text' name='contact_number' id='contact_number' size='30' value= '' /></td>
+      </tr>
+     <tr>
+
        <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />
 					     <!--tr> 
 					         <td><label  for='Adult or Child'>*  Adult or Child (Grades 1-6) </label></td>
@@ -669,8 +670,8 @@ function render_basic_form ()
       </tr>
     </tr>
      <tr>     
-          <td><label  for='comments'>Coupon</label></td>
-          <td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= '' /></td>
+          <td><label  for='comments'>Program Code</label></td>
+          <td > <input class='textbox' type='text' name='t_coupon' id='t_coupon' size='15' value= 'STANDARD' /></td>
           <td></td>
       </tr> 
           <tr>     

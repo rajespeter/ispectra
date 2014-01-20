@@ -76,7 +76,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 	//check to see if all required items in form are complete and correct.       
     if (empty($_POST['first_name']) || 
         empty($_POST['last_name']) ||
-        empty($_POST['contact_number'])||
+      //  empty($_POST['contact_number'])||
         empty($_POST['adultchild']) ||
         empty($_POST['email']) ||
         (empty($_POST['adult']) && empty($_POST['recordings'])) ||
@@ -135,13 +135,13 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			  	value= '$last_name'/></td>
 		     <td></td>
      		</tr>			
-			<tr>     
-			  <td><label  class='required' for='contact_number'>* Contact Number</label></td>
-			  <td > <input class='textbox' type='text' name='contact_number' id='contact_number' size='30' 
-			  value= '$contact_number' />
-			   </td>
-			  <td></td>
-			 </tr>
+		   <tr>
+				  <td ><label class='required'  class='field' for='email'>* Email Address</label></td>
+				  <td><input class='textbox' type='text' name='email' id='email' size='40' value= '$email_address'/>
+				  </td>
+				  <td>				  	   <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />
+				  </td>
+			  </tr>
 		  
 	   		<tr>
 			   <tr>
@@ -151,7 +151,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				  <td></td>
 			  </tr>
 			  <tr>
-				  <td><label class='field' for='address'>&nbsp;&nbsp;Address Line 2</label></td>
+				  <td><label class='field' for='address'>Address Line 2</label></td>
 				  <td ><input class='textbox' type='text' name='address2' id='address2' size='40' 
 				  	value= '$address_second' /></td>
 				  <td></td>
@@ -183,13 +183,14 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
 			  	  <td></td>
 			</tr> 
-		      <tr>
-				  <td ><label class='required'  class='field' for='email'>* Email Address</label></td>
-				  <td><input class='textbox' type='text' name='email' id='email' size='40' value= '$email_address'/>
-				  </td>
-				  <td>				  	   <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />
-				  </td>
-			  </tr>
+			<tr>     
+			  <td><label  class='field' for='contact_number'>Phone</label></td>
+			  <td > <input class='textbox' type='text' name='contact_number' id='contact_number' size='30' 
+			  value= '$contact_number' />
+			   </td>
+			  <td></td>
+			 </tr>
+
 				  
 			  <!--tr> 
 				 <td><label class='required' for='adultchild'>*  Adult or Child (Grades 1-6)  </label></td>
