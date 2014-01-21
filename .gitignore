@@ -45,3 +45,7 @@ PayPalCart/html/my_ipn.php
 order.log
 
 registration.log
+
+PayPalCart/functions/constants_sandbox.php
+
+PayPalCart/html/complete_listener_IPN.php

@@ -357,7 +357,8 @@ function render_paypal_checkout(ShoppingCart $shopping_cart)
     $email_address = $_POST['email'];
          
     $coupon_value = $shopping_cart->GetCoupon();//session call
-      $quantity_adults = $shopping_cart->GetItemQuantity($product_id = "ADULT") ;
+    $quantity_adults = $shopping_cart->GetItemQuantity($product_id = "ADULT") ;
+     $gcode = $shopping_cart->GetGcode() ;
     
      if($quantity_adults >= 5) {
         $discount_group = $quantity_adults*20.00; 
@@ -408,6 +409,7 @@ function render_paypal_checkout(ShoppingCart $shopping_cart)
         <input type='hidden' name='night_phone_b' value='$phone_prefix'>
         <input type='hidden' name='night_phone_c' value='$phone_postfix'>
         <input type='hidden' name='email' value='$email_address'>
+         <input type='hidden' name='custom' value='$gcode'>
         
         <input type='hidden' name='notify_url' value=' " .PAYPAL_IPN_RETURN_URL. "  '>
         <input type='hidden' name='return' value=' " .PAYPAL_CHECKOUT_COMPLETE_URL. " '>

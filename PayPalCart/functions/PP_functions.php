@@ -7,7 +7,7 @@
 //test on sand box on real site
 
 // For Testing with PayPal real
-require_once ('constants_sandbox.php');
+require_once ('constants_live.php');
 
 /* Database */
 
@@ -252,9 +252,6 @@ function valid_coupon($codes){
 
 
 function insert_register($reg_row){
-	
-
- 
     $id = "'".str_replace("~","','",$reg_row) ."'";//this will break if they enter a , some where
     $sql ="INSERT INTO `register`( `first_name`,
                        `last_name`, 
@@ -297,5 +294,29 @@ function insert_register($reg_row){
     }
 	}
  
+function insert_ipn($ipn){
+     $sql ="INSERT INTO `ipn`( `GCODE`
+                    ) VALUES ($ipn)";
+	 
+	error_log($sql);// $sql) ;//remove later
+	//echo $sql;
+    global $mysqli;
+	if ($stmt = $mysqli->prepare($sql))
+     {
+        $stmt->execute();
+        $stmt->store_result();
+        
+       
+		/* close statement and connection */
+		$stmt->close();
 
+		/* close connection */
+		//$mysqli->close();
+    }
+    else
+    {
+        error_log('Could not prepare MySQLi statement.');
+    }
+	}
+ 
 ?>
