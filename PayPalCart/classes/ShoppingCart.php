@@ -48,7 +48,11 @@ class ShoppingCart {
             $this->items[$product_id] = $this->items[$product_id] + 1;
          else {
             $this->items[$product_id] = 1;
-			$this->gcode = rand(1,3000);
+			 if ($this->gcode == 0)
+			 {
+			 	$this->gcode = rand(1,3000);
+			 } 
+			
          }   
     }
     
@@ -114,8 +118,9 @@ class ShoppingCart {
         $this->names = array();
 		$this->coupons = 0;
 		$this->codes = array();
-		$this->code = 0;
-   
+		$this->gcode = 0;
+
+    
     }
     
     
