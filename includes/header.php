@@ -33,7 +33,7 @@
 
   
 </head>
-<body class="page page-id-reg page-template-default " data-url="http//www.ispectraignite.org">
+<body class="page page-id-reg page-template-default " data-url="http://www.ispectraignite.org">
 <div id="wrapper">
 <!-- Start Header and Nav -->
 <header id="header" class="clearfix fixed">
