@@ -571,10 +571,10 @@ function render_basic_form ()
           <center>
 	          <table >
 	          <tr>     
-	           <td><label for='recordings'>Conference $99&nbsp;
+	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $99&nbsp;</a>
 	            <input type='checkbox' name='adult' id='adult'  value='adult' checked /> </label></td>
 	          
-	           <td><label  for='recordings'>Ethnographic Training $35&nbsp;
+	           <td><label  for='recordings'><a href='http://www.peoplegroups.info/'> &nbsp; PeopleGroups.info  Workshop April 22-23, $35&nbsp;</a>	
 	         	   <input  type='checkbox' name='recordings' id='recordings'  value= 'ETRAIN' />
 	            	</label>
 	            </td>
@@ -923,4 +923,57 @@ function countryArray($name, $selected)
     return $str;
     
     }
+
+function render_register($gcode)
+{
+    $register = get_register_session($gcode);
+    
+    if ($register == FALSE)
+    {
+        $output = "<table class='products'><tr>";
+        $output .= "<td>No products to display!</td>";
+        $output .= "</tr></table>";
+    }
+    else
+    {
+        $output = "
+        
+        <table class='shoppingCart'>
+        <tr><th colspan=3>Registerant Details (Click to Edit)</th></tr>
+        ";
+    
+        foreach ($register as $r)
+        {
+        	$id=$r['id'];
+            $output .= "
+            <tbody>
+                <tr id=$id  class='edit_tr'>
+              
+               <td width='33%' class='edit_td'>
+				<span id='first_$id' class='text'> ".$r['first_name']."</span>
+					<input type='text' value=".$r['first_name']." class='editbox' id='first_input_$id' />
+				</td>
+				 <td class='edit_td'>
+				<span width='33%' id='last_$id' class='text'> ".$r['last_name']."</span>
+					<input type='text' value=".$r['last_name']." class='editbox' id='last_input_$id' />
+				</td>
+             
+               <td width='33%' class='edit_td'>
+          	      <span id='email_$id' class='text'> ".$r['email']."</span>
+          	      	<input type='text' value=".$r['email']." class='editbox' id='email_input_$id' />
+				
+               </td>               
+           
+                
+               </tr>
+               </tbody>
+            ";
+        }
+        $output .= "</table>";
+        return $output;
+    }
+}
 ?>
+
+ 
+ 

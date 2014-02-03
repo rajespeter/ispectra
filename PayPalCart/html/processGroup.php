@@ -101,14 +101,14 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			     <center>  
 			     <table >
 			   <tr>     
-			   <td><label for='recordings'>Conference $99&nbsp;
+	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $99&nbsp;</a>
 			      		<input class='' type='checkbox' name='adult' id='adult' size='25' value='adult' "; 
 			   			if (!empty($adult)) {$output .=  $checked;}
 			  			$output .=  "
 			  	  		/>
 			  	    </label>
 		         </td>
-			   	  <td ><label  for='recordings'> &nbsp; Ethnographic Training $35&nbsp;
+	             <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $99&nbsp;</a>
 				  		 <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' "; 
 			   			 if (!empty($recordings)) {$output .=  $checked;}
 			  			 $output .=  "
