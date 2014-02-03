@@ -13,12 +13,6 @@ PayPalCart/functions/constants_live_BLUE.php
 
 includes/config.php
 
-includes/initialize.php
-
-includes/footer.php
-
-includes/header.php
-
 README.md
 
 docs/iSpectra Registration - mock up - draft 1.docx
@@ -35,7 +29,6 @@ PayPalCart/functions/constants_live.php
 
 .DS_Store
 
-includes/initialize.php
 PayPalCart/html/my_ipn.php
 
 order.log
