@@ -49,9 +49,9 @@
        <div class="nine columns desktop-menu">
         <div class="top-social sf-menu">
             <a href="http://facebook.com/ispectraignite" class="boxed-icon facebook"><i class="icon-facebook icon-small"></i></a>
-            <a href="http://youtube.com/ispectra" class="boxed-icon youtube"><i class="icon-youtube icon-small"></i></a>
+            <a href="http://youtube.com/ispectraignite" class="boxed-icon youtube"><i class="icon-youtube icon-small"></i></a>
             <a href="http://twitter.com/ispectraignite" class="boxed-icon twitter"><i class="icon-twitter icon-small"></i></a>
-            <a href="http://instagram.com/ispectra" class="boxed-icon instagram"><i class="icon-instagram icon-small"></i></a>
+            <a href="http://instagram.com/ispectraignite" class="boxed-icon instagram"><i class="icon-instagram icon-small"></i></a>
            </div>
                                 <ul id="menu-menu" class="sf-menu"><li id="menu-item-742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-742"><a href="http://www.ispectraignite.org/speakers/">Speakers</a></li>
 <li id="menu-item-1059" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1059"><a href="#">Info</a>
@@ -84,9 +84,9 @@
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="http://www.ispectraignite.org/contact-us/">Contact Us</a></li>
 </ul>         
 <a href="http://facebook.com/ispectraignite" class="boxed-icon facebook"><i class="icon-facebook icon-small"></i></a>
-        <a href="http://youtube.com/ispectra" class="boxed-icon youtube"><i class="icon-youtube icon-small"></i></a>
+        <a href="http://youtube.com/ispectraignite" class="boxed-icon youtube"><i class="icon-youtube icon-small"></i></a>
         <a href="http://twitter.com/ispectraignite" class="boxed-icon twitter"><i class="icon-twitter icon-small"></i></a>
-        <a href="http://instagram.com/ispectra" class="boxed-icon instagram"><i class="icon-instagram icon-small"></i></a>
+        <a href="http://instagram.com/ispectraignite" class="boxed-icon instagram"><i class="icon-instagram icon-small"></i></a>
 </div>
   </div>
 </div>

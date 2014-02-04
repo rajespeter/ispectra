@@ -35,9 +35,9 @@
             <div class="four columns">
                 <p>©2014 iSpectra Ignite                &nbsp;&nbsp;
                 <a href="http://facebook.com/ispectraignite" class="boxed-icon facebook"><i class="icon-facebook icon-large"></i></a>
-          <a href="http://youtube.com/ispectra" class="boxed-icon youtube"><i class="icon-youtube icon-large"></i></a>
+          <a href="http://youtube.com/ispectraignite" class="boxed-icon youtube"><i class="icon-youtube icon-large"></i></a>
                 <a href="http://twitter.com/ispectraignite" class="boxed-icon twitter"><i class="icon-twitter icon-large"></i></a>
-                <a href="http://instagram.com/ispectra" class="boxed-icon instagram"><i class="icon-instagram icon-large"></i></a>
+                <a href="http://instagram.com/ispectraignite" class="boxed-icon instagram"><i class="icon-instagram icon-large"></i></a>
                 </p>
             </div>
             
