@@ -32,7 +32,7 @@
         <!-- Start Sub-Footer -->
     <section class="subfooter">
         <div class="row">
-            <div class="three columns">
+            <div class="four columns">
                 <p>©2014 iSpectra Ignite                &nbsp;&nbsp;
                 <a href="http://facebook.com/ispectraignite" class="boxed-icon facebook"><i class="icon-facebook icon-large"></i></a>
           <a href="http://youtube.com/ispectra" class="boxed-icon youtube"><i class="icon-youtube icon-large"></i></a>
@@ -41,7 +41,7 @@
                 </p>
             </div>
             
-            <div class="nine columns">
+            <div class="eight columns">
                 <ul id="menu-menu-2" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-742"><a href="http://www.ispectraignite.org/speakers/">Speakers</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1059"><a href="#">Info</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="http://www.ispectraignite.org/schedule/">Schedule</a></li>
