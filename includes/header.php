@@ -40,13 +40,19 @@
 <div class="row">
   <div class="twelve columns">
     <nav class="row">
-       <div class="four mobile-two columns logo">
+       <div class="three mobile-two columns logo">
                     <a href="http://www.ispectraignite.org" ><img src="//www.ispectraignite.org/content/themes/ispectra/assets/img/logo.png" alt="iSpectra Ignite" /></a>
                              </div>
-       <div class="eight mobile-two columns mobile-menu-toggle">
+       <div class="nine mobile-two columns mobile-menu-toggle">
         <i class="icon-reorder" id="mobile-toggle"></i>
        </div>
-       <div class="eight columns desktop-menu">
+       <div class="nine columns desktop-menu">
+        <div class="top-social sf-menu">
+            <a href="http://facebook.com/ispectraignite" class="boxed-icon facebook"><i class="icon-facebook icon-small"></i></a>
+            <a href="http://youtube.com/ispectra" class="boxed-icon youtube"><i class="icon-youtube icon-small"></i></a>
+            <a href="http://twitter.com/ispectraignite" class="boxed-icon twitter"><i class="icon-twitter icon-small"></i></a>
+            <a href="http://instagram.com/ispectra" class="boxed-icon instagram"><i class="icon-instagram icon-small"></i></a>
+           </div>
                                 <ul id="menu-menu" class="sf-menu"><li id="menu-item-742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-742"><a href="http://www.ispectraignite.org/speakers/">Speakers</a></li>
 <li id="menu-item-1059" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1059"><a href="#">Info</a>
 <ul class="sub-menu">
@@ -76,7 +82,12 @@
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="http://www.ispectraignite.org/schedule/">Schedule</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-932 current_page_item menu-item-939"><a href="http://www.ispectraignite.org/registration/">Registration</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="http://www.ispectraignite.org/contact-us/">Contact Us</a></li>
-</ul>         </div>
+</ul>         
+<a href="http://facebook.com/ispectraignite" class="boxed-icon facebook"><i class="icon-facebook icon-small"></i></a>
+        <a href="http://youtube.com/ispectra" class="boxed-icon youtube"><i class="icon-youtube icon-small"></i></a>
+        <a href="http://twitter.com/ispectraignite" class="boxed-icon twitter"><i class="icon-twitter icon-small"></i></a>
+        <a href="http://instagram.com/ispectra" class="boxed-icon instagram"><i class="icon-instagram icon-small"></i></a>
+</div>
   </div>
 </div>
 <!-- End Mobile Menu -->
