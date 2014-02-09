@@ -294,9 +294,9 @@ function insert_register($reg_row){
     }
 	}
  
-function insert_ipn($ipn){
-     $sql ="INSERT INTO `ipn`( `GCODE`
-                    ) VALUES ($ipn)";
+function insert_ipn($ipn,$quantity,$amount){
+     $sql ="INSERT INTO `ipn`( `GCODE`, `quantity`, `amount`
+                    ) VALUES ($ipn,$quantity,$amount)";
 	 
 	error_log($sql);// $sql) ;//remove later
 	//echo $sql;

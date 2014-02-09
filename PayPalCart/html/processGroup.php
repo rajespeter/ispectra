@@ -108,7 +108,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			  	  		/>
 			  	    </label>
 		         </td>
-	             <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $99&nbsp;</a>
+	             <td><label  for='recordings'><a href='http://www.peoplegroups.info/'> &nbsp; PeopleGroups.info  Workshop April 22-23, $35&nbsp;</a>	
 				  		 <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' "; 
 			   			 if (!empty($recordings)) {$output .=  $checked;}
 			  			 $output .=  "
