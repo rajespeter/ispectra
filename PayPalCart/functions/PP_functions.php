@@ -7,7 +7,7 @@
 //test on sand box on real site
 
 // For Testing with PayPal real
-require_once ('constants_live.php');
+require_once ('constants_sandbox.php');
 
 /* Database */
 
@@ -219,7 +219,7 @@ function valid_coupon($codes){
 	}
 	else {
  		
-    $sql = "SELECT value, code FROM coupon WHERE code ='".$codes."'";
+    $sql = "SELECT value, code FROM coupon WHERE code ='".$codes."' and expired in (1,5)";
 	error_log($sql);// $sql) ;//remove later
     global $mysqli;
 	  if ($stmt = $mysqli->prepare($sql))
@@ -259,6 +259,7 @@ function insert_register($reg_row){
                        `address1`,
                        `address2`, 
                        `city`, 
+                       `state`, 
                        `zip`, 
 		               `country`, 
                        `email`, 
@@ -310,13 +311,37 @@ function insert_ipn($ipn,$quantity,$amount){
 		/* close statement and connection */
 		$stmt->close();
 
-		/* close connection */
-		//$mysqli->close();
     }
     else
     {
         error_log('Could not prepare MySQLi statement.');
     }
+    
+    
+     $sql1 ="update coupon set expired=0 WHERE code = any( SELECT DISTINCT (coupon)
+			FROM register
+			WHERE gcode =$ipn ) 
+			AND expired =1";
+			
+	error_log($sql1);// $sql) ;//remove later
+	//echo $sql;
+    global $mysqli;
+	if ($stmt = $mysqli->prepare($sql1))
+     {
+        $stmt->execute();
+        $stmt->store_result();
+        
+       
+		/* close statement and connection */
+		$stmt->close();
+
+    }
+    else
+    {
+        error_log('Could not prepare MySQLi statement.');
+    }
+    
+        
 	}
  
 ?>

@@ -51,25 +51,92 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 	$secondary_language= !empty($_POST['secondary_language']) ? $_POST['secondary_language'] : "";
 	$trans_language= !empty($_POST['trans_language']) ? $_POST['trans_language'] : "";
 	$comments= !empty($_POST['comments']) ? $_POST['comments'] : "";
-
- 
-	  $coupon_row=-1;
+	$zip_error = (!preg_match('/^\d{5}(?:-\d{4})?$/', $zip_code));//tbd
+	
+	
+	    ///tbd block using coupon for peoples infor 
+	      $coupon_error=-1;
+	
+	     if(empty($adult) && ($t_coupon=='ONEDAY'))
+		  {
+			  $output .= "<tr> <td> <label> </label></td>
+						  <td><p class='required' align='center'> ";
+			  $output .= "ONEDAY program code is not applicable to people group workshop use STANDARD";
+			  $output .= "</p> </td> </tr>";
+			  $coupon_error=1;
+		  }
+		
+	   
+	    /*if(!empty($zip_code) && ($zip_error == '1'))
+		  {
+			  $output .= "<tr> <td> <label> </label></td>
+						  <td><p class='required' align='center'> ";
+			  $output .= "Zip code is not in correct format or is missing";
+			  $output .= "</p> </td> </tr>";
+		  }  */             
+					  
+	
+	     if(!empty($email_address) && ($email_error == '1'))
+		  {
+			  $output .= "<tr> <td> <label> </label></td>
+						  <td><p class='required' align='center'> ";
+			  $output .= $error_invalid_email;
+			  $output .= "</p> </td> ";
+		  }
+ 		if(empty($_POST['first_name']))
+		  {
+			  $output .= "<tr> <td> <label> </label></td>
+						  <td><p class='required' align='center'> ";
+			  $output .= "Enter your first name";
+			  $output .= "</p> </td> ";
+		  }
+ 		if(empty($_POST['last_name']))
+		  {
+			  $output .= "<tr> <td> <label> </label></td>
+						  <td><p class='required' align='center'> ";
+			  $output .= "Enter your last name";
+			  $output .= "</p> </td> ";
+		  }
+ 		if(empty($_POST['email']))
+		  {
+			  $output .= "<tr> <td> <label> </label></td>
+						  <td><p class='required' align='center'> ";
+			  $output .= "Enter your email ";
+			  $output .= "</p> </td> ";
+		  }
+ 		if(empty($_POST['adult']) && empty($_POST['recordings']))
+		  {
+			  $output .= "<tr> <td> <label> </label></td>
+						  <td><p class='required' align='center'> ";
+			  $output .= "Select iSpectra  or Peoples Group ";
+			  $output .= "</p> </td> ";
+		  }
+		  		  
+		  
+	    $coupon_row=-1;
 	    if (!empty($_POST['t_coupon']))
 		{
-		$coupon_row  = valid_coupon($t_coupon);
+			$coupon_row  = valid_coupon($t_coupon);
 		}
 		if ($coupon_row!=-1)
 		{
-		$coupon_value =$coupon_row[1]['value'];
+			$coupon_value =$coupon_row[1]['value'];
 		}
 		else
 		{
-					$coupon_value=-1;
+			$coupon_value=-1;
 			
 		}
 
-   
-    $zip_error = (!preg_match('/^\d{5}(?:-\d{4})?$/', $zip_code));
+   	if(!empty($_POST['t_coupon']) && ( $coupon_value < 0))
+		{
+			  $output .= "<tr> <td> <label> </label></td>
+						  <td><p class='required' align='center'> ";
+			  $output .= "Validate your program code ";
+			  $output .= "</p> </td> ";
+			
+		}
+	
    	$coutput = countryArray("country", "US");
 	
 
@@ -80,11 +147,12 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
         empty($_POST['adultchild']) ||
         empty($_POST['email']) ||
         (empty($_POST['adult']) && empty($_POST['recordings'])) ||
+        ($coupon_error == '1') ||
         (!empty($_POST['t_coupon']) && ( $coupon_value < 0)) ||
         (!empty($_POST['email']) && ($email_error == '1')))
        {
       
-	 	 $output .= "<p align='center' class='required'>You might have missed a *Required field or entered incorrect program code</p>";  
+	 	 $output .= "<p align='center' class='required'>____</p>";  
 	
 	
 	  $output .= "<div class='form'>
@@ -243,25 +311,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			</tr>
 			 ";
 	  
-	  if(!empty($zip_code) && ($zip_error == '1'))
-		  {
-			  $output .= "<tr> <td> <label> Zip code error </label></td>
-						  <td><p class='required' align='center'> ";
-			  $output .= "Zip code is not in correct format or is missing";
-			  $output .= "</p> </td> </tr>";
-		  }               
-					  
-		//  former email output
-		  //$output .= "            
-			
-			//	  ";
-	  if(!empty($email_address) && ($email_error == '1'))
-		  {
-			  $output .= "<tr> <td> <label> email address error</label></td>
-						  <td><p class='required' align='center'> ";
-			  $output .= $error_invalid_email;
-			  $output .= "</p> </td> ";
-		  }                
+	                 
 	   $output .= "
 				  
 		</table>
@@ -325,6 +375,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  .$_REQUEST['address1']."~" 
 		  .$_REQUEST['address2']."~" 
 		  .$_REQUEST['city']."~" 
+		  .$_REQUEST['state']."~" 
 		  .$_REQUEST['zip']."~" 
 		  .$_REQUEST['country']."~" 
 		  .$_REQUEST['email']."~"
