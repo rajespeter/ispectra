@@ -57,11 +57,11 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 	    ///tbd block using coupon for peoples infor 
 	      $coupon_error=-1;
 	
-	     if(empty($adult) && ($t_coupon=='ONEDAY'))
+	     if(empty($adult) && ($t_coupon!='STANDARD'))
 		  {
 			  $output .= "<tr> <td> <label> </label></td>
 						  <td><p class='required' align='center'> ";
-			  $output .= "ONEDAY program code is not applicable to people group workshop use STANDARD";
+			  $output .= "Program code is not applicable to people group workshop use STANDARD or select iSpectra";
 			  $output .= "</p> </td> </tr>";
 			  $coupon_error=1;
 		  }
