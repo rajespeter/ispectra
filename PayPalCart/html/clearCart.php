@@ -12,6 +12,16 @@ if (isset($_REQUEST['clear'])) {
 }
 
 if (isset($_REQUEST['complete'])) {
+     $complete = !empty($_GET['complete']) ? $_GET['complete'] : "";
+ 	if ($complete=="2")
+	{
+		$gcode = $shopping_cart->GetGcode() ;
+		$quantity1 = $shopping_cart->GetItemQuantity();
+		
+		insert_ipn($gcode,$quantity1,0);//capture the group code in the db to track valid registerants
+		
+	}     
+	
     $shopping_cart->EmptyCart();
   	set_shopping_cart($shopping_cart);
 	

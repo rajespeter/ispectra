@@ -1,4 +1,6 @@
+
 <?php
+ob_start();
 require_once '../functions/PP_functions.php';
 
 $shopping_cart = get_shopping_cart();
@@ -70,7 +72,7 @@ if (isset($_POST['submit']))
     ($email_error || $phone_error || $zip_error)) 
    {
     echo render_shopping_cart($shopping_cart); 
-
+	
     echo "<h2> Enter the information for person paying</h2>";
     echo "<p align='center' class='required'>Please fill in missing or incorrect required * fields</p>";  
     
@@ -209,13 +211,12 @@ echo "<div class='nav'>
  
        echo "<h2> Person Paying</h2>";
        echo render_paypal_checkout($shopping_cart) ; // this is form that is submitted to paypal
-       
-       echo "<div class='nav'>
+          echo "<div class='nav'>
        
                     <p align='center'><a href='clearCart.php?clear=1'>Cancel and Clear Cart</a></p>
                     
                 </div>";  
-                
+	            
     $full_address =   $_POST['address1'];
     if (isset($_POST['address2']) ) {$full_address .= "," . $_POST['address2']; } 
     $full_phone_number = $_POST['night_phone_a'];// . "-" . $_POST['night_phone_b'] . "-" . $_POST['night_phone_c'];
@@ -249,12 +250,23 @@ else
     set_shopping_cart($shopping_cart);    
     echo $product_id;
     }
-    echo render_shopping_cart_coupon($shopping_cart,1);  
-    
-    echo "<h2>  Enter the information for person paying</h2>";
-    echo render_input_form_check();
-    echo "If you are registering 5 or more, discount will be applied when you go to pay";
-     
+    echo render_shopping_cart_coupon($shopping_cart,1); 
+	
+	if ($shopping_cart->GetTotal() ==0)
+	{
+    	echo "<div class='nav'>
+    				<BR>
+                    <p align='center'><a class='btn large green' href='clearCart.php?complete=2'>Confirm</a></p>
+                </div>";
+	}
+	else {
+		echo "<h2>  Enter the information for person paying</h2>";
+    	echo render_input_form_check();
+   	    echo "If you are registering 5 or more, discount will be applied when you go to pay";
+		
+		
+	}
+         
     echo "<div class='nav'>
                     <p align='center'><a href='clearCart.php?clear=1'>Cancel and Clear Cart</a></p>
                 </div>";	

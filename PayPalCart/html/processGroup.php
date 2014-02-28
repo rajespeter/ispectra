@@ -398,7 +398,8 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		
         echo render_shopping_cart_coupon($shopping_cart);  
         echo "<div class='nav' align='center'>
-            <a href='placeOrder.php'>Go to Checkout</a> 
+        <BR>
+            <a class='btn large blue' href='placeOrder.php'>Go to Checkout</a> 
                 <p align='center'> Or </p>
             <a href='clearCart.php?clear=1'>Cancel and Clear Cart</a>
             </div>  
