@@ -17,7 +17,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'GET') && (empty($_GET['id'])))  {
     <div>
             <div class='section'>
                     <form method='post' action='processGroup.php' id='add_names'>
-                    <h2 align='center'> Please fill in information of person registering </h2>
+                    <h3 align='center'>Please fill information of person registering, avoid Browser Back button.</h3>
+                    <h3 align='center'> Use clear cart to change. Help email: registration [at] ispectraignite [dot]org</h3>
+                    
                         <table cellpadding='4' align='center'>
                 </tr>  ";   
      
