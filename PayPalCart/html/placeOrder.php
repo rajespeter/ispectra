@@ -1,13 +1,16 @@
 
 <?php
-//session check
-ob_start();
+ob_start(); 
+error_reporting(E_ERROR);
 require_once '../functions/PP_functions.php';
+
 $shopping_cart = get_shopping_cart();
+   
 echo  render_header(); 
+
 ?>
 
- 
+
 
 <?php 
    
