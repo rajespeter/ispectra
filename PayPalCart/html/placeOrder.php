@@ -4,10 +4,10 @@
 ob_start();
 require_once '../functions/PP_functions.php';
 $shopping_cart = get_shopping_cart();
-
+echo  render_header(); 
 ?>
 
-<?= render_header(); ?>
+ 
 
 <?php 
    
