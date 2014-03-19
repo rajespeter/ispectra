@@ -1,10 +1,10 @@
 
 <?php
+//session check
 ob_start();
 require_once '../functions/PP_functions.php';
-
 $shopping_cart = get_shopping_cart();
-   
+
 ?>
 
 <?= render_header(); ?>
