@@ -1,8 +1,12 @@
 
 <?php
+error_reporting(0);
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 ob_start(); 
-error_reporting(E_ERROR);
 require_once '../functions/PP_functions.php';
+
 
 $shopping_cart = get_shopping_cart();
    
@@ -14,7 +18,7 @@ echo  render_header();
 
 <?php 
    
-	$cform = !empty($_POST['cform']) ? $_POST['cform'] : "";
+	/*$cform = !empty($_POST['cform']) ? $_POST['cform'] : "";
 	if($cform=="cform")
 	{
 		   $coupon = !empty($_POST['coupon']) ? $_POST['coupon'] : "";	
@@ -34,7 +38,7 @@ echo  render_header();
 		                    <p align='center'><a href='clearCart.php?clear=1'>Cancel and Clear Cart</a></p>
 		                </div>";	
 	   break;		
-	}
+	}*/
 		
 	
     // All people to be register have been add, this handles the person who is paying
@@ -282,4 +286,8 @@ else
 </div>
 -->
 
-<?= render_footer(); ?>
+<?php
+echo render_footer();
+ob_end_flush();
+
+?>

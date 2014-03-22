@@ -1,7 +1,21 @@
  
 
-<?php 
-require_once("./includes/initialize.php"); ?>
+<?php
+require_once("./includes/initialize.php"); 
+ob_start();
+session_start(); 
+
+session_unset();
+session_destroy();
+ob_end_flush ();
+ 
+?>
+ 
+   
+
+ 
+
+
   
 <?php include_layout_template('header.php'); ?>         
     

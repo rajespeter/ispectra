@@ -399,9 +399,10 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
  		 insert_register($v); //db insert
 		
         echo render_shopping_cart_coupon($shopping_cart);  
+		$time = time();
         echo "<div class='nav' align='center'>
         <BR>
-            <a class='btn large blue' href='placeOrder.php'>Go to Checkout</a> 
+            <a class='btn large blue' href='placeOrder.php?nocache=".$time ."'>Go to Checkout</a> 
                 <p align='center'> Or </p>
             <a href='clearCart.php?clear=1'>Cancel and Clear Cart</a>
             </div>  
@@ -459,6 +460,6 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['exhb_complete'])) 
 
 <?php
 echo render_footer();
-
+ob_end_flush();
 ?>
 

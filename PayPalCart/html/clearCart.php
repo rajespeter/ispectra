@@ -19,6 +19,14 @@ if (isset($_REQUEST['complete'])) {
 		$quantity1 = $shopping_cart->GetItemQuantity();
 		
 		insert_ipn($gcode,$quantity1,0);//capture the group code in the db to track valid registerants
+		$headers = "From: register@ispectraignite.org\r\n";
+		$headers .= "Reply-To: register@ispectraignite.org\r\n";
+		$headers .= "X-Mailer: PHP/".phpversion();
+		$message .=  "\n\nA new but Complimentary  registration Verified OK ";
+		//$message .=  "\n\n".$req;
+		$message .=  "\n\n gcode  :".$gcode;
+	 //  mail('rajeshpeter@gmail.com,tadcooper4@gmail.com,pastorjp@ispectraignite.org,dlindert@yahoo.com', 'IPN iSpectra', $message,$headers);
+	    mail('rajeshpeter@gmail.com', 'IPN iSpectra', $message,$headers);
 		
 	}     
 	
