@@ -252,7 +252,12 @@ function valid_coupon($codes){
 
 
 function insert_register($reg_row){
-    $id = "'".str_replace("~","','",$reg_row) ."'";//this will break if they enter a , some where
+	//remove quotes     	
+	$reg_row_q =str_replace("'","",$reg_row);
+	
+    $id = "'".str_replace("~","','",$reg_row_q) ."'";//this will break if they enter a , some where
+    	out.print($id);
+    
     $sql ="INSERT INTO `register`( `first_name`,
                        `last_name`, 
                        `contact_number`,
