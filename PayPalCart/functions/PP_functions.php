@@ -299,7 +299,46 @@ function insert_register($reg_row){
         error_log('Could not prepare MySQLi statement.');
     }
 	}
- 
+
+function insert_gregister($reg_row){
+	//remove quotes     	
+	$reg_row_q =str_replace("'","",$reg_row);
+	
+    $id = "'".str_replace("~","','",$reg_row_q) ."'";//this will break if they enter a , some where
+    	//out.print($id);
+    
+    $sql ="INSERT INTO `g_register`( `first_name`,
+                       `last_name`, 
+                       `email`, 
+                       `church`, 
+                       `count`, 
+                       `comments` ,
+                       `gcode`) VALUES ($id)";
+	  
+	error_log($sql);// $sql) ;//remove later
+	//echo $sql;
+    global $mysqli;
+	if ($stmt = $mysqli->prepare($sql))
+     {
+     	error_log('prepare() failed: ' . htmlspecialchars($mysqli->error));
+		
+        $stmt->execute();
+        $stmt->store_result();
+         error_log('execute() failed: ' . htmlspecialchars($stmt->error));
+		
+       
+		/* close statement and connection */
+		$stmt->close();
+
+		/* close connection */
+		//$mysqli->close();
+    }
+    else
+    {
+        error_log('Could not prepare MySQLi statement.');
+    }
+}
+	 
 function insert_ipn($ipn,$quantity,$amount){
      $sql ="INSERT INTO `ipn`( `GCODE`, `quantity`, `amount`
                     ) VALUES ($ipn,$quantity,$amount)";

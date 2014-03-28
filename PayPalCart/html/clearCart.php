@@ -18,7 +18,8 @@ if (isset($_REQUEST['complete'])) {
 		$gcode = $shopping_cart->GetGcode() ;
 		$quantity1 = $shopping_cart->GetItemQuantity();
 		
-		insert_ipn($gcode,$quantity1,0);//capture the group code in the db to track valid registerants
+		insert_ipn($gcode,1,0);//capture the group code in the db to track valid registerant , there is a bug if multiple free
+		//registerants then the count is wrong
 		$headers = "From: register@ispectraignite.org\r\n";
 		$headers .= "Reply-To: register@ispectraignite.org\r\n";
 		$headers .= "X-Mailer: PHP/".phpversion();

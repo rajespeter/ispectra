@@ -693,6 +693,77 @@ function render_basic_form ()
     </div>    
     ";
 }
+function render_bulk_form ()
+{
+        
+    //invoking country function //
+     
+    echo " 
+     <tr>     
+         <td colspan=3>
+          <center>
+	          <table >
+	          <tr>     
+	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $89&nbsp;</a>
+	            <input type='checkbox' name='adult' id='adult'  value='groupadult' checked /> </label></td>
+	          
+	       
+	           </tr>
+	           </table>
+	         </td>
+	         </center>
+	       </tr>
+     <tr>
+     <tr>
+     	<td><label  for='first_name'>* First Name</label></td>
+        <td ><input class='textbox' type='text' name='first_name' id='first_name' size='30' value= '' /></td>
+       	<td></td>
+    </tr>
+     <tr>     
+  	    <td><label class='field'  for='last_name'>* Last Name</label></td>
+	    <td><input class='textbox' type='text' name='last_name' id='last_name' size='40' value= '' /></td>
+     	<td></td>
+      </tr>
+       <tr>
+          <td><label class='field' for='email'> * Email Address  </label></td>
+          <td ><input class='textbox' type='text' name='email' id='email' size='40' value= '' /></td>
+          <td></td>
+       </tr> 
+            <input type='hidden' name='adultchild' id='adultchild' value= 'ADULT' />
+					     <!--tr> 
+					         <td><label  for='Adult or Child'>*  Adult or Child (Grades 1-6) </label></td>
+					         <td >Adult<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'ADULT' />
+					              &nbsp;&nbsp;&nbsp;
+					          Child<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'CHILD' /></td>                          
+					      </tr-->
+        <tr>
+          <td><label class='field' for='church'>Church, Org. Name </label></td>
+          <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
+          <td></td>
+        </tr> 
+      
+     
+          <td><label  for='Count'>* Count(5 or more)</label></td>
+          <td > <input class='textbox' type='text' name='count' id='count' size='30' value= '5' /></td>
+          <td></td>
+      </tr>
+               <tr>     
+          <td><label  for='comments'>Comments</label></td>
+          <td > <textarea class='textbox' name='comments' cols='50'>
+          </textarea> </td>
+          <td></td>
+      </tr>
+  </table>
+        <p  align='center'>* Required field.</p>
+        <p align='center'><input class='btn large blue' type='submit' name='action' value='Submit Registration' />     </p>           
+    </form> 
+      <p align='center'>Or </p>
+    </div> 
+     
+                
+    </div>    
+    ";
+}
 
 function render_input_form_check()
 {

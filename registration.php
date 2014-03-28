@@ -36,6 +36,8 @@ ob_end_flush ();
                 <br />
                 <p align="center" ><a href='./PayPalCart/html/processGroup.php?id=' 
                 	title="Start Registration" target="" class="btn large blue">Start Registration </a> </p>
+                <p align="center" ><a href='./PayPalCart/html/processBulk.php?id=' 
+                	title="Start Registration" target="" class="btn large blue">Group Tickets </a> </p>
                 <p><br /></p>
                 <?php /*
                  <p align="center" >
