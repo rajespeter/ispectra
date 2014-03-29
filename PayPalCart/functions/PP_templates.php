@@ -705,7 +705,7 @@ function render_bulk_form ()
 	          <table >
 	          <tr>     
 	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $89&nbsp;</a>
-	            <input type='checkbox' name='adult' id='adult'  value='groupadult' checked /> </label></td>
+	            <input type='hidden' name='adult' id='adult'  value='groupadult'  /> </label></td>
 	          
 	       
 	           </tr>
@@ -737,7 +737,7 @@ function render_bulk_form ()
 					          Child<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'CHILD' /></td>                          
 					      </tr-->
         <tr>
-          <td><label class='field' for='church'>Church, Org. Name </label></td>
+          <td><label class='field' for='church'>* Church, Org. Name </label></td>
           <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
           <td></td>
         </tr> 

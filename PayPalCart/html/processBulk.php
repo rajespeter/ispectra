@@ -83,16 +83,15 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			  $output .= "Enter your email ";
 			  $output .= "</p> </td> ";
 		  }
- 		if(empty($_POST['adult']))
+ 		if(empty($_POST['church']))
 		  {
 			  $output .= "<tr> <td> <label> </label></td>
 						  <td><p class='required' align='center'> ";
-			  $output .= "Select iSpectra Conferene ";
+			  $output .= "Provide Church, Org. Name  ";
 			  $output .= "</p> </td> ";
 		  }
 		  		  
-		  
-	   
+ 	   
    	if(empty($_POST['count']) || ( $count < 5))
 		{
 	
@@ -133,9 +132,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			     <center>  
 			     <table >
 			   <tr>     
-	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $99&nbsp;</a>
-			      		<input class='' type='checkbox' name='adult' id='adult' size='25' value='groupadult' "; 
-			   			if (!empty($adult)) {$output .=  $checked;}
+	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $89&nbsp;</a>
+			      		<input class='' type='hidden' name='adult' id='adult' size='25' value='groupadult' "; 
+			   			//if (!empty($adult)) {$output .=  $checked;}
 			  			$output .=  "
 			  	  		/>
 			  	    </label>
@@ -171,7 +170,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  
 	   		<tr>
 			   <tr>
-				  <td><label class='field' for='church'>Church,Org. Name</label></td>
+				  <td><label  class='required' for='church'>* Church,Org. Name</label></td>
 				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
 			  	  <td></td>
 			</tr> 
