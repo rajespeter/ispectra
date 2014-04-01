@@ -13,12 +13,17 @@ echo  render_header();
 //first time start of registration start here, to fill in basic form
  
 if (($_SERVER['REQUEST_METHOD'] == 'GET') && (empty($_GET['id'])))  {
+		$username = 'registration';
+		$hostname = 'ispectraignite.org';
+		$linktext = $username + '@' + $hostname ;
+										
    echo "    
     <div>
             <div class='section'>
                     <form method='post' action='processBulk.php' id='add_names'>
                     <h3 align='center'>Please fill information of person registering, avoid Browser Back button.</h3>
-                    <h3 align='center'> Use clear cart to change. Help email: registration [at] ispectraignite [dot]org</h3>
+                    <h3 align='center'> Use clear cart to change.  Help email
+                                        <a href='mailto:registration@ispectraignite.org'>registration@ispectraignite.org</a> 					</h3>
                     
                         <table cellpadding='4' align='center'>
                 </tr>  ";   

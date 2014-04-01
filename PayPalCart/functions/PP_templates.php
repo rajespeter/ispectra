@@ -361,7 +361,7 @@ function render_paypal_checkout(ShoppingCart $shopping_cart)
      $gcode = $shopping_cart->GetGcode() ;
     
      if($quantity_adults >= 5) {
-        $discount_group = $quantity_adults*10.00; 
+        $discount_group = ($quantity_adults*10.00)+$coupon_value; 
          echo "You have registered 5 or more Adults, the discout will be aplied when you go to pay";
      } else{
        
