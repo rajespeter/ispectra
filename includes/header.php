@@ -58,14 +58,14 @@
 <ul class="sub-menu">
   <li id="menu-item-879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-879"><a href="http://www.ispectraignite.org/breakout-sessions/">Sessions</a></li>
   <li id="menu-item-1060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1060"><a href="http://www.ispectraignite.org/epg-discovery-and-engagement-workshop/">EPG Discovery and Engagement Workshop</a></li>
-  <li id="menu-item-1111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1111"><a href="http://ispectraignite.dev/exhibitors/">Exhibitors</a></li>
-  <li id="menu-item-1099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099"><a href="http://ispectraignite.dev/hotel/">Hotel</a></li>
+  <li id="menu-item-1111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1111"><a href="http://www.ispectraignite.org/exhibitors/">Exhibitors</a></li>
+  <li id="menu-item-1099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099"><a href="http://www.ispectraignite.org/hotel/">Hotel</a></li>
 </ul>
 </li>
 <li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="http://www.ispectraignite.org/schedule/">Schedule</a></li>
 <li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-932 current_page_item menu-item-939"><a href="http://www.ispectraignite.org/registration/">Registration</a></li>
 <li id="menu-item-743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="http://www.ispectraignite.org/contact-us/">Contact Us</a></li>
-<li id="menu-item-1211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1211"><a href="http://ispectraignite.dev/donate/">Donate</a></li>
+<li id="menu-item-1211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1211"><a href="http://www.ispectraignite.org/donate/">Donate</a></li>
 </ul>
        </div>
     </nav>
