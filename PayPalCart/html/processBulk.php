@@ -97,13 +97,13 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  }
 		  		  
  	   
-   	if(empty($_POST['count']) || ( $count < 5))
+   	if(empty($_POST['count']) || ( $count < 10))
 		{
 	
 	
 			  $output .= "<tr> <td> <label> </label></td>
 						  <td><p class='required' align='center'> ";
-			  $output .= "Group registeration  less than 5 people!!! ";
+			  $output .= "Group registeration can't be less than 10 people!!! ";
 			  $output .= "</p> </td> ";
 			
 		}
@@ -116,7 +116,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
       //  empty($_POST['contact_number'])||
         empty($_POST['adultchild']) ||
         empty($_POST['email']) ||
-         (empty($_POST['count']) || ( $count < 5)) ||
+         (empty($_POST['count']) || ( $count < 10)) ||
         (!empty($_POST['email']) && ($email_error == '1')))
        {
       
@@ -180,17 +180,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			  	  <td></td>
 			</tr> 
 			 				  
-			  <!--tr> 
-				 <td><label class='required' for='adultchild'>*  Adult or Child (Grades 1-6)  </label></td>
-				  <td align='left'>Adult<input class='radio' type='radio' name='adultchild' id='adulttype' value='ADULT' "; 
-		   if (!empty($adult_child) && ($adult_child =='ADULT')) {$output .=  $checked;}
-		  $output .=  "/> &nbsp;&nbsp;&nbsp;Child<input class='radio' type='radio' name='adultchild' id='childtype' value= 'CHILD' "; 
-		   if (!empty($adult_child) && ($adult_child =='CHILD')) {$output .=  $checked;}
-		  $output .= "/>
-		   </td>                          
-			  </tr-->
+	
 			 <tr>
-			  <td><label class='required' for='last_name'>* Count(5 or more)</label></td>
+			  <td><label class='required' for='last_name'>* Count(10 or more)</label></td>
 			  <td><input class='textbox' type='text' name='count' id='count' size='30' 
 			  	value= '$count'/></td>
 		     <td></td>

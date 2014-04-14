@@ -361,7 +361,9 @@ function render_paypal_checkout(ShoppingCart $shopping_cart)
      $gcode = $shopping_cart->GetGcode() ;
     
      if($quantity_adults >= 5) {
+     	
         $discount_group = ($quantity_adults*10.00)+$coupon_value; 
+		$discount_group=($discount_group > 0 )   ? $discount_group : 0;
          echo "You have registered 5 or more Adults, the discout will be aplied when you go to pay";
      } else{
        
@@ -704,7 +706,7 @@ function render_bulk_form ()
           <center>
 	          <table >
 	          <tr>     
-	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $89&nbsp;</a>
+	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $79&nbsp;</a>
 	            <input type='hidden' name='adult' id='adult'  value='groupadult'  /> </label></td>
 	          
 	       
@@ -743,8 +745,8 @@ function render_bulk_form ()
         </tr> 
       
      
-          <td><label  for='Count'>* Count(5 or more)</label></td>
-          <td > <input class='textbox' type='text' name='count' id='count' size='30' value= '5' /></td>
+          <td><label  for='Count'>* Count(10 or more)</label></td>
+          <td > <input class='textbox' type='text' name='count' id='count' size='30' value= '10' /></td>
           <td></td>
       </tr>
                <tr>     
