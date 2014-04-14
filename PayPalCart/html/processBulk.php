@@ -176,7 +176,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 	   		<tr>
 			   <tr>
 				  <td><label  class='required' for='church'>* Church,Org. Name</label></td>
-				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
+				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '$church' /></td>
 			  	  <td></td>
 			</tr> 
 			 				  
