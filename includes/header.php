@@ -26,12 +26,12 @@
 <script type='text/javascript' src='//www.ispectraignite.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 <script type='text/javascript' src='//www.ispectraignite.org/wp-includes/js/comment-reply.min.js?ver=3.6.1'></script>
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="//www.ispectraignite.org/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="//www.ispectraignite.org/wp-includes/wlwmanifest.xml" /> 
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="//www.ispectraignite.org/wp-includes/wlwmanifest.xml" />
 <link rel='prev' title='Thank You!' href='//www.ispectraignite.org/donate-thank-you/' />
 <meta name="generator" content="WordPress 3.6.1" />
 <link rel='canonical' href='//www.ispectraignite.org/registration/' />
 
-  
+
 </head>
 <body class="page page-id-reg page-template-default " data-url="http://www.ispectraignite.org">
 <div id="wrapper">
@@ -58,12 +58,15 @@
 <ul class="sub-menu">
   <li id="menu-item-879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-879"><a href="http://www.ispectraignite.org/breakout-sessions/">Sessions</a></li>
   <li id="menu-item-1060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1060"><a href="http://www.ispectraignite.org/epg-discovery-and-engagement-workshop/">EPG Discovery and Engagement Workshop</a></li>
+  <li id="menu-item-1111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1111"><a href="http://www.ispectraignite.org/exhibitors/">Exhibitors</a></li>
+  <li id="menu-item-1099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099"><a href="http://www.ispectraignite.org/hotel/">Hotel</a></li>
 </ul>
 </li>
 <li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="http://www.ispectraignite.org/schedule/">Schedule</a></li>
 <li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-932 current_page_item menu-item-939"><a href="http://www.ispectraignite.org/registration/">Registration</a></li>
 <li id="menu-item-743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="http://www.ispectraignite.org/contact-us/">Contact Us</a></li>
-</ul>                   
+<li id="menu-item-1211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1211"><a href="http://www.ispectraignite.org/donate/">Donate</a></li>
+</ul>
        </div>
     </nav>
   </div>
@@ -82,7 +85,7 @@
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="http://www.ispectraignite.org/schedule/">Schedule</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-932 current_page_item menu-item-939"><a href="http://www.ispectraignite.org/registration/">Registration</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="http://www.ispectraignite.org/contact-us/">Contact Us</a></li>
-</ul>         
+</ul>
 <a href="http://facebook.com/ispectraignite" class="boxed-icon facebook"><i class="icon-facebook icon-small"></i></a>
         <a href="http://youtube.com/ispectraignite" class="boxed-icon youtube"><i class="icon-youtube icon-small"></i></a>
         <a href="http://twitter.com/ispectraignite" class="boxed-icon twitter"><i class="icon-twitter icon-small"></i></a>

@@ -40,13 +40,14 @@
                 <a href="http://instagram.com/ispectraignite" class="boxed-icon instagram"><i class="icon-instagram icon-large"></i></a>
                 </p>
             </div>
-            
+
             <div class="eight columns">
                 <ul id="menu-menu-2" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-742"><a href="http://www.ispectraignite.org/speakers/">Speakers</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1059"><a href="#">Info</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="http://www.ispectraignite.org/schedule/">Schedule</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-932 current_page_item menu-item-939"><a href="http://www.ispectraignite.org/registration/">Registration</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="http://www.ispectraignite.org/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1211"><a href="http://www.ispectraignite.org/donate/">Donate</a></li>
 </ul>           </div>
         </div>
     </section>
