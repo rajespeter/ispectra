@@ -17,8 +17,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'GET') && (empty($_GET['id'])))  {
     <div>
             <div class='section'>
                     <form method='post' action='processGroup.php' id='add_names'>
-                    <h3 align='center'>Please fill information of person registering, avoid Browser Back button.</h3>
-                    <h3 align='center'> Use clear cart to change. Help email: registration [at] ispectraignite [dot]org</h3>
+                    <h2 align='center'>Registration</h2>
+                          <h3 align='center'>Avoid using browser BACK button / Use clear cart to change<br>Help email
+                          <a href='mailto:registration@ispectraignite.org'>registration@ispectraignite.org</a> 	</h3>
                     
                         <table cellpadding='4' align='center'>
                 </tr>  ";   
@@ -171,14 +172,14 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			     <center>  
 			     <table >
 			   <tr>     
-	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $99&nbsp;</a>
+	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26&nbsp;</a>
 			      		<input class='' type='checkbox' name='adult' id='adult' size='25' value='adult' "; 
 			   			if (!empty($adult)) {$output .=  $checked;}
 			  			$output .=  "
 			  	  		/>
 			  	    </label>
 		         </td>
-	             <td><label  for='recordings'><a href='http://www.peoplegroups.info/'> &nbsp; PeopleGroups.info  Workshop April 22-23, $35&nbsp;</a>	
+	             <td><label  for='recordings'><a href='http://www.peoplegroups.info/'> &nbsp; PeopleGroups.info  Workshop April 22-23&nbsp;</a>	
 				  		 <input  type='checkbox' name='recordings' id='recordings' size='25' value= 'ETRAIN' "; 
 			   			 if (!empty($recordings)) {$output .=  $checked;}
 			  			 $output .=  "
@@ -234,13 +235,16 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			  
 			  <tr>
 				  <td><label class='field' for='state'> State</label></td>
-				  <td >
-					  <input class='textbox' type='text' name='state' id='state' size='2' value= '$state_name' />
-					  <label class='field' for='zip'>&nbsp;&nbsp;<strong> Zip</strong>&nbsp;</label>
-					  <input class='textbox' type='text' name='zip' id='zip' size='10' value= '$zip_code' />
-				  </td>
+				  <td ><input class='textbox' type='text' name='state' id='state' size='2' value= '$state_name' /></td>
+				  <td></td>
+			  </tr>
+
+			  <tr>
+				  <td><label class='field' for='zip'> Zip</label></td>
+				  <td ><input class='textbox' type='text' name='zip' id='zip' size='10' value= '$zip_code' /></td>
 				  <td></td>
 			  </tr> 
+
 			  <tr>
 				  <td>
 				  <label class='field' for='Country'> Country</label></td>
@@ -249,7 +253,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			  	  <td></td>
 			</tr>	  
 			  <tr>
-				  <td><label class='field' for='church'>Church,Org. Name</label></td>
+				  <td><label class='field' for='church'>Church/Organization</label></td>
 				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
 			  	  <td></td>
 			</tr> 
@@ -274,22 +278,22 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			  <tr> 
 			      
 				  <td>
-				  <label  class='field' for='ethinicity'>Ethinicity</label></td>
+				  <label  class='field' for='ethinicity'>Ethnicity</label></td>
 				  <td > <input class='textbox' type='text' name='ethinicity' id='ethinicity' size='30' value= '$ethinicity' /></td>
 				  <td></td>
 			  </tr>
 			  <tr>     
-				  <td><label   class='field' for='primary_language'>Primary Lang.</label></td>
+				  <td><label   class='field' for='primary_language'>Primary Language</label></td>
 				  <td > <input class='textbox' type='text' name='primary_language' id='primary_language' size='30' value= '$primary_language' /></td>
 				  <td></td>
 			  </tr>
 			  	  <tr>     
-				  <td><label  class='field' for='secondary_language'>Secondary Lang.</label></td>
+				  <td><label  class='field' for='secondary_language'>Secondary Language</label></td>
 				  <td > <input class='textbox' type='text' name='secondary_language' id='secondary_language' size='30' value='$secondary_language' /></td>
 				  <td></td>
 			  </tr>
 			  <tr>     
-				  <td><label  class='field' for='trans_language'>Translation Lang.</label></td>
+				  <td><label  class='field' for='trans_language'>Translation Language<br>needed during conference</label></td>
 				  <td > <input class='textbox' type='text' name='trans_language' id='t_language' size='30' value= '$trans_language' /></td>
 				  <td></td>
 			  </tr>

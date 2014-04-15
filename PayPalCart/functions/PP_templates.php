@@ -573,10 +573,10 @@ function render_basic_form ()
           <center>
 	          <table >
 	          <tr>     
-	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $99&nbsp;</a>
+	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26&nbsp;</a>
 	            <input type='checkbox' name='adult' id='adult'  value='adult' checked /> </label></td>
 	          
-	           <td><label  for='recordings'><a href='http://www.peoplegroups.info/'> &nbsp; PeopleGroups.info  Workshop April 22-23, $35&nbsp;</a>	
+	           <td><label  for='recordings'><a href='http://www.peoplegroups.info/'> &nbsp; PeopleGroups.info  Workshop April 22-23&nbsp;</a>	
 	         	   <input  type='checkbox' name='recordings' id='recordings'  value= 'ETRAIN' />
 	            	</label>
 	            </td>
@@ -617,13 +617,16 @@ function render_basic_form ()
       </tr>
       <tr>
           <td><label class='field' for='state'> State</label></td>
-          <td >
-              <input class='textbox' type='text' name='state' id='state' size='2' value= '' />
-              <label class='field' for='zip'>&nbsp;&nbsp;<strong> Zip</strong>&nbsp;</label>
-              <input class='textbox' type='text' name='zip' id='zip' size='10' value= '' />
-          </td>
+          <td ><input class='textbox' type='text' name='state' id='state' size='2' value= '' /></td>
           <td></td>
       </tr>
+	  
+	  <tr>
+	  	  <td><label class='field' for='zip'> Zip</label></td>
+		  <td ><input class='textbox' type='text' name='zip' id='zip' size='10' value= '$zip_code' /></td>
+		  <td></td>
+	  </tr> 
+	  
 	  <tr>
 	      <td><label class='field' for='Country'> Country</label></td>
 	      <td >
@@ -631,7 +634,7 @@ function render_basic_form ()
 	          
 	      </td>
     	  <td></td>
-       </tr>
+      </tr>
       <tr>     
        	<td><label  for='contact_number'>Phone</label></td>
         <td ><input class='textbox' type='text' name='contact_number' id='contact_number' size='30' value= '' /></td>
@@ -646,29 +649,29 @@ function render_basic_form ()
 					          Child<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'CHILD' /></td>                          
 					      </tr-->
         <tr>
-          <td><label class='field' for='church'>Church, Org. Name </label></td>
+          <td><label class='field' for='church'>Church/Organization</label></td>
           <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
           <td></td>
         </tr> 
       
      
-          <td><label  for='ethinicity'>Ethinicity</label></td>
+          <td><label  for='ethinicity'>Ethnicity</label></td>
           <td > <input class='textbox' type='text' name='ethinicity' id='ethinicity' size='30' value= '' /></td>
           <td></td>
       </tr>
       <tr>     
-          <td><label  for='primary_language'>Primary Lang.</label></td>
+          <td><label  for='primary_language'>Primary Language</label></td>
           <td > <input class='textbox' type='text' name='primary_language' id='primary_language' size='30' value= '' /></td>
           <td></td>
       </tr>
       <tr>     
-          <td><label  for='secondary_language'>Secondary Lang.</label></td>
+          <td><label  for='secondary_language'>Secondary Language</label></td>
           <td > <input class='textbox' type='text' name='secondary_language' id='secondary_language' size='30' value= '' /></td>
            <td></td>
       </tr>
       </tr>
           <tr>     
-          <td><label  for='trans_language'>Translation Lang.</label></td>
+          <td><label  for='trans_language'>Translation Language<br>needed during conference</label></td>
           <td > <input class='textbox' type='text' name='trans_language' id='t_language' size='30' value= '' /></td>
           <td></td>
       </tr>
@@ -739,13 +742,13 @@ function render_bulk_form ()
 					          Child<input class='radio' type='radio' name='adultchild' id='adultchild' value= 'CHILD' /></td>                          
 					      </tr-->
         <tr>
-          <td><label class='field' for='church'>* Church, Org. Name </label></td>
+          <td><label class='field' for='church'>* Church/Organization</label></td>
           <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '' /></td>
           <td></td>
         </tr> 
       
      
-          <td><label  for='Count'>* Count(10 or more)</label></td>
+          <td><label  for='Count'>* Number to Purchase (minimum 10)</label></td>
           <td > <input class='textbox' type='text' name='count' id='count' size='30' value= '10' /></td>
           <td></td>
       </tr>

@@ -21,9 +21,10 @@ if (($_SERVER['REQUEST_METHOD'] == 'GET') && (empty($_GET['id'])))  {
     <div>
             <div class='section'>
                     <form method='post' action='processBulk.php' id='add_names'>
-                    <h3 align='center'>Please fill information of person registering, avoid Browser Back button.</h3>
-                    <h3 align='center'> Use clear cart to change.  Help email
-                                        <a href='mailto:registration@ispectraignite.org'>registration@ispectraignite.org</a> 					</h3>
+                    <h2 align='center'>Group Registration Purchase</h2>
+                    <h3 align='center'>Please Enter Group Leader's Information</h3>
+                                        <h3 align='center'>Avoid using browser BACK button / Use clear cart to change<br>Help email
+                                        <a href='mailto:registration@ispectraignite.org'>registration@ispectraignite.org</a> 	</h3>
                     
                         <table cellpadding='4' align='center'>
                 </tr>  ";   
@@ -92,7 +93,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  {
 			  $output .= "<tr> <td> <label> </label></td>
 						  <td><p class='required' align='center'> ";
-			  $output .= "Provide Church, Org. Name  ";
+			  $output .= "Provide Church/Organization Name  ";
 			  $output .= "</p> </td> ";
 		  }
 		  		  
@@ -137,7 +138,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 			     <center>  
 			     <table >
 			   <tr>     
-	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $89&nbsp;</a>
+	           <td><label for='recordings'><a href='http://www.ispectraignite.org/'>  iSpectra Conference April 24-26, $79&nbsp;</a>
 			      		<input class='' type='hidden' name='adult' id='adult' size='25' value='groupadult' "; 
 			   			//if (!empty($adult)) {$output .=  $checked;}
 			  			$output .=  "
@@ -175,14 +176,14 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
 		  
 	   		<tr>
 			   <tr>
-				  <td><label  class='required' for='church'>* Church,Org. Name</label></td>
+				  <td><label  class='required' for='church'>* Church/Organization</label></td>
 				  <td ><input class='textbox' type='text' name='church' id='church' size='50' value= '$church' /></td>
 			  	  <td></td>
 			</tr> 
 			 				  
 	
 			 <tr>
-			  <td><label class='required' for='last_name'>* Count(10 or more)</label></td>
+			  <td><label class='required' for='last_name'>* Number to Purchase (minimum 10)</label></td>
 			  <td><input class='textbox' type='text' name='count' id='count' size='30' 
 			  	value= '$count'/></td>
 		     <td></td>
