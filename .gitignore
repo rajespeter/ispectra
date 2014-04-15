@@ -50,3 +50,5 @@ PayPalCart/functions/constants_sandbox.php
 
 PayPalCart/html/complete_listener_IPN.php
 
+PayPalCart/functions/PP_templates_Tad.php
+PayPalCart/html/processGroup_Tad.php
