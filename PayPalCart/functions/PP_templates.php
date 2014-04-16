@@ -308,7 +308,7 @@ if ($formcpn==1) {
               <td colspan=2><label class='field' for='first'> Program Code Applied</label></td>
               <td ><label class='field' for='first'>    '".$code_array ."' </label></td>
               <td> 
-                   $-".$coupon_value."  
+                   -$".$coupon_value."  
               </td>
           </tr>
           ";
